@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Experimental Project! 1 2 3 ORG-PM</title>
-<!-- 2015-05-11 Mon 01:06 -->
+<title>Experimental Project! 1 2 3</title>
+<!-- 2015-05-11 Mon 01:07 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Ioannis Zannos" />
@@ -156,7 +156,7 @@ org_html_manager.set("LOCAL_TOC", "1");
 org_html_manager.set("VIEW_BUTTONS", "0");
 org_html_manager.set("MOUSE_HINT", "underline");
 org_html_manager.set("FIXED_TOC", "0");
-org_html_manager.set("TOC", "3");
+org_html_manager.set("TOC", "1");
 org_html_manager.set("VIEW", "info");
 org_html_manager.setup();  // activate after the parameters are set
 /*]]>*///-->
@@ -210,719 +210,208 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Experimental Project! 1 2 3 ORG-PM</h1>
+<h1 class="title">Experimental Project! 1 2 3</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Required packages</a></li>
-<li><a href="#sec-2">2. Variables, path construction</a>
+<li><a href="#sec-1">1. org-pm (v. 0.2.0)</a>
 <ul>
-<li><a href="#sec-2-1">2.1. directory + file paths, variables and construction functions</a></li>
-<li><a href="#sec-2-2">2.2. general option and persistency variables</a></li>
-<li><a href="#sec-2-3">2.3. Source and target file paths</a></li>
+<li><a href="#sec-1-1">1.1. Features / Principles</a></li>
+<li><a href="#sec-1-2">1.2. Installation, dependencies</a></li>
+<li><a href="#sec-1-3">1.3. Directory structure</a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1. Project directory</a></li>
+<li><a href="#sec-1-3-2">1.3.2. Templates</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3. Master commands</a></li>
-<li><a href="#sec-4">4. User interface (commands, menu, keybindings)</a></li>
-<li><a href="#sec-5">5. Main functions</a></li>
-<li><a href="#sec-6">6. Utilities: Access to org elements and in-file projects</a></li>
-<li><a href="#sec-7">7. Creation and Deployment of Site on Server</a></li>
-<li><a href="#sec-8">8. Provide package org-pm</a></li>
+<li><a href="#sec-1-4">1.4. Deploying (publishing to server) with scripts</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Required packages</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> org-pm (v. 0.2.0)</h2>
 <div class="outline-text-2" id="text-1">
-<div class="org-src-container">
-
-<pre class="src src-emacs-lisp"><span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">require</span> '<span style="color: #8ae234;">grizzl</span><span style="color: #CCFFCC;">)</span>
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">require</span> '<span style="color: #8ae234;">dash</span><span style="color: #CCFFCC;">)</span>
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Variables, path construction</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-
-<div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1"><span class="section-number-3">2.1</span> directory + file paths, variables and construction functions</h3>
-<div class="outline-text-3" id="text-2-1">
 <p>
-Note: a reset:
+Publish org-mode files or sections to projects created GB reading specifications from a folder.
 </p>
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Features / Principles</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Publish any Org-mode file or any section of it to any number of projects.
+</li>
+<li>Zero configuration: Start publishing any file or section to an existing or new project, without any previous configuration.
+</li>
+<li>Easy customization: Place html (header), org-mode options, css and JavaScript files in folder <code>includes</code>, and they are included in the project's definition automatically.
+</li>
+<li>Templates for creating projects with different custom styles.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Installation, dependencies</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+<code>org-pm</code> can be obtained from GitHub at: <a href="https://github.com/iani/org-pm">https://github.com/iani/org-pm</a>
+</p>
+
+<p>
+The <code>el-get</code> recipe for <code>org-pm</code> is:
+</p>
+
 <div class="org-src-container">
 
-<pre class="src src-elisp"><span style="color: #CCFFCC;">(</span>setq org-pm-template-dirs
-    <span style="color: #33FF66;">(</span>list <span style="color: #009933;">(</span>concat <span style="color: #3366FF;">(</span>file-name-directory <span style="color: #77BBFF;">(</span>buffer-file-name<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span> <span style="color: #ad7fa8; font-style: italic;">"/TEMPLATES/*"</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
+<pre class="src src-elisp"><span style="color: #CCFFCC;">(</span><span style="color: #729fcf;">:name</span> org-pm <span style="color: #729fcf;">:url</span> <span style="color: #ad7fa8; font-style: italic;">"http://github.com/iani/org-pm.git"</span> <span style="color: #729fcf;">:type</span> git <span style="color: #729fcf;">:features</span>
+       <span style="color: #33FF66;">(</span>org-pm<span style="color: #33FF66;">)</span>
+       <span style="color: #729fcf;">:after</span> nil<span style="color: #CCFFCC;">)</span>
 </pre>
 </div>
 
+<p>
+<code>org-pm</code> uses following packages:
+</p>
 
-<div class="org-src-container">
+<ol class="org-ol">
+<li><code>grizzl</code>
+</li>
+<li><code>dash</code>
+</li>
+</ol>
+</div>
+</div>
 
-<pre class="src src-emacs-lisp"><span style="color: #888a85;">;; </span><span style="color: #888a85;">variables, path construction</span>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Directory structure</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> Project directory</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Org-pm stores the configuration, source, and export files for all projects in a single directory.  The default location of this directory is <code>~/org-pm-projects</code>. Each sub-directory of this directory holds a project.
+</p>
 
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defvar</span> <span style="color: #ff6347;">org-pm-root-dir</span>
-  <span style="color: #33FF66;">(</span>expand-file-name <span style="color: #ad7fa8; font-style: italic;">"~/org-pm-projects"</span><span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Path to directory containing project definitions.</span>
-<span style="color: #888a85;">Project definitions are placed in subdirectories of this directory"</span><span style="color: #CCFFCC;">)</span>
+<p>
+For example, the following directory structure defines two projects, <code>project1</code> and <code>project2</code>:
+</p>
 
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defvar</span> <span style="color: #ff6347;">org-pm-target-subdir</span>
-  <span style="color: #ad7fa8; font-style: italic;">""</span>
-  <span style="color: #888a85;">"Subdirectory of project dir where publish exports files to.</span>
-<span style="color: #888a85;">Per default, it is empty, meaning the target dir is the root of the project dir.</span>
-<span style="color: #888a85;">May be changed to save different types of exports in different subdirs. "</span><span style="color: #CCFFCC;">)</span>
+<pre class="example">
+~/org-pm-projects
+                 /project1
+                 /project2
+</pre>
 
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defvar</span> <span style="color: #ff6347;">org-pm-subdir-property-name</span>
-  <span style="color: #ad7fa8; font-style: italic;">"subdirectory"</span>
-  <span style="color: #888a85;">"The name of the property for storing the subdirectory where a file</span>
-<span style="color: #888a85;">or a subtree should be exported in the target directory."</span><span style="color: #CCFFCC;">)</span>
+<p>
+<code>org-pm</code> stores the <code>Org-mode</code> source files of the project in the projects' directory, under sub-directory <code>SOURCE</code>.  The exported files output by publishing the project are placed directly inside the top level of the project directory.  The project <code>SOURCE</code> directory is scanned recursively, and the directory structure of the source is preserved in the exported files directory structure.
+</p>
 
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defvar</span> <span style="color: #ff6347;">org-pm-last-chosen-project</span> <span style="color: #ad7fa8; font-style: italic;">"project1"</span>
-  <span style="color: #888a85;">"Name of last chosen project.</span>
-<span style="color: #888a85;">Used as default for menu in org-pm-choose-project."</span><span style="color: #CCFFCC;">)</span>
+<p>
+Furthermore, each project directory may optionally contain the following sub-directories:
+</p>
+<dl class="org-dl">
+<dt> Directory <code>includes</code> </dt><dd>Contains <code>css</code> and <code>js</code> files that are included in the final project's pages through the standard header mechanism, and the <code>org</code> and <code>html</code> files used to configure the org-mode options of the project and provide headers and other html parts.
+</dd>
+<dt> Directory <code>DEPLOY</code> </dt><dd>Contains shell scripts for deploying the site.
+</dd>
+</dl>
 
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defvar</span> <span style="color: #ff6347;">org-pm-template-dirs</span>
-  <span style="color: #33FF66;">(</span>list <span style="color: #009933;">(</span>concat <span style="color: #3366FF;">(</span>file-name-directory <span style="color: #77BBFF;">(</span>or load-file-name <span style="color: #FFAACC;">(</span>buffer-file-name<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span> <span style="color: #ad7fa8; font-style: italic;">"TE</span><span style="color: #ee82ee; background-color: #333333; font-style: italic;">MPLATES/*"</span><span style="color: #009933; background-color: #333333;">)</span><span style="color: #33FF66; background-color: #333333;">)</span>
-  <span style="color: #888a85;">"List of directories containing templates"</span><span style="color: #CCFFCC;">)</span>
+<p>
+The project's html is exported inside the top level of the project folder.
+</p>
 
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-project-dir</span> <span style="color: #33FF66;">(</span>project-name<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Return the root directory for project named PROJECT-NAME."</span>
-  <span style="color: #33FF66;">(</span>expand-file-name <span style="color: #009933;">(</span>concat org-pm-root-dir <span style="color: #ad7fa8; font-style: italic;">"/"</span> project-name<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-options-path</span> <span style="color: #33FF66;">(</span>project-name<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Return the path of the options file for project named PROJECT-NAME."</span>
-  <span style="color: #33FF66;">(</span>concat <span style="color: #009933;">(</span>org-pm-get-config-dir project-name<span style="color: #009933;">)</span> <span style="color: #ad7fa8; font-style: italic;">"/options.org"</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-config-dir</span> <span style="color: #33FF66;">(</span>project-name<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Return the config directory for project named PROJECT-NAME."</span>
-  <span style="color: #33FF66;">(</span>concat <span style="color: #009933;">(</span>org-pm-get-project-dir project-name<span style="color: #009933;">)</span> <span style="color: #ad7fa8; font-style: italic;">"/CONFIG"</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-source-dir</span> <span style="color: #33FF66;">(</span>project-name<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Return the org source file directory for project named PROJECT-NAME.</span>
-<span style="color: #888a85;">Create directory if needed."</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>dir
-         <span style="color: #77BBFF;">(</span>expand-file-name
-          <span style="color: #FFAACC;">(</span>concat org-pm-root-dir <span style="color: #ad7fa8; font-style: italic;">"/"</span> project-name org-pm-source-dir<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">unless</span> <span style="color: #3366FF;">(</span>file-exists-p dir<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>mkdir dir t<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    dir<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-target-dir</span> <span style="color: #33FF66;">(</span>project-name<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Return the export file directory for project named PROJECT-NAME.</span>
-<span style="color: #888a85;">Create directory if needed."</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>dir <span style="color: #77BBFF;">(</span>concat <span style="color: #FFAACC;">(</span>org-pm-get-project-dir project-name<span style="color: #FFAACC;">)</span> org-pm-target-subdir<span style="color: #77BBFF;">)</span><span style="color: #3366FF; background-color: #333333;">)</span><span style="color: #009933; background-color: #333333;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">unless</span> <span style="color: #3366FF;">(</span>file-exists-p dir<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>mkdir dir t<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    dir<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-includes-dir</span> <span style="color: #33FF66;">(</span>project-name<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Return source directory for includes for project named PROJECT-NAME."</span>
-  <span style="color: #33FF66;">(</span>concat  <span style="color: #009933;">(</span>org-pm-get-target-dir project-name<span style="color: #009933;">)</span> <span style="color: #ad7fa8; font-style: italic;">"/includes"</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-last-exported-file-path</span> <span style="color: #33FF66;">()</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> org-pm-last-saved-source-path
-      <span style="color: #009933;">(</span>replace-regexp-in-string
-       <span style="color: #ad7fa8; font-style: italic;">"/SOURCE/"</span> <span style="color: #888a85;">;; </span><span style="color: #888a85;">dangerous: if many /SOURCE/ are present ...</span>
-       <span style="color: #ad7fa8; font-style: italic;">"/"</span>
-       <span style="color: #3366FF;">(</span>concat
-        <span style="color: #77BBFF;">(</span>file-name-sans-extension org-pm-last-saved-source-path<span style="color: #77BBFF;">)</span> <span style="color: #ad7fa8; font-style: italic;">".html"</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    nil<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
+<pre class="example">
+~/org-pm-projects/project1
+    sub-directory "includes":
+          style.css        (contains the css style definition for the site)
+          scripts.min.js   (contains js scripts for the site)
+          OPTIONS.org      (contains the options for configuring export)
+          HTML_HEAD.html   (contains the HTML_HEAD part for export)
+    sub-directory "SOURCE:
+          index.org        (the home page, created by publishing with org-pm)
+    sub-directory "DEPLOY:
+          github.sh        (shell script for deploying the site to github)
+    index.html             (the home page, generated by org-pm-publish from index.org)
 </pre>
 </div>
+
+<ol class="org-ol"><li><a id="sec-1-3-1-1" name="sec-1-3-1-1"></a>The <code>SOURCE</code> directory<br  /><div class="outline-text-5" id="text-1-3-1-1">
+<p>
+<code>org-pm</code> places the org files that are used to create the project site inside the SOURCE folder.
+</p>
 </div>
+</li></ol>
 </div>
 
-<div id="outline-container-sec-2-2" class="outline-3">
-<h3 id="sec-2-2"><span class="section-number-3">2.2</span> general option and persistency variables</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> Templates</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+The directory <code>TEMPLATES</code> in <code>org-pm</code> includes templates for customizing the style of a project.  The command <code>org-pm-make-project</code> offers a menu to select a template, in order to initialize the template of a new project or to change the template of an existing project.
+</p>
+
+<p>
+A template is simply a folder of files that are copied to the <code>includes</code> folder of a project.
+</p>
+
+<p>
+To add your own templates, create a folder where you will put the templates, and add this folder to the list in variable <code>org-pm-templates-dir</code>.  Include the wild-card for finding the folders (<code>/*</code>) in the path. For example:
+</p>
+
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defvar</span> <span style="color: #ff6347;">org-pm-registered-projects-property</span> <span style="color: #ad7fa8; font-style: italic;">"PM_PROJECTS"</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defvar</span> <span style="color: #ff6347;">org-pm-source-dir</span> <span style="color: #ad7fa8; font-style: italic;">"/SOURCE"</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defvar</span> <span style="color: #ff6347;">org-pm-last-saved-source-path</span> <span style="color: #ad7fa8; font-style: italic;">""</span>
-  <span style="color: #888a85;">"org-pm-last-exported-file-path is computed from this variable."</span><span style="color: #CCFFCC;">)</span>
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-2-3" class="outline-3">
-<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Source and target file paths</h3>
-<div class="outline-text-3" id="text-2-3">
-
-<div class="org-src-container">
-
-<pre class="src src-emacs-lisp"><span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-source-file-path</span> <span style="color: #33FF66;">(</span>project-name subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>concat
-   <span style="color: #009933;">(</span>org-pm-get-source-file-dir project-name subtree-p<span style="color: #009933;">)</span>
-   <span style="color: #ad7fa8; font-style: italic;">"/"</span>
-   <span style="color: #009933;">(</span>org-pm-make-source-file-name project-name subtree-p<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-query-source-file-path</span> <span style="color: #33FF66;">(</span>project-name subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">;; </span><span style="color: #888a85;">TODO: when queried path is different from default, then save it in property</span>
-  <span style="color: #33FF66;">(</span>concat
-   <span style="color: #009933;">(</span>org-pm-get-source-file-dir project-name subtree-p<span style="color: #009933;">)</span>
-   <span style="color: #ad7fa8; font-style: italic;">"/"</span>
-   <span style="color: #009933;">(</span>replace-regexp-in-string
-    <span style="color: #ad7fa8; font-style: italic;">"[</span><span style="color: #ad7fa8; font-style: italic;">^</span><span style="color: #ad7fa8; font-style: italic;">[:alnum:]]+"</span> <span style="color: #ad7fa8; font-style: italic;">"-"</span>
-    <span style="color: #3366FF;">(</span>read-from-minibuffer
-     <span style="color: #77BBFF;">(</span>format <span style="color: #ad7fa8; font-style: italic;">"Save %s as: "</span> <span style="color: #FFAACC;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p <span style="color: #ad7fa8; font-style: italic;">"section"</span> <span style="color: #ad7fa8; font-style: italic;">"file"</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-     <span style="color: #77BBFF;">(</span>file-name-sans-extension
-      <span style="color: #FFAACC;">(</span>org-pm-make-source-file-name project-name subtree-p<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-   <span style="color: #ad7fa8; font-style: italic;">".org"</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-source-file-dir</span> <span style="color: #33FF66;">(</span>project-name subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>maindir <span style="color: #77BBFF;">(</span>org-pm-get-source-dir project-name<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>subdir <span style="color: #77BBFF;">(</span>org-pm-get-subdir project-name subtree-p<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>full-dir <span style="color: #77BBFF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subdir <span style="color: #FFAACC;">(</span>concat maindir <span style="color: #ad7fa8; font-style: italic;">"/"</span> subdir<span style="color: #FFAACC;">)</span> maindir<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">unless</span> <span style="color: #3366FF;">(</span>file-exists-p full-dir<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>mkdir full-dir t<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    full-dir<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-subdir</span> <span style="color: #33FF66;">(</span>project-name subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>org-pm-get-project-attribute
-   project-name org-pm-subdir-property-name subtree-p<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-make-source-file-name</span> <span style="color: #33FF66;">(</span>project-name subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>or <span style="color: #009933;">(</span>org-pm-get-project-attribute project-name <span style="color: #ad7fa8; font-style: italic;">"filename"</span> subtree-p<span style="color: #009933;">)</span>
-      <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p
-           <span style="color: #3366FF;">(</span>concat
-            <span style="color: #77BBFF;">(</span>replace-regexp-in-string
-             <span style="color: #ad7fa8; font-style: italic;">"[</span><span style="color: #ad7fa8; font-style: italic;">^</span><span style="color: #ad7fa8; font-style: italic;">[:alnum:]]+"</span> <span style="color: #ad7fa8; font-style: italic;">"-"</span> <span style="color: #FFAACC;">(</span>org-pm-get-subtree-headline<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-            <span style="color: #ad7fa8; font-style: italic;">".org"</span><span style="color: #3366FF;">)</span>
-        <span style="color: #3366FF;">(</span>file-name-nondirectory <span style="color: #77BBFF;">(</span>buffer-file-name<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-target-file-path</span> <span style="color: #33FF66;">(</span>project-name subtree-p <span style="color: #8ae234; font-weight: bold;">&amp;optional</span> file-type<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Get full path where file/subtree will be exported.</span>
-<span style="color: #888a85;">Used to open that file for viewing (on browser etc)."</span>
-  <span style="color: #33FF66;">(</span>concat
-   <span style="color: #009933;">(</span>org-pm-get-target-file-dir project-name subtree-p<span style="color: #009933;">)</span>
-   <span style="color: #009933;">(</span>concat
-    <span style="color: #3366FF;">(</span>file-name-sans-extension
-     <span style="color: #77BBFF;">(</span>org-pm-make-source-file-name project-name subtree-p<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-    <span style="color: #3366FF;">(</span>and file-type <span style="color: #ad7fa8; font-style: italic;">".html"</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-target-file-dir</span> <span style="color: #33FF66;">(</span>project-name subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>maindir <span style="color: #77BBFF;">(</span>org-pm-get-target-dir project-name<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>subdir <span style="color: #77BBFF;">(</span>org-pm-get-subdir project-name subtree-p<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>full-dir <span style="color: #77BBFF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subdir <span style="color: #FFAACC;">(</span>concat maindir <span style="color: #ad7fa8; font-style: italic;">"/"</span> subdir<span style="color: #FFAACC;">)</span> maindir<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">unless</span> <span style="color: #3366FF;">(</span>file-exists-p full-dir<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>mkdir full-dir t<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    full-dir<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
+<pre class="src src-elisp"><span style="color: #CCFFCC;">(</span>add-to-list 'org-pm-template-dirs <span style="color: #ad7fa8; font-style: italic;">"~/my-org-pm-templates/*"</span><span style="color: #CCFFCC;">)</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><a id="ID-8F755E3E-0D29-4B6B-A3E0-373A078E8A3E" name="ID-8F755E3E-0D29-4B6B-A3E0-373A078E8A3E"></a><span class="section-number-2">3</span> Master commands</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Deploying (publishing to server) with scripts</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+If called with a prefix argument (C-u) the commands <code>org-pm-publish-file</code>, <code>org-pm-publish-subtree</code>, <code>org-pm-republish-entire-project</code> will look for a shell script to run after the publish process is complete. If you want to run a script to upload the project's site with <code>git</code> or <code>rsync</code> etc, then place that script in directory <code>DEPLOY</code> inside the directory of the project.  The script's file name must end in <code>.sh</code>.  Only the first script file contained in the <code>DEPLOY</code> directory will be run.  Other files are ignored.
+</p>
+
+<p>
+The path of the project folder is passed to the script as first argument.
+</p>
+
+<p>
+Here is an example script for deploying to github:
+</p>
+
+<p>
+(<a href="file:///Users/iani/org-pm-projects/project1/DEPLOY/github.sh">file:///Users/iani/org-pm-projects/project1/DEPLOY/github.sh</a>)
+</p>
 
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #CCFFCC;">(</span>global-set-key <span style="color: #33FF66;">(</span>kbd <span style="color: #ad7fa8; font-style: italic;">"H-e m"</span><span style="color: #33FF66;">)</span> 'org-pm-menu<span style="color: #CCFFCC;">)</span>
-<span style="color: #CCFFCC;">(</span>global-set-key <span style="color: #33FF66;">(</span>kbd <span style="color: #ad7fa8; font-style: italic;">"&lt;f14&gt; m"</span><span style="color: #33FF66;">)</span> 'org-pm-menu<span style="color: #CCFFCC;">)</span>
-<span style="color: #CCFFCC;">(</span>global-set-key <span style="color: #33FF66;">(</span>kbd <span style="color: #ad7fa8; font-style: italic;">"&lt;f14&gt; &lt;f14&gt;"</span><span style="color: #33FF66;">)</span> 'org-pm-menu<span style="color: #CCFFCC;">)</span>
-<span style="color: #CCFFCC;">(</span>global-set-key <span style="color: #33FF66;">(</span>kbd <span style="color: #ad7fa8; font-style: italic;">"H-e f"</span><span style="color: #33FF66;">)</span> 'org-pm-publish-file<span style="color: #CCFFCC;">)</span>
-<span style="color: #CCFFCC;">(</span>global-set-key <span style="color: #33FF66;">(</span>kbd <span style="color: #ad7fa8; font-style: italic;">"&lt;f14&gt; f"</span><span style="color: #33FF66;">)</span> 'org-pm-publish-file<span style="color: #CCFFCC;">)</span>
-<span style="color: #CCFFCC;">(</span>global-set-key <span style="color: #33FF66;">(</span>kbd <span style="color: #ad7fa8; font-style: italic;">"H-e s"</span><span style="color: #33FF66;">)</span> 'org-pm-publish-subtree<span style="color: #CCFFCC;">)</span>
-<span style="color: #CCFFCC;">(</span>global-set-key <span style="color: #33FF66;">(</span>kbd <span style="color: #ad7fa8; font-style: italic;">"&lt;f14&gt; s"</span><span style="color: #33FF66;">)</span> 'org-pm-publish-subtree<span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-menu</span> <span style="color: #33FF66;">(</span>deploy-p<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Top level menu of common org-pm commands."</span>
-  <span style="color: #33FF66;">(</span>interactive <span style="color: #ad7fa8; font-style: italic;">"P"</span><span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>call-interactively
-   <span style="color: #009933;">(</span>intern
-    <span style="color: #3366FF;">(</span>concat
-     <span style="color: #ad7fa8; font-style: italic;">"org-pm-"</span>
-     <span style="color: #77BBFF;">(</span>replace-regexp-in-string
-      <span style="color: #ad7fa8; font-style: italic;">" "</span> <span style="color: #ad7fa8; font-style: italic;">"-"</span>
-      <span style="color: #FFAACC;">(</span>grizzl-completing-read
-       <span style="color: #ad7fa8; font-style: italic;">" === SELECT ACTION: === "</span>
-       <span style="color: #ffd700;">(</span>grizzl-make-index
-        <span style="color: #ffa500;">(</span>reverse '<span style="color: #C00;">(</span><span style="color: #ad7fa8; font-style: italic;">"publish file"</span>
-                   <span style="color: #ad7fa8; font-style: italic;">"publish subtree"</span>
-                   <span style="color: #ad7fa8; font-style: italic;">"dired root directory"</span>
-                   <span style="color: #ad7fa8; font-style: italic;">"dired source directory"</span>
-                   <span style="color: #ad7fa8; font-style: italic;">"dired target directory"</span>
-                   <span style="color: #ad7fa8; font-style: italic;">"republish entire project"</span>
-                   <span style="color: #ad7fa8; font-style: italic;">"open last published file"</span>
-                   <span style="color: #ad7fa8; font-style: italic;">"make project"</span><span style="color: #C00;">)</span><span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-publish-file</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> deploy-p project<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>interactive <span style="color: #ad7fa8; font-style: italic;">"P"</span><span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>org-pm-publish-file-or-subtree deploy-p <span style="color: #009933;">(</span>or project <span style="color: #3366FF;">(</span>org-pm-choose-project<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC; background-color: #333333;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-publish-subtree</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> deploy-p project<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>interactive <span style="color: #ad7fa8; font-style: italic;">"P"</span><span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>org-pm-publish-file-or-subtree deploy-p <span style="color: #009933;">(</span>or project <span style="color: #3366FF;">(</span>org-pm-choose-project t<span style="color: #3366FF;">)</span><span style="color: #009933; background-color: #333333;">)</span><span style="color: #ee82ee; background-color: #333333;"> t</span><span style="color: #33FF66; background-color: #333333;">)</span><span style="color: #CCFFCC; background-color: #333333;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-publish-file-or-subtree</span> <span style="color: #33FF66;">(</span>deploy-p project <span style="color: #8ae234; font-weight: bold;">&amp;optional</span> subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Publish current file or subtree to a project chosen from template folder."</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">when</span> project
-    <span style="color: #009933;">(</span>org-add-option-or-property
-     org-pm-registered-projects-property project subtree-p<span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>org-pm-save-org-source project subtree-p<span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>org-pm-publish project deploy-p nil<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-save-org-source</span> <span style="color: #33FF66;">(</span>project-name subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>save-buffer<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>contents-buffer <span style="color: #77BBFF;">(</span>current-buffer<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>contents-path <span style="color: #77BBFF;">(</span>or <span style="color: #FFAACC;">(</span>buffer-file-name<span style="color: #FFAACC;">)</span> <span style="color: #FFAACC;">(</span>buffer-name<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>source-file-path <span style="color: #77BBFF;">(</span>org-pm-query-source-file-path project-name subtree-p<span style="color: #77BBFF; background-color: #333333;">)</span><span style="color: #3366FF; background-color: #333333;">)</span>
-         <span style="color: #3366FF;">(</span>source-file-dir <span style="color: #77BBFF;">(</span>file-name-directory source-file-path<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p <span style="color: #3366FF;">(</span>org-copy-subtree<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">unless</span> <span style="color: #3366FF;">(</span>file-exists-p source-file-dir<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>mkdir source-file-dir t<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>find-file source-file-path<span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>erase-buffer<span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>insert <span style="color: #ad7fa8; font-style: italic;">"#+EXPORT_DATE: "</span>
-            <span style="color: #3366FF;">(</span>format-time-string <span style="color: #ad7fa8; font-style: italic;">"%A %d %B %Y %T %Z\n"</span><span style="color: #3366FF;">)</span>
-            <span style="color: #ad7fa8; font-style: italic;">"#+SOURCE: "</span>
-            contents-path
-            <span style="color: #ad7fa8; font-style: italic;">"\n"</span><span style="color: #009933;">)</span>
-    <span style="color: #888a85;">;; </span><span style="color: #888a85;">If excerpting from subtree, then</span>
-    <span style="color: #888a85;">;; </span><span style="color: #888a85;">subfolder must be stored in file now, to be used later</span>
-    <span style="color: #888a85;">;; </span><span style="color: #888a85;">by org-export-before-parsing hook function org-pm-insert-headers</span>
-    <span style="color: #888a85;">;; </span><span style="color: #888a85;">(if wnole-file, then any subdir spec will already be in place).</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p
-        <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #77BBFF;">(</span><span style="color: #FFAACC;">(</span>pname
-                <span style="color: #ffd700;">(</span>org-pm-compose-project-attribute-name
-                 project-name org-pm-subdir-property-name<span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span>
-               <span style="color: #FFAACC;">(</span>subdir <span style="color: #ffd700;">(</span>org-entry-get <span style="color: #ffa500;">(</span>point<span style="color: #ffa500;">)</span> pname<span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-          <span style="color: #77BBFF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subdir <span style="color: #FFAACC;">(</span>insert <span style="color: #ad7fa8; font-style: italic;">"#+"</span> pname <span style="color: #ad7fa8; font-style: italic;">" "</span> subdir <span style="color: #ad7fa8; font-style: italic;">"\n"</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-          <span style="color: #77BBFF;">(</span>org-paste-subtree 1<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span>insert-buffer-substring contents-buffer<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>save-buffer<span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>kill-buffer<span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>setq org-pm-last-saved-source-path source-file-path<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-choose-project</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Choose a project from menu.</span>
-<span style="color: #888a85;">- Present vertical menu with grizzl.</span>
-<span style="color: #888a85;">- If no project exists, then create one.</span>
-<span style="color: #888a85;">- If name of project entered is not in list of exising projects, then create</span>
-<span style="color: #888a85;">  that project.</span>
-<span style="color: #888a85;">- Offer last chosen project for file or section in current org-mode buffer</span>
-<span style="color: #888a85;">  as default.</span>
-<span style="color: #888a85;">- Append list already exported projects for file or section, distinguishing it</span>
-<span style="color: #888a85;">through a separator line."</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>existing-projects
-          <span style="color: #77BBFF;">(</span>reverse <span style="color: #FFAACC;">(</span>append '<span style="color: #ffd700;">(</span><span style="color: #ad7fa8; font-style: italic;">"====== Existing projects: ======"</span><span style="color: #ffd700;">)</span> <span style="color: #ffd700;">(</span>org-pm-list-pr<span style="color: #ee82ee; background-color: #333333;">ojects</span><span style="color: #ffd700; background-color: #333333;">)</span><span style="color: #FFAACC; background-color: #333333;">)</span><span style="color: #77BBFF; background-color: #333333;">)</span><span style="color: #3366FF; background-color: #333333;">)</span>
-         <span style="color: #3366FF;">(</span>default-projects
-          <span style="color: #77BBFF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> <span style="color: #FFAACC;">(</span>eq <span style="color: #ffd700;">(</span>buffer-local-value 'major-mode <span style="color: #ffa500;">(</span>current-buffer<span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span> 'org-mode<span style="color: #FFAACC;">)</span>
-              <span style="color: #FFAACC;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p
-                  <span style="color: #ffd700;">(</span>org-pm-get-subtree-projects<span style="color: #ffd700;">)</span>
-                <span style="color: #ffd700;">(</span>org-pm-get-file-projects<span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span>
-            nil<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>default-project-menu
-           <span style="color: #77BBFF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> default-projects
-               <span style="color: #FFAACC;">(</span>reverse
-                <span style="color: #ffd700;">(</span>cons
-                 <span style="color: #ffa500;">(</span>format
-                  <span style="color: #ad7fa8; font-style: italic;">"====== Projects which current %s already exports to are: ====</span><span style="color: #ee82ee; background-color: #333333; font-style: italic;">=="</span>
-                  <span style="color: #C00;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p <span style="color: #ad7fa8; font-style: italic;">"section"</span> <span style="color: #ad7fa8; font-style: italic;">"file"</span><span style="color: #C00;">)</span><span style="color: #ffa500;">)</span>
-                 default-projects<span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span>
-             <span style="color: #FFAACC;">(</span>reverse <span style="color: #ffd700;">(</span>cons <span style="color: #ad7fa8; font-style: italic;">"====== Default project: ======="</span>
-                            <span style="color: #ffa500;">(</span>list <span style="color: #C00;">(</span>or org-pm-last-chosen-project <span style="color: #ad7fa8; font-style: italic;">"project1"</span><span style="color: #C00;">)</span><span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF; background-color: #333333;">)</span>
-         <span style="color: #3366FF;">(</span>chosen-project
-          <span style="color: #77BBFF;">(</span>replace-regexp-in-string
-           <span style="color: #ad7fa8; font-style: italic;">"[</span><span style="color: #ad7fa8; font-style: italic;">^</span><span style="color: #ad7fa8; font-style: italic;">[:alnum:]]+"</span>
-           <span style="color: #ad7fa8; font-style: italic;">"-"</span>
-           <span style="color: #FFAACC;">(</span>grizzl-completing-read
-            <span style="color: #ad7fa8; font-style: italic;">"=== CHOOSE EXISTING PROJECT, OR ENTER NAME TO CREATE ONE ==="</span>
-            <span style="color: #ffd700;">(</span>grizzl-make-index
-             <span style="color: #ffa500;">(</span>reverse
-              <span style="color: #C00;">(</span>delete-dups
-               <span style="color: #CCFFCC;">(</span>append default-project-menu existing-projects<span style="color: #CCFFCC;">)</span><span style="color: #C00;">)</span><span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>project-path <span style="color: #77BBFF;">(</span>org-pm-get-project-dir chosen-project<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">unless</span> <span style="color: #3366FF;">(</span>file-exists-p project-path<span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> <span style="color: #77BBFF;">(</span>y-or-n-p <span style="color: #FFAACC;">(</span>format <span style="color: #ad7fa8; font-style: italic;">"Really create project named '%s'?"</span> chosen-project<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-          <span style="color: #77BBFF;">(</span>mkdir project-path t<span style="color: #77BBFF;">)</span>
-        <span style="color: #77BBFF;">(</span><span style="color: #f57900; font-weight: bold;">error</span>
-         <span style="color: #FFAACC;">(</span>format <span style="color: #ad7fa8; font-style: italic;">"Did not create project %s. Publishing cancelled."</span>
-                 chosen-project<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    chosen-project<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-make-project</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> project-name<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>interactive<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">unless</span> project-name
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #3366FF;">(</span><span style="color: #77BBFF;">(</span>project-index <span style="color: #FFAACC;">(</span>grizzl-make-index <span style="color: #ffd700;">(</span>org-pm-list-projects<span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span>setq project-name
-            <span style="color: #77BBFF;">(</span>grizzl-completing-read
-             <span style="color: #ad7fa8; font-style: italic;">"Enter project name or select a project to update its template"</span>
-             project-index<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>setq project-name
-        <span style="color: #009933;">(</span>replace-regexp-in-string <span style="color: #ad7fa8; font-style: italic;">"[</span><span style="color: #ad7fa8; font-style: italic;">^</span><span style="color: #ad7fa8; font-style: italic;">[:alnum:]]+"</span> <span style="color: #ad7fa8; font-style: italic;">"-"</span> project-name<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span>template-index
-        template-dir
-        <span style="color: #3366FF;">(</span>project-dir <span style="color: #77BBFF;">(</span>org-pm-get-project-dir project-name<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> <span style="color: #3366FF;">(</span>file-exists-p project-dir<span style="color: #3366FF;">)</span>
-        <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">unless</span>
-            <span style="color: #77BBFF;">(</span>yes-or-no-p
-             <span style="color: #FFAACC;">(</span>format <span style="color: #ad7fa8; font-style: italic;">"Project '%s' exists. Overwrite its template?"</span> project-name<span style="color: #FFAACC; background-color: #333333;">)</span><span style="color: #77BBFF; background-color: #333333;">)</span>
-          <span style="color: #77BBFF;">(</span><span style="color: #f57900; font-weight: bold;">error</span> <span style="color: #FFAACC;">(</span>format <span style="color: #ad7fa8; font-style: italic;">"Cancelled creation of project '%s'"</span> project-name<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span>mkdir project-dir t<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>setq template-index
-          <span style="color: #3366FF;">(</span>grizzl-make-index
-           <span style="color: #77BBFF;">(</span>apply 'append
-                  <span style="color: #FFAACC;">(</span>mapcar 'file-expand-wildcards org-pm-template-dirs<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>setq template-dir
-          <span style="color: #3366FF;">(</span>grizzl-completing-read <span style="color: #ad7fa8; font-style: italic;">"Select a template: "</span> template-index<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-     <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> <span style="color: #3366FF;">(</span>file-exists-p template-dir<span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">progn</span>
-          <span style="color: #77BBFF;">(</span>copy-directory
-           template-dir
-           <span style="color: #FFAACC;">(</span>concat project-dir <span style="color: #ad7fa8; font-style: italic;">"/includes"</span><span style="color: #FFAACC;">)</span>
-           nil t t<span style="color: #77BBFF;">)</span>
-          <span style="color: #77BBFF;">(</span>message <span style="color: #FFAACC;">(</span>format <span style="color: #ad7fa8; font-style: italic;">"Updated template for project %s"</span> project-name<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-       <span style="color: #3366FF;">(</span><span style="color: #f57900; font-weight: bold;">error</span> <span style="color: #77BBFF;">(</span>format <span style="color: #ad7fa8; font-style: italic;">"Template not found: %s"</span> template-dir<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #888a85;">;;; </span><span style="color: #888a85;">INCOMPLETE!:</span>
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-default-project-list</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Present list of default projects for user to choose from.</span>
-<span style="color: #888a85;">If current buffer is in org-mode, then list projects that this file or subtree</span>
-<span style="color: #888a85;">has already been exported in.</span>
-<span style="color: #888a85;">Else list the last project that has been exported to."</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>exported-projects
-         <span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> exported-projects
-        exported-projects
-      <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> org-pm-last-chosen-project
-          <span style="color: #77BBFF;">(</span>list org-pm-last-chosen-project<span style="color: #77BBFF;">)</span>
-        nil<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
+<pre class="src src-sh"><span style="color: #888a85;">#</span><span style="color: #888a85;">!/bin/</span><span style="color: #729fcf; font-weight: bold;">bash</span>
+<span style="color: #729fcf;">cd</span> $<span style="color: #ff6347;">1</span>
+git checkout master
+git add .
+git commit -am <span style="color: #ad7fa8; font-style: italic;">"Published on: `date`"</span>
+git push origin master
+git checkout gh-pages
+git merge master
+git push origin gh-pages
+git checkout master
 </pre>
 </div>
-</div>
-</div>
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> User interface (commands, menu, keybindings)</h2>
-<div class="outline-text-2" id="text-4">
-<div class="org-src-container">
-
-<pre class="src src-emacs-lisp"><span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-select-project-then-action</span> <span style="color: #33FF66;">()</span>
-  <span style="color: #33FF66;">(</span>interactive<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>project <span style="color: #77BBFF;">(</span>org-pm-choose-project<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-        <span style="color: #3366FF;">(</span>action <span style="color: #77BBFF;">(</span>org-pm-select-action<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>funcall action project<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-select-action-then-project</span> <span style="color: #33FF66;">()</span>
-  <span style="color: #888a85;">"Project selection is provided by the action, if needed."</span>
-  <span style="color: #33FF66;">(</span>interactive<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>funcall <span style="color: #009933;">(</span>org-pm-select-action<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span>global-set-key <span style="color: #33FF66;">(</span>kbd <span style="color: #ad7fa8; font-style: italic;">"H-m"</span><span style="color: #33FF66;">)</span> 'org-pm-select-action-then-project<span style="color: #CCFFCC;">)</span>
-<span style="color: #CCFFCC;">(</span>global-set-key <span style="color: #33FF66;">(</span>kbd <span style="color: #ad7fa8; font-style: italic;">"H-M"</span><span style="color: #33FF66;">)</span> 'org-pm-select-project-then-action<span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-select-action</span> <span style="color: #33FF66;">()</span>
-  <span style="color: #33FF66;">(</span>intern
-   <span style="color: #009933;">(</span>concat
-    <span style="color: #ad7fa8; font-style: italic;">"org-pm-"</span>
-    <span style="color: #3366FF;">(</span>replace-regexp-in-string
-     <span style="color: #ad7fa8; font-style: italic;">" "</span> <span style="color: #ad7fa8; font-style: italic;">"-"</span>
-     <span style="color: #77BBFF;">(</span>grizzl-completing-read
-      <span style="color: #ad7fa8; font-style: italic;">" === SELECT ACTION: === "</span>
-      <span style="color: #FFAACC;">(</span>grizzl-make-index
-       '<span style="color: #ffd700;">(</span><span style="color: #ad7fa8; font-style: italic;">"make project"</span>
-         <span style="color: #ad7fa8; font-style: italic;">"dired root directory"</span>
-         <span style="color: #ad7fa8; font-style: italic;">"dired source directory"</span>
-         <span style="color: #ad7fa8; font-style: italic;">"dired target directory"</span>
-         <span style="color: #ad7fa8; font-style: italic;">"publish subtree"</span>
-         <span style="color: #ad7fa8; font-style: italic;">"publish file"</span>
-         <span style="color: #ad7fa8; font-style: italic;">"republish entire project"</span>
-         <span style="color: #ad7fa8; font-style: italic;">"open last published file"</span><span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-republish-entire-project</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> deploy-p project<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Republish entire source of PROJECT."</span>
-  <span style="color: #33FF66;">(</span>interactive <span style="color: #ad7fa8; font-style: italic;">"P"</span><span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>org-pm-publish <span style="color: #009933;">(</span>or project <span style="color: #3366FF;">(</span>org-pm-choose-project<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span> deploy-p t<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-dired-root-directory</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> dummy<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>interactive<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>dired org-pm-root-dir<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-dired-source-directory</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> project<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>interactive<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>dired <span style="color: #009933;">(</span>org-pm-get-source-dir <span style="color: #3366FF;">(</span>or project <span style="color: #77BBFF;">(</span>org-pm-choose-project<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-dired-target-directory</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> project<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>interactive<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>dired <span style="color: #009933;">(</span>org-pm-get-target-dir <span style="color: #3366FF;">(</span>or project <span style="color: #77BBFF;">(</span>org-pm-choose-project<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-open-last-published-file</span> <span style="color: #33FF66;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;optional</span> dummy<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>interactive<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>path <span style="color: #77BBFF;">(</span>org-pm-last-exported-file-path<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> <span style="color: #3366FF;">(</span>and path <span style="color: #77BBFF;">(</span>file-exists-p path<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-        <span style="color: #3366FF;">(</span>shell-command <span style="color: #77BBFF;">(</span>concat <span style="color: #ad7fa8; font-style: italic;">"open "</span> path<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span>message <span style="color: #ad7fa8; font-style: italic;">"No file found to open: %s"</span> path<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><a id="ID-777717F0-B63A-429B-B731-BFB77A885539" name="ID-777717F0-B63A-429B-B731-BFB77A885539"></a><span class="section-number-2">5</span> Main functions</h2>
-<div class="outline-text-2" id="text-5">
-<div class="org-src-container">
-
-<pre class="src src-emacs-lisp"><span style="color: #888a85;">;;; </span><span style="color: #888a85;">Main function</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-publish</span> <span style="color: #33FF66;">(</span>project deploy-p force<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Publish PROJECT, forcing re-publish of all files if FORCE."</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>org-publish-project-alist <span style="color: #77BBFF;">(</span>org-pm-create-project-plist project deploy-p<span style="color: #77BBFF; background-color: #333333;">)</span><span style="color: #3366FF; background-color: #333333;">)</span>
-        <span style="color: #3366FF;">(</span>org-export-before-parsing-hook '<span style="color: #77BBFF;">(</span>org-pm-insert-headers<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-        <span style="color: #3366FF;">(</span>project-name project<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>org-publish project force<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-list-projects</span> <span style="color: #33FF66;">()</span>
-  <span style="color: #33FF66;">(</span>mapcar
-   <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #3366FF;">(</span>p<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>file-name-nondirectory <span style="color: #77BBFF;">(</span>file-name-sans-extension p<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-   <span style="color: #009933;">(</span>file-expand-wildcards <span style="color: #3366FF;">(</span>concat org-pm-root-dir <span style="color: #ad7fa8; font-style: italic;">"/*"</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-create-project-plist</span> <span style="color: #33FF66;">(</span>project-name deploy-p<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Create org-publish-project-alist with project from template folder.</span>
-<span style="color: #888a85;">PROJECT-NAME is the name of the project, and is the same as the folder</span>
-<span style="color: #888a85;">that contains the project."</span>
-  <span style="color: #33FF66;">(</span>list
-   <span style="color: #009933;">(</span>org-pm-make-project-base-plist project-name deploy-p<span style="color: #009933;">)</span>
-   <span style="color: #888a85;">;; </span><span style="color: #888a85;">(append</span>
-   <span style="color: #888a85;">;;  </span><span style="color: #888a85;">(org-pm-make-project-base-plist project-name)</span>
-   <span style="color: #888a85;">;;  </span><span style="color: #888a85;">(org-pm-get-project-options project-name))</span>
-   <span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-make-project-base-plist</span> <span style="color: #33FF66;">(</span>project-name deploy-p<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>the-list
-         <span style="color: #77BBFF;">(</span>list
-          project-name
-          <span style="color: #729fcf;">:base-directory</span> <span style="color: #FFAACC;">(</span>org-pm-get-source-dir project-name<span style="color: #FFAACC;">)</span>
-          <span style="color: #729fcf;">:publishing-directory</span> <span style="color: #FFAACC;">(</span>org-pm-get-target-dir project-name<span style="color: #FFAACC;">)</span>
-          <span style="color: #729fcf;">:base-extension</span> <span style="color: #ad7fa8; font-style: italic;">"org"</span>
-          <span style="color: #729fcf;">:recursive</span> t
-          <span style="color: #729fcf;">:publishing-function</span> 'org-html-publish-to-html
-          <span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> deploy-p
-        <span style="color: #3366FF;">(</span>setq
-         the-list
-         <span style="color: #77BBFF;">(</span>append
-          the-list
-          '<span style="color: #FFAACC;">(</span><span style="color: #729fcf;">:completion-function</span>
-            <span style="color: #ffd700;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #ffa500;">()</span>
-              <span style="color: #ffa500;">(</span>org-pm-deploy
-               <span style="color: #C00;">(</span>plist-get
-                <span style="color: #CCFFCC;">(</span>cdr <span style="color: #33FF66;">(</span>assoc project-name org-publish-project-alist<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-                <span style="color: #729fcf;">:publishing-directory</span><span style="color: #C00;">)</span><span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    the-list<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-deploy</span> <span style="color: #33FF66;">(</span>publishing-directory<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">;; </span><span style="color: #888a85;">(message "must do my stuff here !!!!!!! %s" publishing-directory)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>script
-         <span style="color: #77BBFF;">(</span>car <span style="color: #FFAACC;">(</span>file-expand-wildcards
-               <span style="color: #ffd700;">(</span>concat publishing-directory <span style="color: #ad7fa8; font-style: italic;">"/DEPLOY/*.sh"</span><span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">when</span> script
-      <span style="color: #3366FF;">(</span>message <span style="color: #ad7fa8; font-style: italic;">"Deploying project to site with script:\n%s\n"</span> script<span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span>start-process <span style="color: #ad7fa8; font-style: italic;">"deploy"</span> <span style="color: #ad7fa8; font-style: italic;">"*deploy*"</span> script publishing-directory<span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span>message
-       <span style="color: #ad7fa8; font-style: italic;">"Deploying project to site with script:\n%s\n=====COMPLETED!======\n"</span>
-       script<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span>
-  <span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-insert-headers</span> <span style="color: #33FF66;">(</span>backend<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Insert org-publish headers to current buffer before publishing.</span>
-
-<span style="color: #888a85;">This function is called by org-publish through org-export-before-parsing-hook.</span>
-<span style="color: #888a85;">The BACKEND is therefore passed by org-publish function and is not used here.</span>
-
-<span style="color: #888a85;">The value of PROJECT-NAME is inherited from the 'let' binding in org-pm-publish.</span>
-
-<span style="color: #888a85;">The headers are created by scanning the CONFIG and includes folders</span>
-<span style="color: #888a85;">of project folder corresponding to PROJECT_NAME."</span>
-  <span style="color: #33FF66;">(</span>insert <span style="color: #009933;">(</span>org-pm-make-includes-headers project-name<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-make-includes-headers</span> <span style="color: #33FF66;">(</span>project-name<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Make HTML_HEAD_EXTRA lines with links for each css and js file in includes.</span>
-<span style="color: #888a85;">For each js or css files in includes directory, construct a HTML_HEAD_EXTRA</span>
-<span style="color: #888a85;">string and to be add it to the top of the org source file for publishing."</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>subdir
-          <span style="color: #77BBFF;">(</span>concat
-           org-pm-target-subdir
-           <span style="color: #FFAACC;">(</span>or <span style="color: #ffd700;">(</span>org-get-option <span style="color: #ffa500;">(</span>org-pm-make-subdir-option project-name<span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>includes-path <span style="color: #77BBFF;">(</span>org-pm-get-includes-dir project-name<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>includes-string <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #3366FF;">)</span>
-         <span style="color: #3366FF;">(</span>relative-path <span style="color: #ad7fa8; font-style: italic;">"includes/"</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">when</span> <span style="color: #3366FF;">(</span>file-exists-p includes-path<span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span>setq
-       includes-string
-       <span style="color: #77BBFF;">(</span>concat includes-string
-               <span style="color: #FFAACC;">(</span>org-pm-make-options includes-path<span style="color: #FFAACC;">)</span>
-               <span style="color: #FFAACC;">(</span>org-pm-make-html-head includes-path <span style="color: #ad7fa8; font-style: italic;">"HTML_HEAD"</span><span style="color: #FFAACC;">)</span>
-               <span style="color: #FFAACC;">(</span>org-pm-make-html-head includes-path <span style="color: #ad7fa8; font-style: italic;">"HTML_HEAD_EXTRA"</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> <span style="color: #77BBFF;">(</span>&gt; <span style="color: #FFAACC;">(</span>length subdir<span style="color: #FFAACC;">)</span> 0<span style="color: #77BBFF;">)</span>
-          <span style="color: #77BBFF;">(</span>setq relative-path
-                <span style="color: #FFAACC;">(</span>concat
-                 <span style="color: #ffd700;">(</span>mapconcat <span style="color: #ffa500;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #C00;">(</span>x<span style="color: #C00;">)</span> <span style="color: #888a85;">"../"</span><span style="color: #ffa500;">)</span> <span style="color: #ffa500;">(</span>split-string subdir <span style="color: #ad7fa8; font-style: italic;">"/"</span><span style="color: #ffa500;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #ffd700;">)</span>
-                 relative-path<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-       <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">dolist</span> <span style="color: #77BBFF;">(</span>path <span style="color: #FFAACC;">(</span>file-expand-wildcards <span style="color: #ffd700;">(</span>concat includes-path <span style="color: #ad7fa8; font-style: italic;">"/*.css"</span><span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-         <span style="color: #77BBFF;">(</span>setq includes-string
-               <span style="color: #FFAACC;">(</span>concat
-                includes-string
-                <span style="color: #888a85;">;;</span>
-                <span style="color: #ad7fa8; font-style: italic;">"#+HTML_HEAD_EXTRA: &lt;link rel=\"stylesheet\" href=\""</span>
-                relative-path
-                <span style="color: #ffd700;">(</span>file-name-nondirectory path<span style="color: #ffd700;">)</span>
-                <span style="color: #ad7fa8; font-style: italic;">"\"/&gt;\n"</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-      <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">dolist</span> <span style="color: #77BBFF;">(</span>path <span style="color: #FFAACC;">(</span>file-expand-wildcards <span style="color: #ffd700;">(</span>concat includes-path <span style="color: #ad7fa8; font-style: italic;">"/*.js"</span><span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-        <span style="color: #77BBFF;">(</span>setq includes-string
-              <span style="color: #FFAACC;">(</span>concat
-               includes-string
-               <span style="color: #ad7fa8; font-style: italic;">"#+HTML_HEAD_EXTRA: &lt;script src=\""</span>
-               relative-path
-               <span style="color: #ffd700;">(</span>file-name-nondirectory path<span style="color: #ffd700;">)</span>
-               <span style="color: #ad7fa8; font-style: italic;">"\"&gt;&lt;/script&gt;\n"</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    includes-string<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-make-options</span> <span style="color: #33FF66;">(</span>path<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">;; </span><span style="color: #888a85;">TODO: Also convert relative paths here as in org-pm-make-html-head</span>
-  <span style="color: #888a85;">;; </span><span style="color: #888a85;">For options such as #+LINK_HOME, #+LINK_UP</span>
-  <span style="color: #888a85;">"Create string from OPTIONS file"</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>file-name <span style="color: #77BBFF;">(</span>file-truename <span style="color: #FFAACC;">(</span>concat path <span style="color: #ad7fa8; font-style: italic;">"/OPTIONS.org"</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> <span style="color: #3366FF;">(</span>file-exists-p file-name<span style="color: #3366FF;">)</span>
-        <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">with-temp-buffer</span>
-          <span style="color: #77BBFF;">(</span>insert-file-contents file-name<span style="color: #77BBFF;">)</span>
-          <span style="color: #77BBFF;">(</span>buffer-string<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-      <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-make-html-head</span> <span style="color: #33FF66;">(</span>path head-type<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">;; </span><span style="color: #888a85;">TODO: insert replace-regexp-in-string before last return,</span>
-  <span style="color: #888a85;">;; </span><span style="color: #888a85;">to convert relative links to root for source files in subfolders.</span>
-  <span style="color: #888a85;">;; </span><span style="color: #888a85;">Project root can be indicated by {.}</span>
-  <span style="color: #888a85;">;; </span><span style="color: #888a85;">need extra argument relative-path to replace project root placeholder.</span>
-  <span style="color: #888a85;">"Create string with one HTML_HEAD(_EXTRA) per line from file in template folde</span><span style="color: #ee82ee; background-color: #333333;">r."</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>file-name <span style="color: #77BBFF;">(</span>file-truename <span style="color: #FFAACC;">(</span>concat path <span style="color: #ad7fa8; font-style: italic;">"/"</span> head-type <span style="color: #ad7fa8; font-style: italic;">".html"</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> <span style="color: #3366FF;">(</span>file-exists-p file-name<span style="color: #3366FF;">)</span>
-        <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">with-temp-buffer</span>
-          <span style="color: #77BBFF;">(</span>insert-file-contents file-name<span style="color: #77BBFF;">)</span>
-          <span style="color: #77BBFF;">(</span>goto-char <span style="color: #FFAACC;">(</span>point-min<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-          <span style="color: #77BBFF;">(</span><span style="color: #729fcf; font-weight: bold;">while</span> <span style="color: #FFAACC;">(</span>re-search-forward <span style="color: #ad7fa8; font-style: italic;">"^"</span> nil t<span style="color: #FFAACC;">)</span>
-            <span style="color: #FFAACC;">(</span>replace-match <span style="color: #ffd700;">(</span>concat <span style="color: #ad7fa8; font-style: italic;">"#+"</span> head-type <span style="color: #ad7fa8; font-style: italic;">": "</span><span style="color: #ffd700;">)</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-          <span style="color: #77BBFF;">(</span>concat <span style="color: #FFAACC;">(</span>buffer-string<span style="color: #FFAACC;">)</span> <span style="color: #ad7fa8; font-style: italic;">"\n"</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-      <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6"><a id="ID-12A162A2-B1DA-4C27-9613-DDF4B534AFAF" name="ID-12A162A2-B1DA-4C27-9613-DDF4B534AFAF"></a><span class="section-number-2">6</span> Utilities: Access to org elements and in-file projects</h2>
-<div class="outline-text-2" id="text-6">
-<div class="org-src-container">
-
-<pre class="src src-emacs-lisp"><span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-subtree-headline</span> <span style="color: #33FF66;">()</span> <span style="color: #33FF66;">(</span>nth 4 <span style="color: #009933;">(</span>org-heading-components<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-file-and-subtree-projects</span> <span style="color: #33FF66;">()</span>
-  <span style="color: #33FF66;">(</span>delete-dups
-   <span style="color: #009933;">(</span>append <span style="color: #3366FF;">(</span>org-pm-get-file-projects<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>org-pm-get-subtree-projects<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-file-projects</span> <span style="color: #33FF66;">()</span>
-  <span style="color: #33FF66;">(</span>-select <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #3366FF;">(</span>x<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>&gt; <span style="color: #77BBFF;">(</span>length x<span style="color: #77BBFF;">)</span> 0<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-           <span style="color: #009933;">(</span>split-string
-            <span style="color: #3366FF;">(</span>or <span style="color: #77BBFF;">(</span>org-get-option org-pm-registered-projects-property<span style="color: #77BBFF;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #3366FF;">)</span> <span style="color: #ad7fa8; font-style: italic;">" "</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-subtree-projects</span> <span style="color: #33FF66;">()</span>
-  <span style="color: #33FF66;">(</span>-select <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #3366FF;">(</span>x<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>&gt; <span style="color: #77BBFF;">(</span>length x<span style="color: #77BBFF;">)</span> 0<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-           <span style="color: #009933;">(</span>split-string
-            <span style="color: #3366FF;">(</span>or <span style="color: #77BBFF;">(</span>org-entry-get <span style="color: #FFAACC;">(</span>point<span style="color: #FFAACC;">)</span> org-pm-registered-projects-property<span style="color: #77BBFF;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #3366FF;">)</span> <span style="color: #ee82ee; background-color: #333333; font-style: italic;">" "</span><span style="color: #009933; background-color: #333333;">)</span><span style="color: #33FF66; background-color: #333333;">)</span><span style="color: #CCFFCC; background-color: #333333;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-project-attribute</span> <span style="color: #33FF66;">(</span>project-name property <span style="color: #8ae234; font-weight: bold;">&amp;optional</span> subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>property-name <span style="color: #888a85;">;; </span><span style="color: #888a85;">use function for DRY when setting/getting</span>
-         <span style="color: #77BBFF;">(</span>org-pm-compose-project-attribute-name project-name property<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-   <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p
-       <span style="color: #3366FF;">(</span>org-entry-get <span style="color: #77BBFF;">(</span>point<span style="color: #77BBFF;">)</span> property-name<span style="color: #3366FF;">)</span>
-     <span style="color: #3366FF;">(</span>org-get-option property-name<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-compose-project-attribute-name</span> <span style="color: #33FF66;">(</span>project-name property<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Compose property or option name from PROJECT-NAME and PROPERTY.</span>
-<span style="color: #888a85;">The code of this function is shorter than its name, but this function</span>
-<span style="color: #888a85;">ensures that the attrubute name is always constructed in the same way."</span>
-  <span style="color: #33FF66;">(</span>concat <span style="color: #ad7fa8; font-style: italic;">"_"</span> project-name <span style="color: #ad7fa8; font-style: italic;">"-"</span> property<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-make-subdir-option</span> <span style="color: #33FF66;">(</span>project-name<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>org-pm-compose-project-attribute-name
-   project-name org-pm-subdir-property-name<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-get-option</span> <span style="color: #33FF66;">(</span>option<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>org-with-wide-buffer
-   <span style="color: #009933;">(</span>goto-char <span style="color: #3366FF;">(</span>point-min<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-   <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #3366FF;">(</span><span style="color: #77BBFF;">(</span>found
-           <span style="color: #FFAACC;">(</span>re-search-forward <span style="color: #ffd700;">(</span>org-make-options-regexp <span style="color: #ffa500;">(</span>list option<span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span> nil t<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-     <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> found <span style="color: #77BBFF;">(</span>match-string-no-properties 2<span style="color: #77BBFF;">)</span> nil<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-add-option-or-property</span> <span style="color: #33FF66;">(</span>option value <span style="color: #8ae234; font-weight: bold;">&amp;optional</span> subtree-p<span style="color: #33FF66;">)</span>
-  <span style="color: #888a85;">"Add option or property value in buffer.</span>
-<span style="color: #888a85;">This is a special case: Option or property items must be separated by spaces.</span>
-<span style="color: #888a85;">See also org-set-option-or-property."</span>
-  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p
-      <span style="color: #009933;">(</span>org-add-property option value<span style="color: #009933;">)</span>
-    <span style="color: #009933;">(</span>org-add-option option value<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-add-option</span> <span style="color: #33FF66;">(</span>option value<span style="color: #33FF66;">)</span>
-    <span style="color: #33FF66;">(</span>org-with-wide-buffer
-     <span style="color: #009933;">(</span>goto-char <span style="color: #3366FF;">(</span>point-min<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-     <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #3366FF;">(</span><span style="color: #77BBFF;">(</span>found
-             <span style="color: #FFAACC;">(</span>re-search-forward <span style="color: #ffd700;">(</span>org-make-options-regexp <span style="color: #ffa500;">(</span>list option<span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span> nil t<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
-            <span style="color: #77BBFF;">(</span>found-string <span style="color: #FFAACC;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> found <span style="color: #ffd700;">(</span>match-string 2<span style="color: #ffd700;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-       <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> found
-           <span style="color: #77BBFF;">(</span>kill-whole-line<span style="color: #77BBFF;">)</span>
-         <span style="color: #77BBFF;">(</span>goto-char <span style="color: #FFAACC;">(</span>point-min<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
-       <span style="color: #3366FF;">(</span>insert
-        <span style="color: #77BBFF;">(</span>concat
-         <span style="color: #ad7fa8; font-style: italic;">"#+"</span>
-         option
-         <span style="color: #ad7fa8; font-style: italic;">": "</span>
-         <span style="color: #FFAACC;">(</span>add-word-to-string-set value found-string<span style="color: #FFAACC;">)</span>
-         <span style="color: #ad7fa8; font-style: italic;">"\n"</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-add-property</span> <span style="color: #33FF66;">(</span>property value<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>org-entry-put
-   <span style="color: #009933;">(</span>point<span style="color: #009933;">)</span>
-   property
-   <span style="color: #009933;">(</span>add-word-to-string-set value <span style="color: #3366FF;">(</span>or <span style="color: #77BBFF;">(</span>org-entry-get <span style="color: #FFAACC;">(</span>point<span style="color: #FFAACC;">)</span> property<span style="color: #77BBFF;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-
-<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">add-word-to-string-set</span> <span style="color: #33FF66;">(</span>word string<span style="color: #33FF66;">)</span>
-  <span style="color: #33FF66;">(</span>mapconcat
-   <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #3366FF;">(</span>x<span style="color: #3366FF;">)</span> x<span style="color: #009933;">)</span>
-   <span style="color: #009933;">(</span>delete-dups <span style="color: #3366FF;">(</span>cons word <span style="color: #77BBFF;">(</span>split-string <span style="color: #FFAACC;">(</span>or string <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #FFAACC;">)</span> <span style="color: #ad7fa8; font-style: italic;">" "</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
-   <span style="color: #ad7fa8; font-style: italic;">" "</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Creation and Deployment of Site on Server</h2>
-<div class="outline-text-2" id="text-7">
-</div>
-</div>
-
-<div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> Provide package org-pm</h2>
-<div class="outline-text-2" id="text-8">
-<div class="org-src-container">
-
-<pre class="src src-emacs-lisp"><span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">provide</span> '<span style="color: #8ae234;">org-pm</span><span style="color: #CCFFCC;">)</span>
-</pre>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ioannis Zannos</p>
-<p class="date">Created: 2015-05-11 Mon 01:06</p>
+<p class="date">Created: 2015-05-11 Mon 01:07</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
