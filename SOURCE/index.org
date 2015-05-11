@@ -1,16 +1,17 @@
-#+EXPORT_DATE: Monday 11 May 2015 01:07:06 EEST
+#+EXPORT_DATE: Monday 11 May 2015 03:14:26 EEST
 #+SOURCE: /Users/iani/Documents/Dev/Emacs/org-pm/README.org
 #+PM_PROJECTS: project1
 
-* org-pm (v. 0.2.0)
+* org-pm (v. 0.2.2)
 
-Publish org-mode files or sections to projects created GB reading specifications from a folder.
+Publish org-mode files or sections to projects created by reading specifications from a folder.
 ** Features / Principles
 
 - Publish any Org-mode file or any section of it to any number of projects.
 - Zero configuration: Start publishing any file or section to an existing or new project, without any previous configuration.
 - Easy customization: Place html (header), org-mode options, css and JavaScript files in folder =includes=, and they are included in the project's definition automatically.
 - Templates for creating projects with different custom styles.
+- Optionally run script to upload site to server immediately after the publish process is completed.
 
 ** Installation, dependencies
 
@@ -28,6 +29,26 @@ The =el-get= recipe for =org-pm= is:
 
 1. =grizzl=
 2. =dash=
+
+On Emacs 24 one can install these packages by running the command =package-install=  (Meta-x package-install grizzl).
+
+** Commands
+
+- org-pm-menu (Function-e m) :: Open a menu with following items:
+  - publish file
+  - publish subtree
+  - dired root directory
+  - dired source directory
+  - dired target directory
+  - republish entire project
+  - open last published file
+  - make project
+- org-pm-publish-file (Function-e f) :: Publish the current file to a project selected from a menu of existing project, or enter a name to create a new project.
+- org-pm-publish-subtree (Function-e s) :: Publish the current org-section to a project selected from menu (see =org-pm-publish-file=).
+- org-pm-republish-entire-project :: Force re-publishing all source files of the project.
+- org-pm-make-project :: Create a new project or select a new template for an existing project.
+
+When the above publishing commands are preceded by a universal argument (Control-U), =org-pm= will execute the first shell file (=.sh=) found inside sub-directory =DEPLOY= of the project after publishing.  This can be used to upload the site to a server immediately after exporting it.
 
 ** Directory structure
 *** Project directory
