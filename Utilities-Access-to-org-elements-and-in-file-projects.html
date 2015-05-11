@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Experimental Project! 1 2 3</title>
-<!-- 2015-05-09 Sat 11:58 -->
+<!-- 2015-05-11 Mon 13:44 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Ioannis Zannos" />
+<meta  name="author" content="IOANNIS ZANNOS" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center; }
@@ -224,91 +224,91 @@ for the JavaScript code in this tag.
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-pm-get-subtree-headline</span> <span style="color: #5fafd7; font-weight: bold;">()</span> <span style="color: #5fafd7; font-weight: bold;">(</span>nth 4 <span style="color: #a1db00; font-weight: bold;">(</span>org-heading-components<span style="color: #a1db00; font-weight: bold;">)</span><span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-subtree-headline</span> <span style="color: #33FF66;">()</span> <span style="color: #33FF66;">(</span>nth 4 <span style="color: #009933;">(</span>org-heading-components<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-pm-get-file-and-subtree-projects</span> <span style="color: #5fafd7; font-weight: bold;">()</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span>delete-dups
-   <span style="color: #a1db00; font-weight: bold;">(</span>append <span style="color: #ff4ea3; font-weight: bold;">(</span>org-pm-get-file-projects<span style="color: #ff4ea3; font-weight: bold;">)</span> <span style="color: #ff4ea3; font-weight: bold;">(</span>org-pm-get-subtree-projects<span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span><span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-file-and-subtree-projects</span> <span style="color: #33FF66;">()</span>
+  <span style="color: #33FF66;">(</span>delete-dups
+   <span style="color: #009933;">(</span>append <span style="color: #3366FF;">(</span>org-pm-get-file-projects<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>org-pm-get-subtree-projects<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-pm-get-file-projects</span> <span style="color: #5fafd7; font-weight: bold;">()</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span>-select <span style="color: #a1db00; font-weight: bold;">(</span><span style="color: #a1db00;">lambda</span> <span style="color: #ff4ea3; font-weight: bold;">(</span>x<span style="color: #ff4ea3; font-weight: bold;">)</span> <span style="color: #ff4ea3; font-weight: bold;">(</span>&gt; <span style="color: #00d7af; font-weight: bold;">(</span>length x<span style="color: #00d7af; font-weight: bold;">)</span> 0<span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span>
-           <span style="color: #a1db00; font-weight: bold;">(</span>split-string
-            <span style="color: #ff4ea3; font-weight: bold;">(</span>or <span style="color: #00d7af; font-weight: bold;">(</span>org-get-option org-pm-registered-projects-property<span style="color: #00d7af; font-weight: bold;">)</span> <span style="color: #ff4ea3;">""</span><span style="color: #ff4ea3; font-weight: bold;">)</span> <span style="color: #ff4ea3;">" "</span><span style="color: #a1db00; font-weight: bold;">)</span><span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-file-projects</span> <span style="color: #33FF66;">()</span>
+  <span style="color: #33FF66;">(</span>-select <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #3366FF;">(</span>x<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>&gt; <span style="color: #77BBFF;">(</span>length x<span style="color: #77BBFF;">)</span> 0<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
+           <span style="color: #009933;">(</span>split-string
+            <span style="color: #3366FF;">(</span>or <span style="color: #77BBFF;">(</span>org-get-option org-pm-registered-projects-property<span style="color: #77BBFF;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #3366FF;">)</span> <span style="color: #ad7fa8; font-style: italic;">" "</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-pm-get-subtree-projects</span> <span style="color: #5fafd7; font-weight: bold;">()</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span>-select <span style="color: #a1db00; font-weight: bold;">(</span><span style="color: #a1db00;">lambda</span> <span style="color: #ff4ea3; font-weight: bold;">(</span>x<span style="color: #ff4ea3; font-weight: bold;">)</span> <span style="color: #ff4ea3; font-weight: bold;">(</span>&gt; <span style="color: #00d7af; font-weight: bold;">(</span>length x<span style="color: #00d7af; font-weight: bold;">)</span> 0<span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span>
-           <span style="color: #a1db00; font-weight: bold;">(</span>split-string
-            <span style="color: #ff4ea3; font-weight: bold;">(</span>or <span style="color: #00d7af; font-weight: bold;">(</span>org-entry-get <span style="color: #ff8700; font-weight: bold;">(</span>point<span style="color: #ff8700; font-weight: bold;">)</span> org-pm-registered-projects-property<span style="color: #00d7af; font-weight: bold;">)</span> <span style="color: #ff4ea3;">""</span><span style="color: #ff4ea3; font-weight: bold;">)</span> <span style="color: #ee82ee; background-color: #333333;">" "</span><span style="color: #a1db00; background-color: #333333; font-weight: bold;">)</span><span style="color: #5fafd7; background-color: #333333; font-weight: bold;">)</span><span style="color: #dd0000; background-color: #333333; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-subtree-projects</span> <span style="color: #33FF66;">()</span>
+  <span style="color: #33FF66;">(</span>-select <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #3366FF;">(</span>x<span style="color: #3366FF;">)</span> <span style="color: #3366FF;">(</span>&gt; <span style="color: #77BBFF;">(</span>length x<span style="color: #77BBFF;">)</span> 0<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
+           <span style="color: #009933;">(</span>split-string
+            <span style="color: #3366FF;">(</span>or <span style="color: #77BBFF;">(</span>org-entry-get <span style="color: #FFAACC;">(</span>point<span style="color: #FFAACC;">)</span> org-pm-registered-projects-property<span style="color: #77BBFF;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #3366FF;">)</span> <span style="color: #ee82ee; background-color: #333333; font-style: italic;">" "</span><span style="color: #009933; background-color: #333333;">)</span><span style="color: #33FF66; background-color: #333333;">)</span><span style="color: #CCFFCC; background-color: #333333;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-pm-get-project-attribute</span> <span style="color: #5fafd7; font-weight: bold;">(</span>project-name property <span style="color: #00d7af;">&amp;optional</span> subtree-p<span style="color: #5fafd7; font-weight: bold;">)</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span><span style="color: #a1db00;">let</span> <span style="color: #a1db00; font-weight: bold;">(</span><span style="color: #ff4ea3; font-weight: bold;">(</span>property-name <span style="color: #6c6c6c; font-style: italic;">;; </span><span style="color: #6c6c6c; font-style: italic;">use function for DRY when setting/getting</span>
-         <span style="color: #00d7af; font-weight: bold;">(</span>org-pm-compose-project-attribute-name project-name property<span style="color: #00d7af; font-weight: bold;">)</span><span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span>
-   <span style="color: #a1db00; font-weight: bold;">(</span><span style="color: #a1db00;">if</span> subtree-p
-       <span style="color: #ff4ea3; font-weight: bold;">(</span>org-entry-get <span style="color: #00d7af; font-weight: bold;">(</span>point<span style="color: #00d7af; font-weight: bold;">)</span> property-name<span style="color: #ff4ea3; font-weight: bold;">)</span>
-     <span style="color: #ff4ea3; font-weight: bold;">(</span>org-get-option property-name<span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span><span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-get-project-attribute</span> <span style="color: #33FF66;">(</span>project-name property <span style="color: #8ae234; font-weight: bold;">&amp;optional</span> subtree-p<span style="color: #33FF66;">)</span>
+  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #009933;">(</span><span style="color: #3366FF;">(</span>property-name <span style="color: #888a85;">;; </span><span style="color: #888a85;">use function for DRY when setting/getting</span>
+         <span style="color: #77BBFF;">(</span>org-pm-compose-project-attribute-name project-name property<span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
+   <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p
+       <span style="color: #3366FF;">(</span>org-entry-get <span style="color: #77BBFF;">(</span>point<span style="color: #77BBFF;">)</span> property-name<span style="color: #3366FF;">)</span>
+     <span style="color: #3366FF;">(</span>org-get-option property-name<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-pm-compose-project-attribute-name</span> <span style="color: #5fafd7; font-weight: bold;">(</span>project-name property<span style="color: #5fafd7; font-weight: bold;">)</span>
-  <span style="color: #ff4b4b;">"Compose property or option name from PROJECT-NAME and PROPERTY.</span>
-<span style="color: #ff4b4b;">The code of this function is shorter than its name, but this function</span>
-<span style="color: #ff4b4b;">ensures that the attrubute name is always constructed in the same way."</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span>concat <span style="color: #ff4ea3;">"_"</span> project-name <span style="color: #ff4ea3;">"-"</span> property<span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-compose-project-attribute-name</span> <span style="color: #33FF66;">(</span>project-name property<span style="color: #33FF66;">)</span>
+  <span style="color: #888a85;">"Compose property or option name from PROJECT-NAME and PROPERTY.</span>
+<span style="color: #888a85;">The code of this function is shorter than its name, but this function</span>
+<span style="color: #888a85;">ensures that the attrubute name is always constructed in the same way."</span>
+  <span style="color: #33FF66;">(</span>concat <span style="color: #ad7fa8; font-style: italic;">"_"</span> project-name <span style="color: #ad7fa8; font-style: italic;">"-"</span> property<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-pm-make-subdir-option</span> <span style="color: #5fafd7; font-weight: bold;">(</span>project-name<span style="color: #5fafd7; font-weight: bold;">)</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span>org-pm-compose-project-attribute-name
-   project-name org-pm-subdir-property-name<span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-pm-make-subdir-option</span> <span style="color: #33FF66;">(</span>project-name<span style="color: #33FF66;">)</span>
+  <span style="color: #33FF66;">(</span>org-pm-compose-project-attribute-name
+   project-name org-pm-subdir-property-name<span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-get-option</span> <span style="color: #5fafd7; font-weight: bold;">(</span>option<span style="color: #5fafd7; font-weight: bold;">)</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span>org-with-wide-buffer
-   <span style="color: #a1db00; font-weight: bold;">(</span>goto-char <span style="color: #ff4ea3; font-weight: bold;">(</span>point-min<span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span>
-   <span style="color: #a1db00; font-weight: bold;">(</span><span style="color: #a1db00;">let</span> <span style="color: #ff4ea3; font-weight: bold;">(</span><span style="color: #00d7af; font-weight: bold;">(</span>found
-           <span style="color: #ff8700; font-weight: bold;">(</span>re-search-forward <span style="color: #af5fff; font-weight: bold;">(</span>org-make-options-regexp <span style="color: #c6c6c6; font-weight: bold;">(</span>list option<span style="color: #c6c6c6; font-weight: bold;">)</span><span style="color: #af5fff; font-weight: bold;">)</span> nil t<span style="color: #ff8700; font-weight: bold;">)</span><span style="color: #00d7af; font-weight: bold;">)</span><span style="color: #ff4ea3; font-weight: bold;">)</span>
-     <span style="color: #ff4ea3; font-weight: bold;">(</span><span style="color: #a1db00;">if</span> found <span style="color: #00d7af; font-weight: bold;">(</span>match-string-no-properties 2<span style="color: #00d7af; font-weight: bold;">)</span> nil<span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span><span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-get-option</span> <span style="color: #33FF66;">(</span>option<span style="color: #33FF66;">)</span>
+  <span style="color: #33FF66;">(</span>org-with-wide-buffer
+   <span style="color: #009933;">(</span>goto-char <span style="color: #3366FF;">(</span>point-min<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
+   <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">let</span> <span style="color: #3366FF;">(</span><span style="color: #77BBFF;">(</span>found
+           <span style="color: #FFAACC;">(</span>re-search-forward <span style="color: #ffd700;">(</span>org-make-options-regexp <span style="color: #ffa500;">(</span>list option<span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span> nil t<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
+     <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> found <span style="color: #77BBFF;">(</span>match-string-no-properties 2<span style="color: #77BBFF;">)</span> nil<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-add-option-or-property</span> <span style="color: #5fafd7; font-weight: bold;">(</span>option value <span style="color: #00d7af;">&amp;optional</span> subtree-p<span style="color: #5fafd7; font-weight: bold;">)</span>
-  <span style="color: #ff4b4b;">"Add option or property value in buffer.</span>
-<span style="color: #ff4b4b;">This is a special case: Option or property items must be separated by spaces.</span>
-<span style="color: #ff4b4b;">See also org-set-option-or-property."</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span><span style="color: #a1db00;">if</span> subtree-p
-      <span style="color: #a1db00; font-weight: bold;">(</span>org-add-property option value<span style="color: #a1db00; font-weight: bold;">)</span>
-    <span style="color: #a1db00; font-weight: bold;">(</span>org-add-option option value<span style="color: #a1db00; font-weight: bold;">)</span><span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-add-option-or-property</span> <span style="color: #33FF66;">(</span>option value <span style="color: #8ae234; font-weight: bold;">&amp;optional</span> subtree-p<span style="color: #33FF66;">)</span>
+  <span style="color: #888a85;">"Add option or property value in buffer.</span>
+<span style="color: #888a85;">This is a special case: Option or property items must be separated by spaces.</span>
+<span style="color: #888a85;">See also org-set-option-or-property."</span>
+  <span style="color: #33FF66;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> subtree-p
+      <span style="color: #009933;">(</span>org-add-property option value<span style="color: #009933;">)</span>
+    <span style="color: #009933;">(</span>org-add-option option value<span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-add-option</span> <span style="color: #5fafd7; font-weight: bold;">(</span>option value<span style="color: #5fafd7; font-weight: bold;">)</span>
-    <span style="color: #5fafd7; font-weight: bold;">(</span>org-with-wide-buffer
-     <span style="color: #a1db00; font-weight: bold;">(</span>goto-char <span style="color: #ff4ea3; font-weight: bold;">(</span>point-min<span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span>
-     <span style="color: #a1db00; font-weight: bold;">(</span><span style="color: #a1db00;">let*</span> <span style="color: #ff4ea3; font-weight: bold;">(</span><span style="color: #00d7af; font-weight: bold;">(</span>found
-             <span style="color: #ff8700; font-weight: bold;">(</span>re-search-forward <span style="color: #af5fff; font-weight: bold;">(</span>org-make-options-regexp <span style="color: #c6c6c6; font-weight: bold;">(</span>list option<span style="color: #c6c6c6; font-weight: bold;">)</span><span style="color: #af5fff; font-weight: bold;">)</span> nil t<span style="color: #ff8700; font-weight: bold;">)</span><span style="color: #00d7af; font-weight: bold;">)</span>
-            <span style="color: #00d7af; font-weight: bold;">(</span>found-string <span style="color: #ff8700; font-weight: bold;">(</span><span style="color: #a1db00;">if</span> found <span style="color: #af5fff; font-weight: bold;">(</span>match-string 2<span style="color: #af5fff; font-weight: bold;">)</span> <span style="color: #ff4ea3;">""</span><span style="color: #ff8700; font-weight: bold;">)</span><span style="color: #00d7af; font-weight: bold;">)</span><span style="color: #ff4ea3; font-weight: bold;">)</span>
-       <span style="color: #ff4ea3; font-weight: bold;">(</span><span style="color: #a1db00;">if</span> found
-           <span style="color: #00d7af; font-weight: bold;">(</span>kill-whole-line<span style="color: #00d7af; font-weight: bold;">)</span>
-         <span style="color: #00d7af; font-weight: bold;">(</span>goto-char <span style="color: #ff8700; font-weight: bold;">(</span>point-min<span style="color: #ff8700; font-weight: bold;">)</span><span style="color: #00d7af; font-weight: bold;">)</span><span style="color: #ff4ea3; font-weight: bold;">)</span>
-       <span style="color: #ff4ea3; font-weight: bold;">(</span>insert
-        <span style="color: #00d7af; font-weight: bold;">(</span>concat
-         <span style="color: #ff4ea3;">"#+"</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-add-option</span> <span style="color: #33FF66;">(</span>option value<span style="color: #33FF66;">)</span>
+    <span style="color: #33FF66;">(</span>org-with-wide-buffer
+     <span style="color: #009933;">(</span>goto-char <span style="color: #3366FF;">(</span>point-min<span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
+     <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #3366FF;">(</span><span style="color: #77BBFF;">(</span>found
+             <span style="color: #FFAACC;">(</span>re-search-forward <span style="color: #ffd700;">(</span>org-make-options-regexp <span style="color: #ffa500;">(</span>list option<span style="color: #ffa500;">)</span><span style="color: #ffd700;">)</span> nil t<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span>
+            <span style="color: #77BBFF;">(</span>found-string <span style="color: #FFAACC;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> found <span style="color: #ffd700;">(</span>match-string 2<span style="color: #ffd700;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
+       <span style="color: #3366FF;">(</span><span style="color: #729fcf; font-weight: bold;">if</span> found
+           <span style="color: #77BBFF;">(</span>kill-whole-line<span style="color: #77BBFF;">)</span>
+         <span style="color: #77BBFF;">(</span>goto-char <span style="color: #FFAACC;">(</span>point-min<span style="color: #FFAACC;">)</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span>
+       <span style="color: #3366FF;">(</span>insert
+        <span style="color: #77BBFF;">(</span>concat
+         <span style="color: #ad7fa8; font-style: italic;">"#+"</span>
          option
-         <span style="color: #ff4ea3;">": "</span>
-         <span style="color: #ff8700; font-weight: bold;">(</span>add-word-to-string-set value found-string<span style="color: #ff8700; font-weight: bold;">)</span>
-         <span style="color: #ff4ea3;">"\n"</span><span style="color: #00d7af; font-weight: bold;">)</span><span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span><span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+         <span style="color: #ad7fa8; font-style: italic;">": "</span>
+         <span style="color: #FFAACC;">(</span>add-word-to-string-set value found-string<span style="color: #FFAACC;">)</span>
+         <span style="color: #ad7fa8; font-style: italic;">"\n"</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">org-add-property</span> <span style="color: #5fafd7; font-weight: bold;">(</span>property value<span style="color: #5fafd7; font-weight: bold;">)</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span>org-entry-put
-   <span style="color: #a1db00; font-weight: bold;">(</span>point<span style="color: #a1db00; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">org-add-property</span> <span style="color: #33FF66;">(</span>property value<span style="color: #33FF66;">)</span>
+  <span style="color: #33FF66;">(</span>org-entry-put
+   <span style="color: #009933;">(</span>point<span style="color: #009933;">)</span>
    property
-   <span style="color: #a1db00; font-weight: bold;">(</span>add-word-to-string-set value <span style="color: #ff4ea3; font-weight: bold;">(</span>or <span style="color: #00d7af; font-weight: bold;">(</span>org-entry-get <span style="color: #ff8700; font-weight: bold;">(</span>point<span style="color: #ff8700; font-weight: bold;">)</span> property<span style="color: #00d7af; font-weight: bold;">)</span> <span style="color: #ff4ea3;">""</span><span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span><span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+   <span style="color: #009933;">(</span>add-word-to-string-set value <span style="color: #3366FF;">(</span>or <span style="color: #77BBFF;">(</span>org-entry-get <span style="color: #FFAACC;">(</span>point<span style="color: #FFAACC;">)</span> property<span style="color: #77BBFF;">)</span> <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 
-<span style="color: #dd0000; font-weight: bold;">(</span><span style="color: #a1db00;">defun</span> <span style="color: #ffd700;">add-word-to-string-set</span> <span style="color: #5fafd7; font-weight: bold;">(</span>word string<span style="color: #5fafd7; font-weight: bold;">)</span>
-  <span style="color: #5fafd7; font-weight: bold;">(</span>mapconcat
-   <span style="color: #a1db00; font-weight: bold;">(</span><span style="color: #a1db00;">lambda</span> <span style="color: #ff4ea3; font-weight: bold;">(</span>x<span style="color: #ff4ea3; font-weight: bold;">)</span> x<span style="color: #a1db00; font-weight: bold;">)</span>
-   <span style="color: #a1db00; font-weight: bold;">(</span>delete-dups <span style="color: #ff4ea3; font-weight: bold;">(</span>cons word <span style="color: #00d7af; font-weight: bold;">(</span>split-string <span style="color: #ff8700; font-weight: bold;">(</span>or string <span style="color: #ff4ea3;">""</span><span style="color: #ff8700; font-weight: bold;">)</span> <span style="color: #ff4ea3;">" "</span><span style="color: #00d7af; font-weight: bold;">)</span><span style="color: #ff4ea3; font-weight: bold;">)</span><span style="color: #a1db00; font-weight: bold;">)</span>
-   <span style="color: #ff4ea3;">" "</span><span style="color: #5fafd7; font-weight: bold;">)</span><span style="color: #dd0000; font-weight: bold;">)</span>
+<span style="color: #CCFFCC;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">add-word-to-string-set</span> <span style="color: #33FF66;">(</span>word string<span style="color: #33FF66;">)</span>
+  <span style="color: #33FF66;">(</span>mapconcat
+   <span style="color: #009933;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #3366FF;">(</span>x<span style="color: #3366FF;">)</span> x<span style="color: #009933;">)</span>
+   <span style="color: #009933;">(</span>delete-dups <span style="color: #3366FF;">(</span>cons word <span style="color: #77BBFF;">(</span>split-string <span style="color: #FFAACC;">(</span>or string <span style="color: #ad7fa8; font-style: italic;">""</span><span style="color: #FFAACC;">)</span> <span style="color: #ad7fa8; font-style: italic;">" "</span><span style="color: #77BBFF;">)</span><span style="color: #3366FF;">)</span><span style="color: #009933;">)</span>
+   <span style="color: #ad7fa8; font-style: italic;">" "</span><span style="color: #33FF66;">)</span><span style="color: #CCFFCC;">)</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Ioannis Zannos</p>
-<p class="date">Created: 2015-05-09 Sat 11:58</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="author">Author: IOANNIS ZANNOS</p>
+<p class="date">Created: 2015-05-11 Mon 13:44</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

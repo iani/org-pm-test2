@@ -1,0 +1,2112 @@
+#+EXPORT_DATE: Monday 11 May 2015 13:44:51 EEST
+#+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
+#+PM_PROJECTS: org-pm-test2 project1
+#+INFOJS_OPT: view:info toc:4 sdepth:4
+#+OPTIONS: H:6 toc:4 ^:{}
+
+* About
+
+Very short notes
+
+Sudelbuch
+* 2015
+** 2015-03 March
+*** 2015-03-13 Friday
+**** start
+ :PROPERTIES:
+ :DATE: <2015-03-13 Fri 23:57>
+ :END:
+: git push -u origin gh-pages
+*** 2015-03-14 Saturday
+**** Fauré Quintet Nr 1: d
+ :PROPERTIES:
+ :DATE: <2015-03-14 Sat 08:56>
+ :END:
+*** 2015-03-15 Sunday
+**** Animal Refrains / Silence and Repetition
+ :PROPERTIES:
+ :DATE: <2015-03-15 Sun 08:42>
+ :END:
+**** The virtue of pausing
+ :PROPERTIES:
+ :DATE: <2015-03-15 Sun 11:28>
+ :END:
+
+http://vitagate.ch/de/gesund_leben/konzentration/pausen
+#+BEGIN_QUOTE
+Konzentration
+
+Gönnen Sie Ihrem Gehirn eine Pause
+Das Gehirn erholt sich im Schlaf. Klar. Aber nicht nur. Auch im Wachzustand sind regelmässige Pausen wichtig.
+
+Regelmässige Pausen sind keine verlorene Zeit.
+Regelmässige Pausen sind keine verlorene Zeit.
+© Petra Grau / pixelio.de
+Wer geistig über längere Zeit unter Strom steht, sollte immer wieder kleine oder auch längere Erholungsphasen einbauen. Das ist kein unnötiger Zeitverlust, im Gegenteil. Nichtstun ist eine wichtige Voraussetzung für Kreativität und Produktivität. Wer sein Potential nutzen will, muss ausruhen, die Gedanken schweifen lassen. Nur gönnen die Menschen sich viel zu wenige Pausen.
+
+Kreativitätsforscher Ernst Pöppel, Chef des Münchner Instituts für Medizinische Psychologie (IMP), spricht gar von einem «Kreativitätsstau». Pöppel ist überzeugt, dass unsere Gesellschaft «geradezu explodieren könnte, wenn alle täglich eine Stunde aus dem Kommunikationszwang aussteigen würden».
+
+Mach mal Pause!
+Folgende Arten von Pausen haben sich für Studierende bewährt. In angepasster Form haben sie auch im Arbeitsprozess Gültigkeit:
+
+Kurze Gedankenpausen/Verschnaufpausen: Damit können Sie Gelerntes abschliessen und die Verarbeitungsprozesse im Gehirn fangen an.
+Minipausen: 5 Minuten alle 30 Minuten: kurz aufzustehen, einige Bewegungsübungen machen.
+Kurzpausen: Spätestens nach 2 Stunden lernen/arbeiten sollten Sie 15 bis 20 Minuten Pause machen. Tun Sie nichts ausser etwas trinken und vielleicht etwas (leichtes) essen.
+Freizeitpausen: Nach 3 bis 4 Stunden lernen/arbeiten sollten Sie sich 1 bis 2 Stunden lang erholen und diese freie Zeit bewusst geniessen.
+Nützliche Links:
+
+_ Schweizerische Hirnliga
+
+_ Verband für Gedächtnistraining
+
+Download (pdf):
+
+_ Merkblatt Brainfood
+Wundermittel Schlaf
+Das wichtigste für ein leistungsfähiges Gehirn ist die regelmässige Nachtruhe. Das Gehirn nutzt und braucht den Schlaf, um zu verarbeiten, was es tagsüber geleistet hat. Mehr noch. Viele Probleme lösen sich geradezu über Nacht. Viele Menschen kommen beim Aufwachen oft auf Lösungen, die ihm am Vortag noch unlösbar schienen. Schlafforscher erklären das Phänomen so: Der Schlaf dient dazu, überflüssige Nervenverknüpfungen abzubauen und neue zu festigen. Im Schlaf überführt das Gehirn zudem neue Informationen vom Zwischenspeicher ins Langzeitgedächtnis verankert sie da.
+
+Sport treiben und gesund essen
+Das Gehirn kann sich aber auch aktiv erholen. Sport kann Ihnen helfen, Ihre Konzentration zu verbessern. Denn Sport kurbelt nicht nur den Stoffwechsel an, sondern verbessert auch die Sauerstoffzufuhr, was der Konzentrationsfähigkeit dient.
+
+Wichtig für das Gehirn ist auch eine gesunde Ernährung. Am besten sind fünf kleinere Mahlzeiten regelmässig über den Tag verteilt. So bleibt Ihr Blutzuckerspiegel stabil. Denn ein tiefer Blutzuckerspielge führt zu Konzentrationsmangel und Leistungsabfall. Nebst genügend Kohlenhydraten, Eiweiss, Vitaminen und pflanzlichen ungesättigten Fetten braucht das Gehirn aber auch genügend Flüssigkeit wie Wasser, ungesüssten Tee oder verdünnte Fruchtsäfte. Lebensmittel, die besonders gut für Ihr Gehirn sind, finden Sie auf dem Merkblatt «Brainfood».
+
+Nahrungsergänzungsmittel
+Aufbau- und Vitaminpräparate sind eine sinnvolle Ergänzung zur ausgewogenen Ernährung. Vor allem, wenn beispielsweise nach einer Krankheit ein erhöhter Bedarf an Mineralien, Vitaminen und Spurenelementen besteht.
+
+Vitamine: Vitamin C kann stimulieren. Die B-Vitamine unterstützen die Funktion des Nervensystems und setzen Energie aus Kohlenhydraten frei, die es für die korrekte Funktion der Hirnzellen braucht.
+Pflanzliche Stoffe: Ginseng oder Ginkgo biloba können die Konzentration verbessern, indem sie die Durchblutung der Hirnzellen fördern. Bestimmte Lebensmittel respektive Gewürze wie Knoblauch, Zwiebeln, Kohl oder Cayennepfeffer fördern ebenfalls die Durchblutung.
+Kaffee, Guarana und Cola wirken wegen ihres Koffeingehaltes stimulierend.
+Weitere Artikel zum Thema: Nicht alle Gehirnzellen sind ständig online | Das Geheimnis der grauen Zellen
+#+END_QUOTE
+
+**** ah hard links are treacherous - must copy per script.
+ :PROPERTIES:
+ :DATE: <2015-03-15 Sun 11:33>
+ :END:
+
+#+BEGIN_SRC sh
+org-export html --infile sudel.org --outfile index.html
+git checkout master
+cp ~/Dropbox/000WORKFILES/0_PRIVATE/SUDEL.org ./
+git add --all .
+git commit -am "Updated on: `date`"
+git push origin master
+git checkout gh-pages
+git merge master
+git push origin gh-pages
+git checkout master
+#+END_SRC
+**** nouvelles impressions de raymond roussel
+ :PROPERTIES:
+ :DATE: <2015-03-15 Sun 11:48>
+ :END:
+
+http://www.on-verge.org/features/review-of-nouvelles-impressions-de-raymond-roussel/
+
+On-Verge
+Alternative Art Criticism
+
+
+aicausa CUE
+SKIP TO CONTENT
+RECOMMENDATIONS
+REVIEWS
+FEATURES
+CONVERSATIONS
+NEWS
+WRITERS
+SUBMISSIONS
+ABOUT
+SUPPORT
+REVIEW OF NOUVELLES IMPRESSIONS DE RAYMOND ROUSSEL
+Posted on April 4, 2013 by CUE
+Palais de Tokyo
+13, avenue du Président Wilson, 75 116 Paris
+Level 1 – Galerie Seine
+February 27 – May 2, 2013
+
+by Joseph Nechvatal
+
+
+
+
+
+Marcel Duchamp by Man Ray (1920) & Etoile cosmique (1923) by Raymond Roussel
+
+ « My soul is a strange factory » -Raymond Roussel
+
+New Impressions of Raymond Roussel points us towards an intellectual history that maps out art’s role in creating a social allegory for the poetic psychoanalysis[1] of mechanized pleasure – in circular struggle with the mechanized mass killings of World War I and II, the holocaust, and Hiroshima. And the rewards of such exhausting circularity are considerable, given both the historical significance of Raymond Roussel’s influence and its unapologetic relevance to today’s cyber culture – with its intransigent obliqueness and mechanical dizziness.
+
+But if I were going to generate an art exhibition as homage to a particularly flamboyant artist,[2] even if un peu obscur, I would think that it would be advantageous to try to match the aesthetic qualities of that person (absurdly intricate mechanical interlacings) with the show’s general aesthetic. Unfortunately, that was not the least bit achieved with the homage to the wildly creative dandy writer Raymond Roussel (1877-1933)[3] that is at the Palais de Tokyo centre d’art contemporain in Paris.
+
+While access to much of the remarkable work here (including five of Roussel’s otherworldy hand written manuscript pages for his last book Comment j’ai écrit certains de mes livres (How I Wrote Certain of my Books) and a wonderful cookie-encasing sculpture memento called Etoile cosmique (Cosmic Star) – a glass and silver case that Roussel had made for a star-shaped biscuit he brought back from lunch in Juvisy-sur-Orge with the astronomer Camille Flammarion (1842-1925) on July 29, 1923) is to be appreciated and relished, the cavernous half-finished Level 1 Galerie Seine devoured and neutralized any stylistic moods of gamesmanship that are associated with Roussel: such as the famously extravagant, yet intricately hermetic, elaborate mechanamorphic constructions that verged on the exuberantly preposterousness of a machine running infinitely wild. Perhaps if I had seen the other two manifestations of this show – Impressions of Raymond Roussel held at the Museo Reina Sofia (Madrid) in 2011 and the Museu Serralves (Porto) in 2012 – I may not have felt so disappointed in the general lack of neurotic deliriousness experienced in this one.
+
+Granted that Raymond Roussel’s disregard for financial restraint[4] cannot be matched by the Palais de Tokyo, but still the gutted construction materials hanging overhead in this ugly cavernous space takes the eye and mind out of the magnificently intricate labyrinthine quality typical of his extravagant writings: as established in the prose work Impressions d’Afrique (1910) (a work that features a painting machine that duplicates the color spectrum of the sky at dawn),[5] Locus Solus (1914) (like Impressions d’Afrique, written according to formal constraints based on homonymic puns) and the obsessive but convulsingly poetic Nouvelle Impressions d’Afrique (1932).[6] Thus the larger the art (even as it was needed to fill this mammoth half-raw space) the worse it connected to Roussel’s sense of virtual impenetrability through mechanical precision.
+
+Mike Kelly’s lumbering black cave Kandors 10B (Exploded Fortress of Solitude) (2011) and Rodney Graham’s Camera Obscura Mobile (1995-1996) installation were particularly unmatched to Roussel’s obsessive minute attention; a concentration that is capable of whirling together copious narratives from a veiled network of murky puns and obscured double entendres in a way that anticipates Oulipian. Mark Manders’s steamy black connectivist sculpture Mind Study (2011), Giuseppe Gabellone’s beautiful silver sculpture L’Assetalo (Thirsty Man) (2008) and Jacques Carelman’s droll motion sculpture Le Diamont (The Dimond) (1975) worked only a bit better in reinforcing a spirit of intricate mechanicalness as they each ate up almost an entire room. A relatively fascinating installation by André Maranha, Pedro Morais, Jorge Queiroz and Francisco Tropa called Tres Moscas (Three Flies) (2012) did eat an entire room and only delivered limited thematic power in terms of absurd interlacing.
+
+Much more capable of such finicky and arcane mesmerizing rhythms was the more intimate yet preposterous work of Thomas Bayrle (his deadpan pulsating romantic machine Spatz von Paris (2011) is one of the highlights of the show). Rodney Graham’s series of books called The System worked well in the context and it was captivating to see displays of the literary journal Revue Locus Solus, established by American writers John Ashbery, Harry Mathews, Kenneth Koch and James Shuyler. Published in Paris between 1961 and 1962, the journal formed a bridge between French authors, both historical and contemporary, and writers from the New York School and the Beat Generation. The Collège de Pataphysique was represented by the writer Jean Ferry who published several studies devoted to Roussel, including L’Afrique des Impressions, a detailed analysis which consists of considering the text as instructions for users and reconstructing, in the form of maps, diagrams and schedules, the journeys and events that took place at Ponukélé, an imaginary place in Roussel’s Africa. Two comical cosmic Joseph Cornell boxes, Blue Sand Box and Sand Fountain from the early 1950s pleased me, as they bracketed a stream of photographed drawings of fantastic imaginary architecture from 1857 by Victorien Sardou – as did an early Pataphysical video by Jean-Christophe Averty. The irascible Salvador Dalí is represented with his short motion picture Impressions de la Haute Mongolie (1975), made with the filmmaker José Montes-Baquer. Dalí read Roussel’s books as early as the 1920s and Roussel had a great influence on Dalí’s “critical paranoia” method. Dalí, who died with a copy of Impressions d’Afrique on his bedside table, believed him to be one of France’s greatest writers ever. Jean Tinguely is inserted, rightly, into this mix with a brain-teasing manic lithograph from 1966-67 called Requiem pour une feuille morte (Requiem for a Dead Leaf), rather than an expected endless drawing machine contraption, that would have more directly interlocked with Roussel’s imagined painting machine.
+
+And Roussel’s major inspiration (along with novelist and naval officer Pierre Loti), the author Jules Verne, has a wacky lithograph of a flat globe studded with images entitled Around the World in Eighty Days from 1880. Roussel greatly admired the works of Verne – which he read over and over again, fascinated with their extraodinary voyages and machines, full of bachelor scientists completely absorbed in positivist exploratory dreams taken to delirious extremes. At that scale of interlacing, some of the hypnotic effect of Roussel’s capacious playful circularity is possible to feel.
+
+However, Gabriele Di Matteo’s contribution to the show’s circularity is essential. His hand-painted over digital-painting Marcel Duchamp, a life in pictures by André Raffray illustrates the time when Duchamp attended a showing of Impressions d’Afrique in 1912, an experience Duchamp would describe as revelatory. As Gabriele Di Matteo depicts, Duchamp, along with Guillaume Appollinaire, Picabia and Picabia’s wife Gabrielle Buffet, attended a performance of Impressions of Africa: the play by Roussel based on his book. Duchamp later credited Roussel with the inspiration for his The Bride Stripped Bare by Her Bachelors, Even (The Large Glass). There are several original notes by Duchamp and a drawing that he made for The Large Glass in 1912-1915 in the show, as well as quite a few photos of Duchamp with The Large Glass. Among them is the striking photo of Duchamp that was taken by Man Ray in 1920 that shows a star carved out in Duchamp’s hair. This work connects ludicrously well with Roussel’s star shaped cookie piece, Etoile cosmique, from just three years later.
+
+Historically, the mechanamorphic impulse behind Marcel Duchamp’s works from 1912 (that derived a good deal from Roussel) is of great significance. That is when Duchamp started producing paintings and drawings depicting mechanized sex acts such as Mechanics of Modesty and The Passage from the Virgin to the Bride – and the fantastic machine-body work The Bride Stripped Bare by Her Bachelors, Even that follow his exposure to the play Impressions d’Afrique – is an inescapable point of reference for the avant-garde of the 20th century. The same may be said for Francis Picabia (who has a room of paintings all to himself at the show La Collection Michael Werner just a stone throw away at the Musée d’Art Moderne Ville de Paris).
+
+The elaborateness of the machine, for Duchamp and Picabia, became the symbol of sexual bliss[7] attainable through concept connected to auto-sexual autonomy in contradiction to the horror that mechanized war had brought. By hypnotizing attention, the machine freed them from troubling obsessions and personal hang-ups through the alternative model of android life; intimating both our rush of desperation and our ecstatic release, refracted through a web of glazed impersonality. If the machine, as a representative of order, was a fascination Duchamp and Picabia used to balance out the age’s clumsiness, whether of the mind or flesh, Roussel’s mechanamorphic production and machine forms refigured the human body into an almost mechanized substance.
+
+In The Bride Stripped Bare by the Bachelors, Even, which positions a central bride machine over a bachelor apparatus, Duchamp, with the strictness of machinery, applies fantasy to seduction and masturbation. In a way, Duchamp suggests that we (as viewers) can use his art as a vehicle for self-transcendence into a kind of dream world of nonsense sex. This rabbit-hole logic he took from Roussel.
+
+So New Impressions of Raymond Roussel succeeds when it outlines an eccentric expanding circular history of 20th-century art, linking the points between artists and writers who have talked of the influence of this author and his writings on their work: starting with Dada (Duchamp, Man Ray, Picabia), then André Breton and the Surrealists (like Michel Leiris, Salvador Dalí, Jean Cocteau) to Neo-Dada Nouveau réalisme (Jean Tinguely) through Oulipo (Georges Perec) Pataphysicians (Jean Ferry, Jean-Christophe Averty and the Collège de Pataphysique) and the authors of the nouveau roman (like Alain Robbe-Grillet). As noted above, his most direct influence in the English-speaking world was on the New York School of poets John Ashbery, Harry Mathews, James Schuyler, and Kenneth Koch.
+
+Writing as art – or – art as writing: this is the theoretical ripe fruit plucked from Nouvelles impressions de Raymond Roussel – art theory as art – made conceivable by Roussel’s inventions of language machines that produced texts through the use of repetitions and combination/permutations. This machine-like logic provides art with a seemingly pure spectacle of endless variety of textual games and combinations flowing in circular form. (We see and feel this most fully, however, in the sprawling and dazzling Julio Le Parc kinetic op art retrospective on the first floor of the Palais de Tokyo, rather than in this show.)
+
+And there are lessons here for painting, also. Within this writing process Roussel described a number of fantastic machines, including a painting machine in his novel Impressions of Africa. This painting machine wonderfully describes and foresees the arrival of computer-robotic technology and it’s application to visual art which we have available to us today, a century after he envisioned it.
+
+The web also regenerates deep connections to the past; so cyberspace, this territory which stretches out from hypertext to the world-wide computer network, from virtual reality to video games, might also be theorized as the domain of Roussel’s idea of reduplicating without duplication, reiterating without repeating: his game-of-mirrors cosmos. His is a strident activity lost in an infinite navigation from one sort of encounter to another in which the affirmation of the other keeps appearing and disappearing in the play of mechanical maneuvers (or mechanisms) destined to avert gratification. This is where the bachelor apparatus of Duchamp repeats itself ad infinitum by transmitting the machine via an alter-ego.
+
+But too, New Impressions of Raymond Roussel reminds us that Raymond Roussel’s themes and procedures also involved imprisonment and liberation, exoticism, cryptograms and torture by language – all formally reflected in his working technique with its inextricable play of double images, repetitions, and impediments, all giving the impression of the pen running on by itself through the dreamy usage and baroque play of mirrored form.
+
+Roussel’s running on repetition technique, as used in the Thomas Bayrle sculpture, for example, lends itself well to the creation of unforeseen, automatic and spontaneously art which gives me the feeling of prolonging action into eternity through the ceaseless, fantastic constructions of the work itself, transmitting an altered, exalted and orgasmic state of mind which after the initial dazzling creates one predominant overall effect: that of creating doubt through mechanical discourse.
+
+The image of enclosure is common with Roussel where a secret to a secret is held back, systematically imposing a formless anxiety in the reader through the labyrinthine extensions and doublings, disguises and duplications of his texts, which make all speech and vision undergo a moment of annihilation.
+
+New Impressions of Raymond Roussel succeeds when it presents to us through intimacy the model of quiet perfection of the eternally repetitive mechanical machine which functions independently of time and space, pulling us into a logic of the infinite. We can learn this from Roussel’s final rebus-like book, Comment j’ai écrit certains de mes livres (How I Wrote Certain of my Books); the last of his conceptual machines, the machine which contains and repeats within its mechanism all those mental machines he had formerly described and put into motion, making evident the machine which produced all of his machines – the master machine.[8] All of these machines map out an eccentric spiral space that is circular in nature and thus an abstract attempt at eliminating time. They reproduce the old myths of departure, of loss and of return. They construct a crisscrossed mechanical map of the two great mythic spaces so often explored by western imagination: space that is rigid and forbidden, containing the quest, the return and the treasure (for example the geography of the Argonauts and the labyrinth) – and the other space of polymorphosis noise: the visible transformation of instantly crossed frontiers and borders, of strange affiliations, of spells, and of symbolic replacements (the space of the Minotaur).
+
+Nouvelles impressions de Raymond Roussel potentially removes us out of our quiet and glib indolence and points us in the potent direction of expanding intensity. I believe that shows like Nouvelles impressions de Raymond Roussel are critical to us now because the counter-mannerist excess found there may problematize the popular simulacra that art has become – and make the underground intricately-strange privateness of the human animal more lively.
+
+Joseph Nechvatal
+joseph@nechvatal.net
+
+Nouvelles impressions de Raymond Roussel (New Impressions of Raymond Roussel)has work in it by: Mathieu K. Abonnenc, Jean-Michel Alberola, Jean-Christophe Averty, Zbynek Baladrán, Thomas Bayrle, Jacques Carelman, Guy de Cointet, Collège de Pataphysique, Joseph Cornell, Salvador Dalí, Gabriele Di Matteo, Thea Djordjadze, Marcel Duchamp, Giuseppe Gabellone, Rodney Graham, João Maria Gusmão & Pedro Paiva, Mike Kelley, Revue Locus Solus, Pierre Loti, Sabine Macher, Man Ray, Mark Manders, André Maranha, Pedro Morais, Jorge Queiroz et Francisco Tropa, Jean-Michel Othoniel, Victorien Sardou, Joe Scanlan, Jean Tinguely, Jules Verne.
+
+
+Notes:
+[1] At age 17, Roussel wrote Mon Âme, a long poem published three years later in Le Gaulois. By 1896, he had commenced editing his long poem La Doublure when he suffered a mental crisis. After the poem was published on June 10, 1897 and was completely unsuccessful, Roussel began to see the psychiatrist Pierre Janet.
+
+[2] Poet, novelist, playwright, musician, and chess enthusiast
+
+[3] Raymond Roussel was born in Paris in 1877. His writings, including the novels Impressions of Africa and Locus Solus and volumes of poetry and drama, were largely ignored in his lifetime, but have since been championed by the likes of Michel Leiris (whose father was Roussel’s accountant), Raymond Queneau, Alain Robbe-Grillet (his first novel, Le Voyeur, was originally titled La Vue in homage to Roussel’s long 1904 poem of the same name), Georges Perec, Harry Mathews, John Ashbery and Michel Foucault (Foucault wrote a critical study, Death and the Labyrinth, after the chance discovery of one of Roussel’s volumes in an antiquarian shop across from the Luxembourg Gardens). Roussel died under mysterious circumstances (apparently by suicide) in 1933 in Palermo, Sicily after he went broke chasing literary fame before his death – decades before his work began receiving the acceptance he craved. He is buried in Père-Lachaise cemetery in Paris.
+
+[4] In 1894, at age 16, he inherited a substantial fortune from his deceased father and began to write poetry to accompany his musical compositions. Tremendously wealthy, he took two world tours during which he hardly left his hotel rooms.
+
+[5] The story told in Impressions of Africa is a nominally bare-bones fantasy. The shipwrecked inhabitants of the Lyseus, en route from Marseille to Argentina, are captured by an African potentate, Talou, who holds them hostage while awaiting their ransom. The ship’s manifest includes actors, singers, musicians, fearless naturalists, a slew of carpenters, and, fortuitously, a trove of instruments, lumber, scientific equipment, and trained animals. Partly to keep themselves busy, the motley Europeans, dubbing themselves the Incomparables, decide to stage a set of performances. Converging with their gala is Talou’s military triumph over a rival clan (and the execution of a handful of unloyal subjects). This is the back-story of Impressions of Africa, literally.
+
+[6]  New Impressions of Africa is a 1,274-line poem, consisting of four long cantos in rhymed alexandrines, each a single sentence with parenthetical asides that run up to five levels deep. From time to time, a footnote refers to a further poem containing its own depths of brackets. Roussel worked and reworked the 1,274 lines of New Impressions of Africa over a seventeen-year period, rewriting each one as many as twenty times to accomplish a mordant succinctness.
+
+[7] Around the same point in time, Dr. Freud was explaining in his lectures that complex machines that repeat in dreams signified the genital organs. Roussel’s descriptions of eggs on plates and the multiple allusions to the odor of urine after the eating of asparagus are typical of a poetic-mechanical apparatus helping to take us further into the area of the unconscious and the sexual.
+
+[8] Roussel had kept this compositional method a secret until the publication of his posthumous text, How I Wrote Certain of My Books, where he describes it as follows: “I chose two similar words. For example, billard (billiard) and pillard (looter). Then I added to it words similar but taken in two different directions, and I obtained two almost identical sentences thus. The two sentences found, it was a question of writing a tale which can start with the first and finish by the second. Amplifying the process then, I sought new words reporting itself to the word billiards, always to take them in a different direction than that which was presented first of all, and that provided me each time a creation moreover. The process evolved/moved and I was led to take an unspecified sentence, of which I drew from the images by dislocating it, a little as if it had been a question of extracting some from the drawings of rebus.”
+
+
+
+Share Button
+
+Email
+« Review of The Visitors at Luhring AugustineSymmetry as Death in Brutalist Architecture »
+This entry was posted in Features. Bookmark the permalink.
+One Response to Review of Nouvelles Impressions de Raymond Roussel
+G. W. Smith says:
+April 14, 2013 at 11:12 pm
+The appearance of Joseph Nechvatal’s byline in On-Verge, is, in one sense, paradoxical, for Dr. Nechvatal is by no means an emerging writer; indeed, he has had perhaps more of value to say, in scores of books and articles, than any other art theorist regarding the the survival of the thinking, breathing — and loving — individual within our modern technological matrix. This is amply demonstrated in the current review, of a show dedicated to one of those wonderful French intellectuals, Raymond Roussel, whose writings not only helped his fellow Europeans survive the mechanized horrors of the early twentieth century, but which also — through a type of verbal jujitsu — allowed them to retain their own hold on the indispensable machine — this to the great benefit of his followers including Marcel Duchamp, Francis Picabia, and Jean Tinguely.
+
+If, however, we take “On-Verge” to refer also to the dawn of a new post-postModernist age — in which the vitality and precision of technology is married to a humanistic sensibility — then the appearance of Dr. Nechvatal’s review is both appropriate — and welcomed.
+Reply
+Leave a Reply
+
+Your email address will not be published. Required fields are marked *
+
+Name *
+Email *
+Website
+Please answer this simple question so we know you are a real person and not a spambot *
+9 − = two
+Comment
+You may use these HTML tags and attributes: <a href="" title=""> <abbr title=""> <acronym title=""> <b> <blockquote cite=""> <cite> <code> <del datetime=""> <em> <i> <q cite=""> <strike> <strong>
+
+RECENT POSTS
+Thomas Micchelli Interviewed by Linda Francis
+Gray Spaces curated by Ben Gansky
+Amanda Turner Pohan’s The Signals Are Caressing Us: A Circular Formula
+Riad Miah Interviewed by Eileen Jeng
+‘Moun Room’—A Question of Simple Geometry
+ADDITIONAL ARTS COVERAGE
+Art in America
+Art21 Blog
+ArtSlant Magazine
+Brooklyn Rail
+Culture Catch
+HuffPo Arts
+Interview
+Milkmade from Milk Studios
+NY Arts Magazine
+The Engine Institute
+Whitehot Magazine
+TAGS
++aRt 1970's Abstract Expressionism abstraction AICA Armory Show Arthur Danto CATM Clement Greenberg con artist nyc CUE Art Foundation curator curatorial excellence Deconstructivism Edo period feminism film floating world free arts nyc graffiti installation Irving Sandler Japanese art Minimalism mint and serf Otaku painting Painting and Decoration Pattern and Decoration performance art photography place post-war Postmodern RackGaki Robert Storr sculpture Shane McAdams street art superflat That Is Then. This Is Now The Chelsea Chapter ukiyo well hung Yoshiwara
+ON-VERGE is a CUE project in collaboration with AICA
+**** Joseph Nechvatal / Virus for Computer Art / further reading
+ :PROPERTIES:
+ :DATE: <2015-03-15 Sun 17:43>
+ :END:
+
+From: http://en.wikipedia.org/wiki/Joseph_Nechvatal
+
+- John Johnston, The Allure of Machinic Life: Cybernetics, Artificial Life, and the New AI, MIT Press, 2008, cover
+- Donald Kuspit, The Matrix of Sensations VI: Digital Artists and the New Creative Renaissance
+- Joline Blais and Jon Ippolito, The Edge of Art, Thames & Hudson Ltd, p. 213
+- Frank Popper, From Technological to Virtual Art, MIT Press, pp. 120–123
+- Johanna Drucker, [14] Joseph Nechvatal : Critical Pleasure
+- Robert C. Morgan, Voluptuary: An algorithic hermaphornology, Tema Celeste Magazine, volume #93, p. 94
+- Bruce Wands, Art of the Digital Age, London: Thames & Hudson, p. 65
+- Robert C. Morgan, Laminations of the Soul, Editions Antoine Candau, 1990, pp. 23–30
+- Margot Lovejoy, Digital Currents: Art in the Electronic Age Routledge 2004
+- Joseph Nechvatal, Immersive Excess in the Apse of Lascaux, Technonoetic Arts 3, no3. 2005
+- Joseph Nechvatal. Immersion Into Noise. Open Humanities Press in conjunction with the University of Michigan Library's Scholarly Publishing Office. Ann Arbor. 2011
+- Johanna Drucker, Joseph Nechvatal : Critical Pleasure, Redaktion Frank Berndt, 1996, pp. 10–13
+- Mario Costa, Phenomenology of New Tech Arts, Artmedia, Salerno, 2005, p. 6 & pp. 36 – 38
+- Dominique Moulon, L'art numerique: spectateur-acteuret vie artificielle, Les images numeriques #47-48, 2004, pp. 124–125
+- Christine Buci-Glucksmann, L’art à l’époque virtuel, in Frontières esthétiques de l’art, Arts 8, Paris: - L’Harmattan, 2004
+- Brandon Taylor, Collage, Thames & Hudson Ltd, 2006, p. 221
+- Dominique Moulon, [15] Conférence Report : Media Art in France, Un Point d'Actu, L'Art Numerique, pp. 124–125
+- Edmond Couchot, Des Images, du temps et des machines, édité Actes Sud, 2007, pp. 263–264
+- Fred Forest, Art et Internet, Editions Cercle D'Art / Imaginaire Mode d'Emploi, pp. 48 –51
+- Wayne Enstice & Melody Peters, Drawing: Space, Form, & Expression, New Jersey: Prentice Hall, pp. 312–313
+- Ellen K. Levy, Synthetic Lighting: Complex Simulations of Nature, Photography Quarterly (#88) 2004, pp. 7–9
+- Marie-Paule Nègre, Des artistes en leur monde, volume 2, la Gazette de l'Hotel Drout, 2008, pp. 82–83
+- Corrado Levi, È andata così: Cronaca e critica dell'arte 1970-2008, Joseph Nechvatal intervistato nel suo - studio a New York (1985–86), pp. 130–135
+- Donald Kuspit, Del Atre Analogico al Arte Digital in Arte Digital Y Videoarte, Kuspit, D. ed., Consorcio del Circulo de Bellas Artes, Madrid, pp. 33–34 & pp. 210 – 212
+- Robert C. Morgan, Nechvatal’s Visionary Computer Virus, in Gruson, L. ed. 1993. Joseph Nechvatal: Computer Virus Project, Royal Saltworks at Arc-et-Senans: Fondation Claude-Nicolas Ledoux, pp. 8–15
+- Sarah J. Rogers (ed), Body Mécanique: Artistic Explorations of Digital Realms, Columbus, Ohio, Wexner Center for the Arts, The Ohio State University
+- Edward A. Shanken, Art and Electronic Media. London: Phaidon, 2009. ISBN 978-0-7148-4782-5, pp. 42, 285, 160
+**** printing calendar from agenda/calfw
+ :PROPERTIES:
+ :DATE: <2015-03-15 Sun 20:36>
+ :END:
+***** Calfw directly
+
+http://lists.gnu.org/archive/html/emacs-orgmode/2013-02/msg01597.html
+
+After displaying your calfw buffer, you can get a HTML buffer with M-x htmlfontify-buffer.
+
+***** alternative
+http://lists.gnu.org/archive/html/emacs-orgmode/2013-02/msg01773.html
+
+Hi Eric,
+thanks for the tip. I tried this already. Its printing but has some drawbacks. E.g. I use high resolution monitors in vertical (pivot) mode and a tiling window manager. calfw scales to the current buffer size and this is unfortunately not really compatible with printing. In summary this solution might have to many ways to go wrong.
+
+However, I noticed a much more interesting way. calfw buffer look almost like org-tables. And voila saving the buffer as org-file and a minimum of modifications allows me to export the calendar with both the html and pdf exporter. I just try to tell org-mode/latex/html to keep the height of the rows constant and independent of the content of the cell. Guess if I get this right, everything could be done in a little piece of elisp.
+Alternatively, Sakurai san may like to create an official cfw:export-view-to-org could be part of calfw-org. This would also allow people to archive calendar views in org-mode files.
+**** a math teaching website
+ :PROPERTIES:
+ :DATE: <2015-03-15 Sun 21:57>
+ :END:
+
+http://srandby.org/
+**** syntactic science / syntactician
+ :PROPERTIES:
+ :DATE: <2015-03-15 Sun 22:01>
+ :END:
+
+http://www.ucs.mun.ca/~branigan/
+
+Much of my pure syntactic research over the past few years is consolidated in Provocative Syntax. I'm continuing on with my investigations in this model of morphosyntax. Doug Wharram and I have begun to study how syntactic "provocation" and semantics interact in the interpretation of Inuktitut indefinites.
+
+I've also published work on the nature of ergativity (with Jonathan Bobaljik) and on quotative inversion (with Chris Collins).
+**** amber: smalltalk running on a web browser
+ :PROPERTIES:
+ :DATE: <2015-03-15 Sun 22:09>
+ :END:
+
+
+http://amber-lang.net/
+*** 2015-03-16 Monday
+**** firebrick4
+ :PROPERTIES:
+ :DATE: <2015-03-16 Mon 05:44>
+ :END:
+**** Alexander Grothendieck = Obi Wan
+ :PROPERTIES:
+ :DATE: <2015-03-16 Mon 06:57>
+ :END:
+
+- http://xahlee.info/math/Alexander_Grothendieck.html
+- http://www.heidelberg-laureate-forum.org/wp-content/uploads/2013/11/Grothendieck-460x305.jpg
+**** grigori perelman shopping market
+ :PROPERTIES:
+ :DATE: <2015-03-16 Mon 07:05>
+ :END:
+
+
+https://www.youtube.com/watch?v=SnliuBIB2V0
+
+http://xahlee.info/math/Grigori_Perelman.html
+**** rant on unix and other language documentation
+ :PROPERTIES:
+ :DATE: <2015-03-16 Mon 11:21>
+ :END:
+
+http://xahlee.info/comp/idiocy_of_comp_lang.html
+
+#+BEGIN_QUOTE
+Worse of all, the semantic of unix software's options are the worst rape to any possible science in computer science.
+#+END_QUOTE
+**** wireless key sniffer device (for use in projects?)
+ :PROPERTIES:
+ :DATE: <2015-03-16 Mon 11:26>
+ :END:
+
+http://xahlee.info/kbd/Microsoft_wireless_keyboard_key_sniffer.html
+**** abbrev mode change cursor color trick sacha chua emacs
+ :PROPERTIES:
+ :DATE: <2015-03-16 Mon 12:42>
+ :END:
+
+
+http://youtu.be/c6abq9Wv9Wk
+
+see pcmantz emacs lib config on github.
+Works with yasnippet
+**** windmove-left
+ :PROPERTIES:
+ :DATE: <2015-03-16 Mon 19:48>
+ :END:
+*** 2015-03-17 Tuesday
+**** 5 rules of business from medium.com
+ :PROPERTIES:
+ :DATE: <2015-03-17 Tue 09:39>
+ :END:
+***** Pretend like you’re a human being
+With the possible exception of artists and architects, no one is more full of shit than designers. We can find a way to justify anything. Blah blah blah. That means no matter what you end up with, you can come up with some reason why it’s a good design. The best advice I have for designers is to practice being not-designers: stop what you’re doing, close your eyes, take a few deep breaths and then look again like you’re just a regular person encountering this product/service/user interface/object/page/poster for the first time. Where do your eyes go? What do you think it is at first? How do you figure out what you are supposed to do?
+***** Make it inevitable
+There is some truth to that old Henry Ford aphorism “Whether you think you can, or you think you can’t — you’re right.”. If you can’t believe it, it’s probably not going to happen. However, I like to take that one step further and ensure that every action we take is one that assumes the desired outcome is inevitable. Do not make actions that are out of alignment with that inevitability. Do not allow judgements which contradict it. The more evidence you have — and everyone else has — that things will come out as planned, the more likely it will be so.
+***** Every job you do has your signature on it
+When I was around 10 or 11 years old, my father offered me $10 to move a cord of recently-delivered firewood from the driveway into the garage and stack it up inside (I am old; $10 was a great deal of money back then). I managed to get all the firewood inside but rather than it being stacked against the wall, it was more or less evenly distributed across the floor of the garage. I expected my payment, but instead got some advice: “Every job you do has your signature on it — do you really want to sign that?” I always remembered that and if I am going to do something, I make every effort to do it right. (I also properly stacked the wood afterwards, even though it took forever, and I got paid in the end.)
+***** Everyone should always be trying to make it easier for everyone
+I used to play in a band. Other people might have played team sports, or worked in a well-functioning restaurant. There’s something about working deeply, in real-time, with other people that’s both incredibly satisfying and enormously more effective than working alone. You need to be open for the pass, you need to hear the subtle rhythm shifts, you need to spot when someone else’s table needs the check … everyone should be taking account of what everyone else is doing and constantly modifying their own behaviour to better serve the team.
+***** Know why you’re doing it
+If you are just out to make money, god bless: I hope you make some money. If you just want awards or recognition or for others to think highly of you, I hope you get that too. But I don’t think anyone is really satisfied by fame or fortune. I find it incredibly satisfying (and gratifying, rewarding and pleasant) to honestly have done the best job I could have done on something and I believe that works for everyone else too. Being skillful and exercising your mastery is what you’re here to do. Doing anything less undermines the whole point of being alive.
+**** relevant coursera courses
+ :PROPERTIES:
+ :DATE: <2015-03-17 Tue 09:40>
+ :END:
+
+- leading musical ensembles https://www.coursera.org/course/music-ensembles
+
+- Creative Programming for Digital Media & Mobile Apps https://www.coursera.org/course/digitalmedia
+
+- Introduction to Acoustics (Part 1) https://www.coursera.org/course/acoustics1
+
+- Human-Computer Interaction https://www.coursera.org/course/hciucsd
+
+- Networks Illustrated: Principles without Calculus https://www.coursera.org/course/ni
+
+- Understanding Media by Understanding Google https://www.coursera.org/course/googlemedia
+
+- The Bible's Prehistory, Purpose, and Political Future https://www.coursera.org/course/biblefuture
+*** 2015-03-19 Thursday
+**** orgelbuechlein (Koopman), BWV 734 (Sokolov)
+ :PROPERTIES:
+ :DATE: <2015-03-19 Thu 14:45>
+ :END:
+
+[[file:~/Documents/publications_others/scores/bach/keyboard/organ/599-644 Orgelbüchlein/]]
+
+(Some additional notes on Orgelbüchlein (Sun, Mar 22 2015, 10:28 EET)):
+
+- BWV 599-644
+- 46 Chorale Preludes
+- Originally planned as set of 164 preludes spanning the whole liturgical year
+- 43 were composed 1708-1717 and 3 (or just 1? - see german wikipedia) + a two bar fragment were added in 1726.
+
+Question: http://en.wikipedia.org/wiki/Orgelb%C3%BCchlein writes:
+
+#+BEGIN_QUOTE
+and a single chorale prelude in trio sonata form.
+#+END_QUOTE
+
+Which one is meant? I think it must be BWV639, "Ich ruf' zu Dir, Herr Jesu Christ".  An Adagio.
+
+***** BWV627 3 verses - Modal character of Orgelbüchlein
+See 3 variations - plagal cadences, cadences on 3 beat of bar.
+
+***** BWV639: "Triosonata" or "Adagio cantabile"
+
+*** 2015-03-20 Friday
+**** live code data exploration and other extensions
+ :PROPERTIES:
+ :DATE: <2015-03-20 Fri 09:14>
+ :END:
+***** At Empac: https://vimeo.com/79674603
+EMPAC Research: A New Paradigm for Interactive Exploration of Data with Live Coding
+from EMPAC @ Rensselaer PLUS  1 year ago / Creative Commons License: by sa  ALL AUDIENCES
+
+Part 1: Exploring a Dark Data Set ( 13 min. )
+
+Part 2: The Field Environment ( 10 min. )
+
+Interactive data exploration - as opposed to documentation of research outcomes - requires a hard- and software environment that allows quick turn-around (as in live coding), accelerated graphics processing and projection (utilizing GPUs for data processing), an “agnostic” parsing of data, and the ability to tap into the endless existing libraries available on-line. This approach allows quick access to and navigation of “big data”.
+
+The open-source software Field programming environment provides all of the above. It allows to quickly manipulate different representations of a given data set, to navigate representation interactively, to create animations and to discover new perspectives.
+
+Mathematical processes applied to the data can be changed as quickly as the mapping in the visual domain. Other modalities of representation, like stereoscopic visual representation, immersive projections or auditory mapping can easily be accessed.
+
+This video shows in its first part the exploration of a “dark data set”, where the source and desired evaluation of the data was not known to the researcher visualizing the data. It turned out to be the simulation output of a high-performance computing network topology (“Dragon Fly Network”). Immediately insights into the data were unfolding and allowed to discover properties in the simulation, which had gone unnoticed before.
+
+The second part presents an overview over the Field environment.
+
+ Marc Downie
+ Chris Carothers
+ Johannes Goebel
+****
+*** 2015-03-21 Saturday
+**** Rob Kitchin et al: works on Cyber-Geography
+ :PROPERTIES:
+ :DATE: <2015-03-21 Sat 08:11>
+ :END:
+
+- Rob Kitchin, Martin Dodge: Code/Space.
+- Rob Kitchin: The Data Revolution Big Data, Open Data, Data Infrastructures and Their Consequences
+ :PROPERTIES:
+ :DATE: <2015-03-21 Sat 08:26>
+ :END:
+**** opencl demo molecule model calculation
+ :PROPERTIES:
+ :DATE: <2015-03-21 Sat 17:38>
+ :END:
+
+Comparing to the speed of a single core and a 16-threaded 8-core cpu:
+
+https://www.youtube.com/watch?v=IEWGTpsFtt8
+
+*** 2015-03-22 Sunday
+**** Sonify Magnetic Storms, but also the Anticythera Mechanism
+ :PROPERTIES:
+ :DATE: <2015-03-22 Sun 01:15>
+ :END:
+
+Accompany by polar light simulations
+**** installing mu4e - some links
+ :PROPERTIES:
+ :DATE: <2015-03-22 Sun 01:16>
+ :END:
+
+http://blog.danielgempesaw.com/post/43467552978/installing-mu-and-mu4e-with-homebrew-with-emacs
+
+http://www.djcbsoftware.nl/code/mu/
+***** maildir in macos x
+
+https://brettporter.wordpress.com/2006/08/22/moving-to-mac-os-x-from-thunderbird-to-apple-mail/
+
+http://stevelosh.com/blog/2012/10/the-homely-mutt/
+
+http://vijaykiran.com/2010/01/mutt-for-gmail-imap-on-mac-os-x/
+***** offlineimap
+
+http://offlineimap.org/
+
+***** gmail configuration
+
+http://www.djcbsoftware.nl/code/mu/mu4e/Gmail-configuration.html#Gmail-configuration
+
+**** bernhard of clairvaux and hildegard of bingen (apropos AB attending St John Passion in Cardiff)
+ :PROPERTIES:
+ :DATE: <2015-03-22 Sun 12:43>
+ :END:
+
+
+http://en.wikipedia.org/wiki/Bernard_of_Clairvaux
+
+http://en.wikipedia.org/wiki/Hildegard_of_Bingen
+**** @athens fest: notours, escoitar
+ :PROPERTIES:
+ :DATE: <2015-03-22 Sun 17:46>
+ :END:
+
+
+Geert Vermeire, Dana Papachristou, Giorgos(x)
+
+Also present: Katerina Taliani (PhD Candidate on Sound Walks in Urban space, under Richard Coyne + ...)
+
+The Milena Principle - Urban Rituals - Outdoor Living - Lisbon.mp3
+
+www.umapper.com : Resounding Cities.
+
+stadt-geschichten.escoitar.org/map
+
+alayerman.
+*** 2015-03-23 Monday
+**** Greek (and some Italian) persons at CERN
+ :PROPERTIES:
+ :DATE: <2015-03-23 Mon 02:31>
+ :END:
+
+Angelos Alexopoulos
+
+Anastasia Xydou
+PhD at CERN
+
+Androula Alekou
+Postdoctoral Research Assistant, University of Oxford and John Adams Institute
+
+Evangelos N. Gazis
+Professor of Particle Physics at CERN & NTU_Athens
+
+Athanasios Topaloudis
+Computer Engineer in Beams Department
+
+Stella Orfanelli
+CERN PH-CMX-DS
+
+Evangelia Gousiou
+Electronics Engineer at CERN
+
+Eirini Karanisa
+Student at University of Geneva
+
+Afroditi Xafi
+Associate Consultant at Orbium
+
+Anthony Voulgaridis
+Summer Student at CERN
+
+Dimitrios-Marios Kolotouros
+Doctoral Student (Electronic engineer) at CERN
+**** the algorithm auction
+ :PROPERTIES:
+ :DATE: <2015-03-23 Mon 08:09>
+ :END:
+
+https://www.artsy.net/feature/the-algorithm-auction
+
+qrpff DRM DVD unscrambling algorithm: https://www.artsy.net/artwork/keith-winstein-qrpff/zoom
+
+*** 2015-03-24 Tuesday
+**** bwv0078.5.8-9: erschreckliches Gericht, BWV0205.2 <-> Les mains en fer
+ :PROPERTIES:
+ :DATE: <2015-03-24 Tue 03:40>
+ :END:
+**** COMMENT recent films related to immigration
+ :PROPERTIES:
+ :DATE: <2015-03-24 Tue 15:54>
+ :END:
+
+- http://en.wikipedia.org/wiki/Shinjuku_Incident
+- http://en.wikipedia.org/wiki/Night_and_Fog_(2009_film)
+**** Xapian open source search engine library
+ :PROPERTIES:
+ :DATE: <2015-03-24 Tue 16:50>
+ :END:
+
+http://xapian.org/
+
+LvB Op.67
+
+https://www.youtube.com/watch?v=VVFRjIfnzeY
+https://www.youtube.com/watch?v=YvnizM_Ea2Y
+
+*** 2015-03-25 Wednesday
+**** Einstein-Cartan-Sciama-Kibble theory of gravity
+ :PROPERTIES:
+ :DATE: <2015-03-25 Wed 13:22>
+ :END:
+
+http://www.insidescience.org/content/every-black-hole-contains-new-universe/566
+**** art-science projects for "celebrating einstein" centennial year of general relativity
+ :PROPERTIES:
+ :DATE: <2015-03-25 Wed 15:50>
+ :END:
+
+
+http://www.insidescience.org/content/celebrating-einstein-through-100-years-general-relativity/958
+
+#+BEGIN_QUOTE
+Celebrating Einstein strives to communicate all of this beauty and excitement to the general public by bridging the gap between the sciences and the arts in both its design and end products. This event is a truly collaborative and interdisciplinary effort between the departments of physics, history, communication, music, film, photography, art, and architecture at Montana State University, Princeton University, and UCLA. These many different fields all use creativity to invent new ideas that deepen our understanding of the world. Einstein's iconic figure, the centennial of the discovery of his most important theory, and the imminent direct detection of his final prediction produce a perfect theme for Celebrating Einstein.
+
+Celebrating Einstein includes several events: a public lecture series by world-renowned scientists, including University of Maryland's Jim Gates, recipient of the National Medal of Science and member of the President's Science Advisory Panel, and David Kaiser, a best-selling author and the head of the MIT Program in Science, Technology and Society; Celebrating Einstein in the Schools, a collection of K-12 classroom lessons and activities; the Black (W)hole art installation, featuring visualizations and sounds of a small black hole spiraling violently into a supermassive one; and the Shout Across Time live multimedia theatre show, which will feature a dance-company performance illustrating a lecture on general relativity, a live orchestra, playing an original composition inspired by gravitational waves, and an original film featuring numerical simulations of black hole collisions.
+#+END_QUOTE
+**** london design museum annual awards - architecture shortlist for 2015
+ :PROPERTIES:
+ :DATE: <2015-03-25 Wed 16:16>
+ :END:
+
+
+http://www.wired.co.uk/news/archive/2015-03/23/design-museum-architecture
+
+1. Market Hall, Rotterdam, Netherlands
+2. Arena do Morro, Mãe Luiza, Natal, Brazil
+3. Desert Courtyard House, Scottsdale, Arizona, USA
+4. Fondation Louis Vuitton, Paris, Francs
+5. Forfatterhuset Kindergarten brick lamellae facade, Copenhagen, Denmark
+6. La Última Esperanza architecture school
+7. Pontifica Universidad Católica de Chile Innovation Center, San Joaqín, Santiago, Chile
+8. Philharmonic Hall, Szczecin, Poland
+9. Waterbank campus at endana Secondary School in Laikipia, Kenya
+10. Sancaklar Mosque, Istanbul, Turkey
+11. The Long Museum, Shanghai, China
+12. Beijing No. 4 High School Fangshan Campus
+13. Central Park One
+14. Saw Swee Hock Student Centre, London School of Economics
+15. House for Trees, Ho Chi Minh City, Vietnam
+
+But see also:
+
+http://www.designsoftheyear.com/
+
+Following overview is copied from: http://www.dezeen.com/2015/02/19/designs-of-the-year-2015-nominees-announced-design-museum-london/
+***** Architecture
+****** Arena Do Morro, Natal, Brazil – Herzog & de Meuron
+
+This gymnasium was created from an existing sports facility situated in Mãe Luiza, a favela in Natal, north-east Brazil. It now contains a sports field with tiered seating for 420 people, multipurpose rooms for dance and education, a terrace with ocean views, as well as changing rooms and public restrooms. The building's standout feature is its generous roof, which is constructed to allow light and air in but keep water out, giving a new civic place visible from afar. The two ends of the elongated pitched roof open up towards the neighbourhood and invite people in.
+****** Beijing No 4 High School Fangshan Campus, Beijing, China – OPEN Architecture
+
+Also called the Garden School, this building is part of a larger scheme to build a healthier and self-sustainable new town just outside Beijing. The desire to create more open spaces filled with nature, combined with the space limitations of the site, inspired a strategy on the vertical dimension, creating multiple grounds by separating the programs into above and below, and inserting gardens in-between. The roof-top of the upper building is designed to be an organic farm, with 36 plots - one for each class in the school, providing students the chance to learn the techniques of farming, and also paying tribute to the site's pastoral past.
+****** Desert Courtyard House by Wendell Burnette Architects
+
+Desert Courtyard House, Scottsdale, Arizona, USA – Wendell Burnette Architects
+
+A private house in Arizona's Sonoran Desert which has been designed around a courtyard. The ancient construction method of rammed earth was used to create walls offering high thermal mass and a direct relationship to the surrounding landscape. By paying close attention to the desert location the architects have created a house which spirals up from lowest point at southwest corner and out towards a sunset view.
+****** Forfatterhuset Kindergarten Copenhagen by COBE
+
+Forfatterhuset Kindergarten, Copenhagen, Denmark – COBE
+
+With its curved corners, lush roof gardens and special brick facade, the new kindergarten in Copenhagen creates a warm modern feeling while respecting its historic surroundings. The project consists of five small houses held together by a brick band which also surrounds the playground. The Kindergarten is organized like a village, creating a place that is functional and flexible for adults, while also small and exciting for children.
+****** Fondation Louis Vuitton, Paris, France – Frank Gehry and Gehry Partners
+
+The Fondation Louis Vuitton houses temporary displays, the permanent art collection and concerts in a 'glass cloud' of 12 curved sails that emerge from the Bois de Boulogne in Paris. The building's distinctive shape has been made using over three thousand curved and fritted glass panels.
+****** House for Trees by Vo Trong Nghia Architects
+
+House for Trees, Ho Chi Minh City, Vietnam – Vo Trong Nghia Architects
+
+Under rapid urbanization, cities in Vietnam have diverged far from their origins as sprawling tropical forests. An over-abundance of motorbikes causes daily traffic congestion as well as serious air pollution. House for Trees is an effort to change this situation. The aim is to bring green back into the city, accommodating high-density dwelling with big tropical trees. Five concrete boxes are designed as 'pots' to plant trees on their tops. With thick soil layer, these pots also function as storm-water basins for retention, therefore contribute to reduce the risk of flooding when the idea is multiplied to a large number of houses in the future.
+****** La Última Esperanza – The Last Hope, Manabi, Ecuador – AL BORDE
+
+La Última Esperanza is the final iteration of a long-term collaboration between AL BORDE and the Cabuyal community which has already produced a school and a community centre. This project saw the architects design not a building, but system for teaching architecture so that the community can become more self-sufficient, developing their own methodology of design, and ultimately creating their own buildings.
+****** Long Museum West Bund, Shanghai, China – Atelier Deshaus
+
+Long Museum West Bund is located at the bank of Huangpu River, Xuhui District, Shanghai Municipality, on a site which had been used as the wharf for coal transportation. The design of the new museum adopts a cantilever structure featuring an umbrella vault which visually echoes a remaining coal hopper unloading bridge - a symbol of the area's industrial past.
+****** Markthal Rotterdam, Rotterdam, the Netherlands – MVRDV
+
+Located in the center of Rotterdam, Markthal is the first covered food market of the Netherlands. Each of the 228 apartments has a view either towards the historic Laurenskwartier, and towards the market through windows or a glass floor made of sound and smell proof triple glazing. The open sides of the Markthal closed to prevent rain and cold from entering, was designed to be as transparent as possible by opting for a single glazed cable net façade. The mural 'Cornucopia' by artists Arno Coenen and Iris Roskam has a surface of 11.000 m2. 'Cornucopia' shows oversized images of market produce available at the market, while the flowers and insects refer to the work of Dutch still life masters from the 17th century. The image was printed onto perforated aluminum panels, and then attached to acoustic panels for noise control.
+****** Central Park by Jean Nouvel
+
+One Central Park, Sydney, Australia – Ateliers Jean Nouvel
+
+Two landmark towers designed by Jean Nouvel for the second phase of the One Central Park project have transformed Sydney's skyline. The program comprises an exclusively residential apartment block of 34 stories and a 12-story apartment block that sits on a common retail and recreational podium. A vertical landscaped garden designed in collaboration with French artist and botanist Patrick Blanc covers approximately 50% of the buildings' façade.
+****** Szczecin Philharmonic by Barozzi Veiga
+
+Philharmonic Hall Szczecin, Szczecin, Poland – Barozzi / Veiga
+
+The new Philharmonic Hall of Szczecin is located on the historical site of the 'Konzerthaus', which was destroyed during Second World War and recomposes an urban corner in a neighbourhood near to the historic city. The building houses a symphony hall for 1000 spectators, a hall for chamber music, a multifunctional space for exhibitions and conferences, and a wide foyer, which can also be used to host events. The hall is composed following a Fibonacci sequence whose fragmentation increases with the distance from the scene, and gives shape to an ornamental space whose gold-leaf covering calls to mind the classical tradition.
+****** Sancaklar Mosque, Istanbul, Turkey – Emre Arolat Architects
+
+Inspired by the fact that a mosque does not have a predefined form and anywhere clean may be a prayer room, this project focused on the 'essence' of a religious space, distancing itself from discussions based on form. The design aimed at representing purest forms of light and matter, just as a primary inner world, free from all cultural burdens. The disappearance of the building in to the slope of the site, anchored to the ground, creates the sense that it has always been a part of this landscape.
+****** Saw Swee Hock Student Centre, London School of Economics, London, UK – O'Donnell + Tuomey
+
+The site specific sculptural concept for this design is tailored in response to specific lines of sight along approaching vistas, from street corner perspectives and to make visual connections between internal and external circulation. The surface of the brick skin is cut out along fold lines to form large areas of glazing, framing views from street to room. The design is assembled to make one coherent volume from a complex set of component parts. The building is clad with bricks, used in a new way, with each brick offset from the next in an open work pattern, wrapping the walls in a permeable blanket, creating dappled daylight inside and glowing like a lattice lantern at night.
+****** UC-Innovation-Center-by-Elemental_dezeen_sqa
+
+UC Innovation Center – Anacleto Angelini, Santiago, Chile – Elemental
+
+Santiago's weather inspired the architects to substitute the contemporary typical glass skin, responsible for serious greenhouse effect in interiors, for a thermal mass on the perimeter that avoids undesired heat gains. Open air squares are multiplied throughout the building's entire height and a permeable atrium core is proposed so that while circulating vertically, people could see what others are doing. As well as creating the right environment for knowledge-creation, this design has reduced energy costs by two-thirds.
+****** Waterbank Campus at Endana Secondary School, Laikipia, Kenya – PITCHAfrica
+
+A 'model' rain harvesting school campus for semi-arid regions, the aim of this project is to support education with specially designed buildings that integrate water collection, storage and filtration with agriculture, using football as a catalyst, providing a gathering place and vehicle for environmental education and the resolution of ethnic tensions across the region. The 'Waterbank Campus' occupies a 10 acre site integrating 4 acres of irrigated conservation agriculture with 7 unique, low-cost, rain harvesting building types developed by PITCHAfrica, and termed 'Waterbanks' because of each building's capacity to harvest and store high volumes of water using extremely low cost construction and locally available skills and materials, providing a year round supply for poverty stricken regions.
+***** Digital
+****** Disclosed – Marion Ferrec at the Royal College of Art, in collaboration with Kate Wakely
+
+Disclosed is a service concept which offers a transparency certification and data ecosystem – the aim being to help shoppers make more informed choices about the products they purchase. Through simple and tailored digital layers of information, users can act on what they individually believe matters for their health and the planet. Disclosed helps users gain more control over their consumption and channel their spending into products that best meet their ambitions, ultimately influencing retailers to invest in lines that better reflect those.
+****** MegaFaces installation by Asif Khan_dezeen_1sq
+
+Megafaces – Asif Khan
+
+Megafaces, which debuted at the Sochi Olympics, is an experimental architectural installation. It comprises a large scale kinetic-volumetric LED display supported by a bank of automated 3D-scanning photo booths, an automated 3D scan meshing system, a tablet app which uses QR-code cards, an SMS notification system, an automated 3D modelling and lighting algorithm, a web portal, and a video streaming service. The installation was commissioned by MegaFon. Described by the designer as 'A Mount Rushmore for the digital age', Megafaces is a building which could physically transform to take on the appearance of the people visiting it.
+****** Monument Valley – ustwogames
+
+Inspired by the art of M.C. Escher, Japanese prints and minimalist 3D design, Monument Valley is a surreal exploration through fantastical architecture and impossible geometry. Players of this mobile game must guide the silent Princess Ida through mysterious monuments, uncovering hidden paths, taking advantage of optical illusions and outsmarting the enigmatic Crow People. Each level is a hand-crafted combination of puzzle, graphic design and architecture.
+****** No Man's Sky – Sean Murray
+
+No Man's Sky is a science-fiction-based videogame about exploration and survival in an infinite procedurally generated galaxy. The aim is to ensure that players experience the sense of wonder captured by classic science-fiction stories - and to ensure that there are things in the galaxy of 18,446,744,073,709,551,616 planets that not even the developers are aware of. This scope is made possible by a unique engine, developed in-house. Using procedural generation, the engine uses the computational power of next-generation consoles and PCs to generate terrain as the player explores.
+****** Digital_Calliper_by_Unfold_dezeen_sq0
+
+Of Instruments and Archetypes – Claire Warnier + Dries Verbruggen, Unfold (concept, design & hardware), Penny Webb (design & prototyping), Jesse Kirschner (concept & software)
+
+Of Instruments and Archetypes is a range of wireless digital measuring instruments that transfer in realtime, measurements of physical objects to an on-screen digital 3D model. These instruments are designed to be used in applications where archetypical, parametric objects can be customised with exact measurements and materialised by digital production techniques such as 3D printing.
+****** Responsive Street Furniture – Ross Atkin (Conceptual design and digital system development), Jonathan Scott (Physical design and engineering)
+
+Responsive Street Furniture uses smart technology to make streets easier to use for disabled people with different kinds of impairments, including reduced mobility, low vision, blindness and learning difficulties. The system consists of a website where users can register their smartphone, or a low-cost key fob, then request helpful services such as additional places to sit, brighter street lighting, longer crossing times or audio information, which are activated when users approach a responsive item. The system could also be used for tourists and foreign visitors - providing audio information in native and foreign languages.
+****** Shadowing – Jonathan Chomko, Matthew Rosier
+
+Shadowing is an interactive installation embedded within streetlights throughout Bristol. It creates pockets of memory in the street; capturing the shadow of a pedestrian as they pass underneath the streetlight and then projecting it back to accompany the next person who passes by. Shadowing was first commissioned by Watershed as the winner of the 2014 Playable City Award and was installed in eight locations across Bristol during September and October 2014.
+****** Ocean-Clean-Up-Dezeen
+
+The Ocean Cleanup – Boyan Slat (CEO and founder), Jan de Sonneville PhD (Lead engineer), Erwin Zwart (Designer)
+
+Calling itself 'the largest clean up in history', this project aims to develop environmentally friendly, large-scale, and efficient removal of plastic pollution from aquatic ecosystems. Founded by Dutch environmentalist Boyan Slat after he encountered more plastic bags than fish while diving in Greece at the age of 16, the proposal takes the form of a network of floating barriers which cause natural currents to push plastics towards a central platform, allowing for efficient extraction and storage of concentrated plastic for transportation to land. The Ocean Cleanup recently raised over US$2 million through a crowd funding campaign, which the organisation plans to use for the construction and testing of large-scale operational pilots.
+****** The Refugee Project – Hyperakt and Ekene Ijeoma
+
+The Refugee Project is an interactive map that uses UNHCR refugee data and UN population data to tell the histories of refugee movements over time from 1975 to 2012. The map visualizes the size of refugee diasporas from dozens of unstable or repressive nations each year. The Refugee Project also includes over 80 stories that give political and historical context to the major refugee crises of each year. By shedding light on these global patterns, the makers hope to empower aid workers, governments, academics and citizens to seek compassionate solutions for some of the most vulnerable populations on earth.
+****** The Walls Have Eyes – Libby Miller, Jasmine Cox, Andrew Nicolaou (BBC Research and Development)
+
+Three innocuous-looking picture frames, originally placed strategically around the Ethical Dilemma Cafe at Mozilla Festival 2014. Each frame collects pictures of people nearby and information from their phones. The pictures and data are displayed on a projector and printed using a dot-matrix printer, giving the invisible information leaking from our devices noisy physical form. These technologies are used by companies to track people for commercial purposes. BBC R&D created the installation as part of wider work investigating the costs and benefits of personalisation of media.
+***** Fashion
+****** archivist-magazine_dezeen_
+
+Archivist magazine – Jane Howard (fashion director, co-founder), Michael Harrison (art director, co-founder), Dal Chodha (editor), Axel Hoedt (photography), Judith Clarke (contributor)
+
+Archivist is non-seasonal and does not purport to sell its audience clothes; it showcases designers' archives, important personal collections and new emerging talent. Three Faces: Archive Chalayan features the three female archetypes that define the fashion industry: the fresh, young face of a model; the familiar face of a supermodel; and the expressive, 'real' face of an actress all compete for greatest desirability. Trained ballet dancer Lida Fox, supermodel Kristen McMenamy and German actress Bibiana Beglau are photographed wearing clothes from the archive of designer Hussein Chalayan.
+****** Back SS15 Collection – Ann-Sofie Back
+
+Accentuated waists and bare shoulders dominate this collection by Swedish designed Back. Details such as safety pin closings and jewellery are mixed with checked fleece, jerseys and suiting. Materials include navy, wide cord and naively fringed denim. Stripes also feature heavily – pin striped shirts, block striped knits and ribbed jersey stripes. The safety pin details, stripes and bare shoulders are all staples for this label, appearing season after season.
+****** Fausto Puglisi 2014/15 Fall Winter Collection – Fausto Puglisi
+
+The Sicilian designer whose pieces have been worn by Nicky Minaj, Katy Perry, Taylor Swift, Jennifer Lopez, Beyonce and Rihanna, showed a collection which referenced such diverse inspirations as the plastic dynamism of the Ballets Russes, the supremacist artwork compositions of Kazimir Malevic and the Orphic Cubism of Sonia Delaunay. Silk Cady, crepe wool, and soft leather all feature, with intricate hand embroideries in a celebration of the 'Made in Italy'.
+****** JW-Anderson-SS-2015_dezeen
+
+J.W. Anderson SS15 Women's Catwalk Show – Jonathan Anderson with collection stylist Benjamin Bruno and milliner Noel Stewart for J.W. Anderson
+
+With Jacques Tati in mind, this collection is an ode to French playful femininity. Natural appeal flirts with eccentric refinement in a breezy modern interpretation of a seaside affair. The combination of traditional millinery techniques and unusual fabrications such as PVC makes for a new take on a classic shape and design.
+****** Raf-Simons-Sterling-ruby-AW-2014_dezeen
+
+Raf Simons / Sterling Ruby Autumn-Winter 2014/15 – Raf Simons (Designer) and Sterling Ruby (Artist)
+
+Belgian Designer Raf Simons and American artist Sterling Ruby presented the Raf Simons/Sterling Ruby collection in Paris during Menswear Ready to wear collections in January 2014. Born from a long standing friendship and mutual admiration and the desire by both men to experience a creative process together, this collection translated into a complete men's wardrobe that combined the aggressive formal aesthetics of Ruby with Simons' constant search for innovation in men's fashion.
+****** Rodarte AW14 – Kate and Laura Mulleavy
+
+Rodarte's AW14 collection paid homage to the imagery and mythology of Star Wars, depicting the film's key characters on a series of gowns. Behind the eye-catching designs is a serious dedication to craft and skill.
+****** Satu Maaranen / Collection SS 2015 Geometry of Futufolk – Satu Maaranen
+
+This collection, from the Helsinki-based designer who graduated from Aalto University School of Arts, Design and Architecture 2012, takes in functional folkgraft, 60s space-age and the ornamental Baroque. Maaranen researched Finnish folk craft traditions, the scrolls of Hermitage and the couturiers André Courrèges and Pierre Cardin for this collection, which features silhouettes inspired by 1960s Couture, and entirely handmade materials and prints.
+****** Thomas Tait AW13/14 – Thomas Tait
+
+Central St Martins graduate Tait presented a technically and aesthetically skilled collection which combined colour, cut and materials with vision and confidence.
+***** Graphics
+
+100 Years of Swiss Graphic Design – Christian Brändle, Karin Gimmi, Barbara Junod, Christina Reble, Bettina Richter (editors), NORM/Dimitri Bruni, Manuel Krebs, Teo Schifferli, Ludovic Varone (design), Martina Mullis (production), Lars Müller (publisher)
+
+A survey of 100 years of graphic design in Switzerland, taking in posters, corporate design, advertising and type. More than in many other countries, Swiss graphic design shows an uninterrupted evolution of visual dictions and production techniques throughout the 20th century with recognised international influence.
+****** design-for-extinction_dezeen
+
+Designing for the Sixth Extinction – Alexandra Daisy Ginsberg
+
+Commissioned by Science Gallery, Dublin, Designing for the Sixth Extinction investigates synthetic biology's potential impact on biodiversity and conservation. The project imagines a future in which new companion species designed by synthetic biologists support endangered natural species and ecosystems. Modeled on fungus, bacteria, invertebrates and mammals, the designed species are ecological machines that fill the void left by vanished organisms, or offer novel protection against more harmful invasive species, diseases and pollution. But are they even 'alive'? If nature is totally industrialized for the benefit of society—which for some is the logical endpoint of synthetic biology — will nature still exist for us to save?
+****** Franchise Animated – Jeroen Krielaars (Initiator and participating artist), Derek Weathersby (Type designer), Clark Rhee + Wesley Slover (Music and sound design)
+
+Franchise Animated is a collaborative animated typeface created by one type designer and a roster of 110 animators from all over the world. Each animator has picked a glyph and animated it in their personal style. The result is a wide variety of styles and techniques, with a colour palette and letterforms which tie the project together. The file is completely open and contains all the keyframes, expressions and artwork from the artists, it is currently available at Animography.net.
+****** Glasgow International – Kellenberger–White
+
+The biennial Glasgow International showcases the city as a unique major centre for contemporary visual art. Kellenberger–White was commissioned to design the identity for the festival's 2014 edition. The identity is a highly characterful typeface that captures the quickness and scale of large hand-painted lettering used on warehouses, docks and ships throughout Glasgow's industrial waterfront. The hand-painted digitised font maximised inexpensive materials.
+****** Inglorious Fruits & Vegetables – Marcel for Intermarché
+
+A campaign across film, print, billboards, radio, in-store, PR, social media to rehabilitate the imperfect fruits and vegetables by celebrating the beauty of the ridiculous potato, the hideous orange or the failed lemon. The idea was to show people that, though they might by ugly looking, there are as good as any others, but 30% cheaper.
+****** Jurriaan Schrofer (1926-1990) – Jaap van Triest and Karel Martens (design), Frederike Huygen (author), Astrid Vorstermans, Valiz (publishers)
+
+An extensive monograph on one of the defining figures in the field of graphic design in the Netherlands after the Second World War.
+****** Kenzopedia – Toni Halonen for Kenzo Paris
+
+Kenzopedia was an article series published trough the spring of 2014 on the Kenzo's web page. Its aim was to open up the inspirations and themes behind the spring collection. The headlines of the 26 articles came from different letters of the alphabets and contained an illustrated story that was related to it.
+****** MIT rebrand by Pentagon
+
+MIT Media Lab identity – Pentagram
+
+The MIT Media Lab is an interdisciplinary research laboratory at the Massachusetts Institute of Technology devoted to projects at the convergence of technology, multimedia, sciences, art and design. Its new identity builds on the previous system, which launched with the Lab's 25th anniversary in 2010 and was designed by Richard The and Roon Kang. The new solution developed by Bierut and Pentagram designer Aron Fay uses the seven-by-seven grid of The's anniversary logo to generate a simple “ML” monogram that serves as the logo for the Media Lab. Using that same grid, the designers extended the identity to each of the 23 research groups that lie at the heart of the Lab's activity.
+****** modern-design-review_dezeen_SQ01
+
+Modern Design Review issue 1 – Graphic Thought Facility, Editor Laura Houseley
+
+Art-directed by GTF, Modern Design Review is a new covering modern product and furniture design. The dust-jacket illustrates the magazine's content with components of Martino Gamper, Yrjö Kukappuro and Muller Van Severen's products presented in a carved, flower-arrangers foam brick — referencing the Japanese art of Ikebana featured in this launch issue. The magazine templates provide structure and plasticity that allows each feature to forge its own visual direction. MDR's own serif and sans-serif headline typefaces were created in conjunction with Housestyle to compliment the Starling and Haas Grotesk fonts used for the text setting.
+****** No. 5 Culture Chanel – Irma Boom
+
+Created to accompany an exhibition in Palais de Tokyo in Paris, this exquisite book is entirely white and made by embossing rather than printing with ink.
+****** Snøhetta designs bank notes for Norway
+
+Proposals for banknote designs for the Central Bank of Norway – Metric Design and Snøhetta Design
+
+In spring 2014 Norges Bank (The Central Bank of Norway) held a competition for the development of a design for a new Norwegian banknote series, communicating the theme 'The Sea'. The obverse and reverse are by different designers, using modern pixel motifs on one side and more traditional illustration on the other.
+****** Riposte magazine – Danielle Pender (Founder & Editor), Shaz Madani (Creative Director)
+
+Each issue of this 'smart magazine for women' features five ideas, four meetings, three features, two essays and one icon. It profiles bold and fascinating women whose achievements speak for themselves. Essays and features cover a broader range of topics than the regular fashion or celebrity focus of women's magazines, including art, design, music, business, innovation, politics, food and travel.
+****** The Way of the Shovel: Art as Archaeology scratch-off campaign – Romain André and Michael Savona
+
+This campaign for MCA Chicago's exhibition responded to the brief that 'Every piece of art is a story waiting to be uncovered'. The ads aimed to make the exhibition—which explores contemporary artists' interests in history, archaeology and archival research—accessible to the general public. Four bus shelter ads placed around Chicago's Loop and a tip-in newspaper advertisement gave users the opportunity to become archaeologists and archive their own histories through the familiar language of lotto scratch-offs. When users scratched off the silver layer, which depicted a shovel artist Mark Dion illustrated for the exhibition catalogue, they revealed local artist Tony Tasset's colorful portrait of himself dressed as Robert Smithson, as well as an offer for two-for-one admission to the museum.
+****** WIRED-Typography-by-Sawdust-dezeen
+
+Wired custom typeface – Sawdust (Typeface design) and Andrew Diprose (Art direction)
+
+A custom typeface designed for WIRED for use as section headers in the magazine. The aim was to create an eye-catching bespoke design which was both playful and readable.
+***** Product
+****** 101001000Mexico_PriscillaTierno_dezeen
+
+10 100 1000 (Tenhundredthousand) – La Metropolitana (Project Management + Conceptualization), Francisco Torres (Conceptualization), Luis David Arredondo (Project Development + Conceptualization)
+
+La Metropolitana and designer Francisco Torres invited ten Mexican contemporary designers to create the same piece of furniture under the same brief: a stool, to create a collection of pieces that represent the new wave of affordable Mexican design. All of the pieces in the collection were made at La Metropolitana's workshop in Mexico City. The wood used is environmentally certified with a natural finish developed by the company. The participating designers were: Ariel Rojo, Cecilia León de la Barra, Christian Vivanco, Ediciones Jalapa, Jorge Diego Etienne, La Metropolitana, Moisés Hernández, Oscar Núñez, Prisilla Tierno and Sebastián Ocampo.
+****** Air-purifying billboard – University of Engineering and Technology of Peru
+
+This ordinary-looking billboard can in fact attract and filter pollution from the sky, returning purified air to the surrounding area at a rate of 100,000 cubic metres per day – equivalent to the work of 1,200 mature trees. It can also remove dust, metal and stone particles from contaminated air-space around construction zones.
+****** Blue Diversion – Eawag (The Swiss Federal Institute of Aquatic Science and Technology) and EOOS
+
+2.5 billion people around the globe have no access to safe sanitation, causing severe diarrhoea, which kills 1.8 million people each year, primarily children under the age of 5. Furthermore, urine and faeces are severely polluting the environment. Blue Diversion is a grid-free dry diversion toilet, ie with no connection to piped water, sewers or electricity. Urine, faeces and flush-and-wash water are collected separately below the pan. The used water is recovered directly in the toilet by means of an innovative, energy-efficient and maintenance-free membrane bioreactor followed by on-site production of chlorine through electrolysis. This multi-barrier water treatment system included in the back wall of the toilet provides about 7 litres of hygienically safe water per user and day with little energy (provided by a small solar panel on the roof) and only minimal water losses. The Blue Diversion Toilet features a business model, which includes a collection system for urine and faeces, along with semi-centralised recycling plants for the production of valuable fertiliser and biogas.
+****** the_brck_dezeen
+
+BRCK – Erik Hersman, Reg Orton, Philip Walton
+
+BRCK is a rugged, self-powered, mobile WiFi device which connects people and things to the internet in areas of the world with poor infrastructure. Designed and prototyped in Nairobi, Kenya, the BRCK works on the principle of being physically robust, able to connect to multiple networks, a hub for all local devices, and with enough backup power to survive a blackout.
+****** The Brydgeair – Nicholas Smith (CEO) and Eddy Vromen (Technical Director)
+
+An iPad keyboard which works with both the iPad Air and the iPad Air 2, the BrydgeAir is intended to be 'the missing half the iPad.' Forged out of a single piece of aluminium, it features backlit keys, dual stereo speakers and a unique hinge.
+****** Current Table by Marjan van Aubel
+
+Current table – Marjan Van Aubel in collaboration with Solaronix
+
+Current table is a piece of furniture that also harvests energy from daylight to charge appliances. The glass table surface contains a Dye Sensitised Solar Cell. Based on photosynthesis it uses the properties of colour to create an electrical current. Unlike classic solar cells, these coloured cells don't need direct sunlight and are able to function under diffused light.
+****** technology-will-save-us-diy-gamer-kit_dezeen_sq01
+
+DIY Gamer Kit – Technology Will Save Us
+
+The DIY Gamer Kit lets users make, play, code and invent with technology. Using the kit they can build their own handheld games console from scratch, then code and invent their own games using the kit's custom software and the open-source platform, Arduino, so all of the code is freely available. Each Gamer comes with an infrared sensor to allow for multiplayer gaming. Making, coding, inventing and playing with the Gamer instills skills for the 21st century - like electronics, coding, soldering, problem solving and debugging - in a fun and hands-on way.
+****** Double O bicycle lights by Paul Cocksedge
+
+Double O – Paul Cocksedge Studio
+
+Double O is an innovative bike light that locks with your bike for convenience and security, and delivers light that is bright but not blinding to other road users. An in-built hard-wearing, flexible strap allows the Double O to be attached to a bike, bag or helmet. Many bike lights end up lost or stolen - with Double O, the circular shape also provides a way of securely locking up the lights by slipping them onto a D-lock.
+****** Dragonfly – Odo Fioravanti
+
+The design of this chair was derived from observations made on dragonflies, whose bodies are characterized by an imbalance in weight distribution between the front legs and their extended tail. From this came the idea of a cantilever chair with four legs joined on the front and a seating surface that seems to cheat the force of gravity like an overhang. The back legs are obtained from the same metal pipe that is also framing the front edge of the seat.
+****** Endgrain by Raw Edges
+
+Endgrain – Yael Mer and Shay Alkalay
+
+Wood is soaked in colours to build up a collection of timbers that are later glued to each other in vivid colourful tartan patterns. When sculpting these patterned blocks into the finished objects, the three dimensional shapes distort the squares patterns in a surprising and unexpected way.
+****** The Extrapolation Factory – Elliott P. Montgomery and Chris Woebken
+
+The Extrapolation Factory is a studio for design-led futures studies which develops experimental methods for collaboratively prototyping, experiencing and impacting future scenarios. They create hypothetical props and deploy them in familiar contexts such as 99¢ stores, science museums, vending machines and urban sidewalks. With this work, the studio aims to explore the value of rapidly imagined, prototyped, deployed and evaluated visions of possible futures.
+
+Field Experiments: Indonesia – Benjamin Harrison Bryant, Paul Marcus Fuog and Karim Charlebois-Zariffa (Field Experiments) with Ketut Maryone, Wayan Supiarta, Wayan Slamet, Ketut Arya, Bapak Tjok Agung, Ibu Antik, Made Suriyani, Nengah Budi Adnaya, Ni Wayan Ruminti, Kadek Wahyuni
+
+Field Experiments is a nomadic design collective that uses collaborative making to explore diverse cultures and craft communities in different regions around the world. Field Experiments Indonesia resulted in the making of more than 100 conceptual objects that challenge the traditional notion of the souvenir. It explored the re-assemblage of cultural craft objects in a tourist-driven economy and examined the influence of transnational exchange in the making process, proposing how a souvenir can manifest and encourage cross-cultural learning and understanding.
+
+'Grow it Yourself' Mushroom Materials – Eben Bayer (CEO), Gavin McIntyre (Chief Scientist), Gordon MacPherson (Project Manager), Danielle Trofe (Designer), Sam Harrington, Stephen Nock
+
+Ecovative create high-performing biocomposites from humble raw materials. They use fungal mycelium, the root-like structure of a mushroom, to glue together agricultural wastes into high-performing and sustainable products. The resulting material is also completely compostable, so at the end of its useful life, it can be returned to the soil as a nutrient. Grow It Yourself empowers artists, makers, and innovators to use this potentially revolutionary material for their own projects.
+****** Human Organs-on-Chips – Donald Ingber and Dan Dongeun
+
+Scientists at the Wyss Institute for Biologically Inspired Engineering at Harvard University have adapted computer microchip manufacturing methods to design and fabricate crystal-clear microdevices lined with living human cells that mimic the complex tissue structures, functions and mechanical motions of whole organs; they are essentially living 'Human Organs-on-Chips'. Each Organ-on-a-Chip models natural tissue structures and mirrors the dynamic mechanical behavior of internal organs. Chips can also can be linked to form a 'Human Body-on-Chips', which can be analyzed to learn how drugs impact each organ as they are distributed and metabolized throughout the body. Cells from individual patients or from genetically-related populations can be used to inhabit these Organs-on-Chips to build mimics of their organs, a tactic that promises to advance personalized medicine, accelerate drug discovery and decrease development costs.
+****** Kano computer kit by MAP
+
+Kano computer kit – Kano and Map
+
+Kano is a computer and coding kit for all ages, all over the world. It is as simple as Lego and powered by Raspberry Pi. All elements of the kit were designed from scratch to create a unified experience and to be playful and desirable for children and young adults. The packaging is designed to be an integral part of the product experience. It is used as storage for and organisation for the components and also has an instructional role. The kit includes a new wireless coding and gaming keyboard, Raspberry Pi, a new type of customisable case, a speaker module, packaging and accessories.
+****** Konstantin Grcic designs glass furniture with moving parts for Galerie Kreo show
+
+Man Machine – Konstantin Grcic for Galerie kreo
+
+A furniture collection from stalwart Designs of the Year nominee Grcic, Man Machine features tables, a chair and different storage and display pieces, all made of glass with moving air pistons.
+****** Miito by Nils Chudy
+
+Miito – Nils Chudy, Jasmina Grase, Rebekka Mueller
+
+This reimagining of the kettle heats liquid directly in the drinking vessel, eliminating the heating of excess water. Simply fill your cup with water, place it onto the induction base and immerse the rod in the liquid. The induction base heats the rod, which then heats the liquid surrounding it. Miito works with non-ferrous vessels of any size and can also heat soup or milk for a coffee. The clean shape of the rod allows for easy cleaning.
+****** Moocall SMS calving alert sensor – Lyndsey Bryce, Christopher Murphy and Niall Austin
+
+An SMS calving alert sensor, Moocall sends a text when calving has started – bringing benefits for both farmers and cows. Moocall is the first of its kind; easy to use, non-invasive and cost effective solution for live calf birth monitoring. The sensor can withstand the harsh and extreme environment of a farm along with the weather that the outdoors throws at it. With smooth surfaces and an adjustable attachment mechanism, it is quick and safe to use and can withstand cows' curiosity.
+****** Project Daniel: 3D printing limbs – Mick Ebeling / Not Impossible
+
+Project Daniel is the world's first 3D-printing prosthetic lab, set up by Not Impossible founder Mick Ebeling after he saw footage of a teenager who lost both arms when a bomb went off while he was tending his parents' cattle. The young man was Daniel Omar, a resident of a sprawling refugee camp called Yida. Ebeling tracked him down via humanitarian physician Dr. Tom Catena, and set about creating new limbs for Daniel with the help of a team of makers and Richard van As, the founder of open-source 3D-printing prosthetic company Robohand. The project has a legacy beyond Daniel's new limbs — Not Impossible left two 3D printers in Dr. Catena's Nuba Mountains hospital, in a community that had no concept of 3D-printing before his arrival. Ebeling trained locals to use the equipment so that other victims of the conflict are able to get access to a limb that costs $100 of materials, a fraction of the price of traditional solutions.
+****** QardioArm – Marco Peluso (Inventor), Rosario Iannella (Inventor), Clara Gaggero Westaway (Designer), Adrian Westaway (Designer), Duncan Fitzsimons (Designer)
+
+QardioArm is a clinically validated, portable blood pressure monitor, offering the smart way to measure and track systolic and diastolic blood pressure and heart rate. The free Qardio App stores all your blood pressure readings, helps set measurement reminders and encourages users to keep their blood pressure in check.
+****** MAP's Sabi Space collection
+******* Sabi Space – MAP Project Office
+
+Sabi Space is a collection of easy-to-install storage and organization products that give everyone the freedom to curate the perfect bathroom. The line is designed by MAP Project Office, London, a creative consultancy founded by Edward Barber and Jay Osgerby.
+******* Strap Chair – Scholten & Baijings
+
+The Strap Chair is a stackable, lightweight chair with armrests. The way in which the straps are wound around the tubular frame gives the upholstery its unique structure. The strength of the material, in combination with this specific type of braiding, removes the need for foam and other upholstery materials. The special polyester fabric and powder-coated metal frame ensure that the seat is ideal for both inside and outside use.
+******* Switch Light – Joel Hoff
+
+Switch Light possesses an integrated dimmer that enables the user to directly interact with the light by turning the cylinder. The designer imagines the 'light at my bedside table, it is continuously adjustable from bright light for reading to just a bit of light when you wake up at night.' The Switch Light is distilled down to its essential elements, being left with a faceted cylinder out of anodized aluminium, which acts as rotary switch and a blow moulded glass sphere as a diffuser perfectly emitting the light of the LED in all directions.
+***** Transport
+****** Dainese D-air bag Street – Vittorio Cafaggi
+
+Sensors mounted to the front of the motorcycle anticipate a frontal collision and send a signal to the activators in the airbag that inflate the cells in 45-milliseconds thus giving added protection to both rider and pillion in an accident situation.
+****** Google's self-driving car
+
+Google self-driving-car – YooJung Ahn, Jared Gross, Philipp Haban
+
+Google's new vehicle has been designed to drive itself at the push of a button. The design is intended to be simple, friendly, and practical, with some surprises, including a lack of steering wheel or pedals. Google plans to use the vehicles to test their newest software & hardware and develop the technologies for use in the real world.
+****** i8 – Mario Majdandzic, Benoît Jacob and Richard Kim / BMW
+
+An entirely new concept of sports car, the BMW i8 has increased efficiency due to its intelligent lightweight construction with carbon and aerodynamic design. It has been designed with thought towards it sustainability, using BMW eDrive technology and recyclable materials in the interior. The i8 is a plug-in hybrid that brings together the advantages of innovate electric motor and combustion engine technologies, offering low consumption and low emissions.
+****** Loopwheels – Sam Pearce for Jelly Products
+
+Loopwheels are wheels with integral suspension, designed for bicycles and wheelchairs. A spring system with three loops made from a carbon composite material replace conventional spokes, providing shock absorption and up to 70mm suspension travel. The carbon composite springs allow the hub to float within the rigid rim of the wheel, constantly adjusting to the terrain, but are stiff enough to be driven like a normal wheel, making it easier to mount or descend a kerb and go over bumps and potholes.
+****** Model S – Franz von Holzhausen / Tesla Motors
+
+Tesla describe their Model S as 'a premium performance sedan with dual motor all wheel drive and 265 miles range.' With two motors, one in the front and one in the rear, the car digitally and independently controls torque to the front and rear wheels. Model S's Autopilot system combines a forward looking camera, radar, and 360 degree sonar sensors with real time traffic updates to automatically drive on the open road and in traffic. When you arrive at your destination, Model S will both detect a parking spot and automatically park itself.
+****** Yamaha Motor Company MOTIV.e City Car – Masato Suzuki (Yamaha Motor Company) and Gordon Murray Design Limited
+
+MOTIV.e is a compact four-wheeled vehicle which incorporates Formula One heritage, inspiration from motorcycle design and the latest technology. It utilises Gordon Murray Design's iStream® manufacturing technology which delivers new levels of lightweight, safety, vehicle dynamics and manufacturing flexibility alongside low environmental impact.
+***** Related story: Zaha Hadid's Heydar Aliyev Center wins Design of the Year 2014
+
+Zaha Hadid's Heydar Aliyev Center<br /> wins Design of the Year 2014
+News: architect Zaha Hadid's undulating Heydar Aliyev Center in Baku has been named Design of the Year by London's Design Museum this evening. More »
+***** Related movie: Heydar Aliyev Center was "an incredibly ambitious project" says Zaha Hadid
+
+
+Architect Zaha Hadid has described her Heydar Aliyev Center in Baku, Azerbaijan as an "incredible achievement" while project architect Saffet Kaya Bekiroglu said the project expressed the "soft, romantic side" of Azeri culture. Larger version + story »
+**** 回峰行, 即身成佛
+ :PROPERTIES:
+ :DATE: <2015-03-25 Wed 23:03>
+ :END:
+*** 2015-03-26 Thursday
+**** Maria X
+ :PROPERTIES:
+ :DATE: <2015-03-26 Thu 01:23>
+ :END:
+
+
+http://www2.hull.ac.uk/fass/drama,-music-and-screen/our-staff/drama-staff/maria-chatzichristodoulou.aspx
+**** Ryoji Ikeda + Vinyl Factory: SUPERSYMMETRY
+ :PROPERTIES:
+ :DATE: <2015-03-26 Thu 01:26>
+ :END:
+
+http://www.thevinylfactory.com/vinyl-factory-exhibitions/ryoji-ikeda-and-the-vinyl-factory-present-supersymmetry-at-brewer-street-car-park-2/
+*** 2015-03-27 Friday
+**** Schubert Streichquintett C
+ :PROPERTIES:
+ :DATE: <2015-03-27 Fri 00:16>
+ :END:
+**** game of thrones: season 4 fallen roundtable
+ :PROPERTIES:
+ :DATE: <2015-03-27 Fri 15:46>
+ :END:
+
+https://www.youtube.com/watch?v=1YGTR8BCDTM
+**** for EASTM: example of simple but effective online slideshow for physics, by John Baez
+ :PROPERTIES:
+ :DATE: <2015-03-27 Fri 20:34>
+ :END:
+
+SPLIT OCTONIONS
+AND
+THE ROLLING BALL
+
+John Baez and John Huerta
+
+with lots of help from
+
+James Dolan and Geoffrey Dixon
+
+http://math.ucr.edu/home/baez/ball/
+http://math.ucr.edu/home/baez/ball/23.html
+**** readings from withhiddennoise
+ :PROPERTIES:
+ :DATE: <2015-03-27 Fri 21:19>
+ :END:
+
+http://withhiddennoise.net/readings/
+
+***** A
+- Aeschylus, The Oresteia
+- Muammar Al Gathafi, The Green Book
+- Marcel Allain & Pierre Souvestre, The Silent Executioner
+- Eleanor Antin, Historical Takes
+- Dore Ashton, The New York School
+***** B
+- Nicholson Baker, U and Honoré de Balzac, Treatise on Elegant Living
+- W. N. P. Barbellion, The Journal of a Disappointed Man
+- Donald Barthelme, Paradise
+- Elif Batuman, The Possessed
+- Jorge Luis Borges: Doctor Brodie’s Report; The Book of Sand and Shakespeare’s Memory
+- Jane Bowles, Two Serious Ladies
+- Jane Bowles & Denton Welch, A Stick of Green Candy
+- Hermann Broch, The Death of Virgil
+- Thomas Browne: Selected Writings; The Major Works
+- Alan Burns, The Angry Brigade
+***** C
+- Joshua Cohen: Cadenza for the Schneidermann Violin Concerto; A Heaven of Others; Witz
+- Jon Cotner & Andy Fitch, Ten Walks/Two Talks
+- Stanley Crawford: Mayordomo; Petroleum Man; The River in Winter
+- John Crowley: Lord Byron’s Novel: The Evening Land; The Girlhood of Shakespeare’s Heroines
+***** D
+- Jeremy M. Davies, Rose Alley
+- Sergio De La Pava, A Naked Singularity
+- Chris Diken, Some People
+- Danielle Dutton, Attempts at a Life
+- Geoff Dyer, Yoga for People Who Can’t Be Bothered to Do It
+***** F
+- Charles Macomb Flandrau, Viva Mexico!
+- Thomas Frank, What’s the Matter with Kansas?
+***** G
+- Henry Green: Concluding; Back; Caught; Doting; Nothing
+- George & Weedon Grossmith, The Diary of a Nobody
+***** H
+- Julian Jason Haladyn, Marcel Duchamp: Étant donnés
+- Elizabeth Hardwick: The New York Stories of Elizabeth Hardwick; Sleepless Nights
+- Kristin Hersh, Rat Girl
+- Homer, The Odyssey; The Odyssey (trans. Samuel Butler)
+***** I
+- Lucy Ives, Anamnesis
+***** J
+- Gabriel Josipovici: Writing and the Body; Everything Passes
+- Ray Johnson & Bill Wilson, A Book about A Book about Death
+***** K
+- Franz Kafka, Blumfeld, An Elderly Bachelor
+***** L
+- Alan Levin, Love is like Park Avenue
+- Claude Lévi-Strauss, Tristes tropiques
+- Tan Lin, Seven Controlled Vocabularies
+- Pierre Louÿs, The Young Girl’s Handbook of Good Manners
+***** M
+- Harry Mathews, The Journalist
+- Sebastian Matthews, ed., From BMC to NYC: The Tutelary Years of Ray Johnson 1943–1967
+- Joseph McElroy: Ship Rock: A Place; Preparations for Search; Night Soul and Other Stories
+- James R. Mellow, A Charmed Circle
+- Herman Melville, Moby-Dick
+- Stan Mir, Flight Patterns
+- Leonard Mlodinow, Euclid’s Window
+- Steven Moore, The Novel: An Alternative History
+***** N
+- Francis Naumann, ed., Affectionately, Marcel: The Selected Correspondence of Marcel Duchamp
+- Gérard de Nerval, Aurélia & other writings
+***** O
+- Klaus Ottmann, Yves Klein by Himself
+***** P
+- Orhan Pamuk, My Name is Red
+- Georges Perec, An Attempt at Exhausting a Place in Paris
+- Marcel Proust, The Prisoner
+- Alexander Pushkin, The Tales of Belkin
+***** R
+- Tom Rachman, The Imperfectionists
+- Jules Renard, Nature Stories
+- Éric Rohmer, Six Moral Tales
+- Frederick Rolfe, The Desire and Pursuit of the Whole
+***** S
+- Aram Saroyan, Coffee Coffee
+- Wallace Shawn, Essays
+- Ettie Stettheimer, Love Days
+- Florine Stettheimer, Crystal Flowers: Poems and a Libretto
+***** T
+- Alice B. Toklas, What Is Remembered
+- Jean-Philippe Toussaint, Self-Portrait Abroad
+- B. Traven, The Treasure of the Sierra Madre
+- Frederic Tuten: The Adventures of Mao on the Long March; Tintin in the New World
+***** V
+- Jules Verne, The Green Ray
+***** W
+- Robert Walser, Answer to an Inquiry
+- John Waters, Role Models
+- Edmund White: Caracole; City Boy
+***** Y
+- Monica Youn, Ignatz
+***** various
+- The Baffler: #4: Your Lifestyle Sucks!; #6: Dark Age; #7: The City in the Age of Information; #8: The Cultural Miracle; #9: An Injury To All; Vol. 2, No. 1: Margin Call
+***** [About the author]
+
+Note: I presume this is the Dan Visel behind withhiddennoise (?) : http://mobilityshifts.org/conference/participants/keynotes/dan-viesel/
+
+#+BEGIN_QUOTE
+Dan Visel graduated from Harvard and has worked as a book designer and editor in the travel business and publishing world. Since 2005, he's been part of the Institute for the Future of the Book, a Brooklyn-based think tank focusing on the changing nature of the book as it moved from the printed page to the networked screen; in addition to managing the Institute's software development projects, he wrote and spoke extensively about the changing nature of the book and its relation to technology. He's a contributing editor at Triple Canopy, an online magazine that curates and facilitates new media projects, and is presently working for Unfold, a start-up mapping political discourse.
+#+END_QUOTE
+
+See also: http://www.weareinbangkok.com/author/dbv/page/3/
+
+**** javascript color picker (chart) online
+ :PROPERTIES:
+ :DATE: <2015-03-27 Fri 22:28>
+ :END:
+
+http://jdstiles.com/colorchart.html
+
+See also: http://www.w3schools.com/html/html_colornames.asp
+*** 2015-03-28 Saturday
+**** banji monogatari: woman ulysses
+ :PROPERTIES:
+ :DATE: <2015-03-28 Sat 01:05>
+ :END:
+**** notmuch: alternative email client for emacs? (to mu4e)
+ :PROPERTIES:
+ :DATE: <2015-03-28 Sat 02:30>
+ :END:
+
+Note: This is from Sacha Chua's EMACS chat with Christopher Wellons
+around 31:00: https://www.youtube.com/watch?v=Hr06UDD4mCs#t=1215
+
+See also: http://nullprogram.com/blog/2013/09/03/  which is Wellons' account of how he ended up using notmuch.
+
+Here is what he writes about notmuch vs mu4e:
+
+#+BEGIN_QUOTE
+notmuch vs mu4e
+
+Since I decided early on to go with an Emacs-based e-mail client, learning a new e-mail client got a lot easier. I know Emacs Lisp pretty darn well. In the worst case of getting stuck, I could very easily study the client's source code and work out for myself whatever is going on. I could even monkey patch it in my configuration if it was causing problems for me (and I've already done exactly that).
+
+I wanted to use the Maildir format, something I could hack on if needed. The two obvious choices for this were mu4e and notmuch, both started in 2009. I initially reached for mu4e. Compared to notmuch, it follows Emacs idioms more closely. For example, the e-mail listing is oriented around a mark and execute paradigm, like a dired buffer. After an initial glance, it felt more integrated.
+
+Unfortunately, mu4e is still not mature enough for real productive use, making it far too risky for e-mail. I found out the hard way that the database format has varied regularly between versions. Worse, mu4e is not suitable for remote access. Not only does it assume the Maildir directory is on the local host, it uses absolute paths to access it, so it won't work over sshfs as I had hoped. Bummer.
+
+In contrast, the notmuch client is specifically designed to be operated remotely. Emacs doesn't realize that it runs the notmuch client over SSH. Emacs doesn't need to touch the Maildir directly. It's a beautiful setup, one very friendly to versioning dotfiles. I've already done some pretty heavy configuration to get it exactly the way I want it. On top of this, notmuch is incredibly fast and stable. It's been a very enjoyable client. So much so that it inspired me to build a web feed reader with a similar interface (to be described in my next post).
+#+END_QUOTE
+
+see also: https://github.com/Malabarba/gmail-mode
+http://endlessparentheses.com/write-gmail-in-emacs-the-easy-way-gmail-message-mode.html
+**** emacs hangout about org babel for literate programming
+ :PROPERTIES:
+ :DATE: <2015-03-28 Sat 03:42>
+ :END:
+
+
+https://www.youtube.com/watch?v=i5opSxNnhMs#t=327
+**** Bret Victor lecture/demo on live data visualization - et al
+ :PROPERTIES:
+ :DATE: <2015-03-28 Sat 12:06>
+ :END:
+
+"Treatise on why dynamic pictures matter"": http://worrydream.com/MagicInk/
+
+Lectures and other online stuff:
+
+https://vimeo.com/66085662
+
+#+BEGIN_QUOTE
+For more information, see: worrydream.com/DrawingDynamicVisualizationsTalkAddendum
+Throughout the history of science, diagrams and graphs have been essential thinking tools. In the past, such visualizations were drawn with pen on paper, and could embrace the directness, freedom, and expressiveness of hand drawing. Most modern visualizations are programmed instead, where a single description can dynamically generate a unique picture for any dataset.
+
+Today's tools offer the benefits of one or the other -- either directness or dynamics -- but not both. Photoshop and Illustrator allow direct-manipulation drawing of static pictures. D3, R, and Processing allow indirect-manipulation coding of dynamic pictures.
+This talk presents a tool for drawing dynamic pictures -- creating data-driven visualizations, like D3, but via direct manipulation of the picture itself, like Illustrator.
+
+Recorded at the Stanford HCI seminar on February 1, 2013.
+#+END_QUOTE
+
+Another vimeo on live data visualization tinkering / development with code here: http://worrydream.com/#!/DrawingDynamicVisualizationsTalk or directly on vimeo here: https://vimeo.com/66085662
+
+Comments by toplap members here: http://toplap.org/bret-victor-on-live-coding/
+
+The essay that triggered the discussion on toplap here: http://worrydream.com/LearnableProgramming/
+
+Quote:
+
+#+BEGIN_QUOTE
+Here's a trick question: /How do we get people to understand programming?/
+
+Khan Academy recently launched an online environment for learning to program. It offers a set of tutorials based on the JavaScript and Processing languages, and features a "live coding" environment, where the program's output updates as the programmer types.
+
+Because my work was cited as an inspiration for the Khan system, I felt I should respond with two thoughts about learning:
+
+- Programming is a way of thinking, not a rote skill. Learning about "for" loops is not learning to program, any more than learning about pencils is learning to draw.
+- People understand what they can see. If a programmer cannot see what a program is doing, she can't understand it.
+
+Thus, the goals of a programming system should be:
+
+- to support and encourage powerful ways of thinking
+- to enable programmers to see and understand the execution of their programs
+
+A live-coding Processing environment addresses neither of these goals. JavaScript and Processing are poorly-designed languages that support weak ways of thinking, and ignore decades of learning about learning. And live coding, as a standalone feature, is worthless.
+#+END_QUOTE
+
+Finally, an impressive showreel: http://worrydream.com/#!/Showreel2012
+
+**** to look into: SuperCollider-JavaScript lib by crucial
+ :PROPERTIES:
+ :DATE: <2015-03-28 Sat 20:42>
+ :END:
+
+http://supercolliderjs.readthedocs.org/en/latest/index.html
+**** Brandon Stanton / Humans of New York. Broadly related to Alexios' work / strategies for Performigrations piece: How to involve people
+ :PROPERTIES:
+ :DATE: <2015-03-28 Sat 21:12>
+ :END:
+
+On how I approach strangers in the street | Humans of New York creator Brandon Stanton | UCD, Dublin
+
+https://www.youtube.com/watch?v=KPxzlGPrM3A
+*** 2015-03-29 Sunday
+**** font combination: Vollkorn + Source Code Pro
+ :PROPERTIES:
+ :DATE: <2015-03-29 Sun 06:07>
+ :END:
+
+http://www.lunaryorn.com/2014/08/12/emacs-script-pitfalls.html
+
+Vollkorn Sans Serif http://vollkorn-typeface.com/
+See Table of Contents list with non-serif "a", despite non italic.
+**** Can viruses make us human?
+ :PROPERTIES:
+ :DATE: <2015-03-29 Sun 15:16>
+ :END:
+
+http://c3.fisica.unam.mx/images/library/file/VirusesHuman.pdf
+
+
+#+BEGIN_CENTER
+*Can Viruses Make Us Human?*
+
+LUIS P. VILLARREAL
+
+Director, Center for Virus Research
+
+University of California at Irvine
+
+#+END_CENTER
+
+#+BEGIN_QUOTE
+This question will seem preposterous to most. Viruses
+are molecular genetic parasites and are mostly recognized for
+their ability to induce disease in their host. Their effect on host
+evolution has long been thought to be like that of a predator on its
+prey, eliminating the host with weakened defenses. How can we propose
+any constructive role for viruses? Many viruses, however, can
+infect their host in a stable and persisting manner, generally with no
+disease, often for the life of the host. Such viruses can bring to bear
+onto their host the viral seeds of genetic creation. (Villareal: 1).
+#+END_QUOTE
+
+And:
+
+http://www.somosbacteriasyvirus.com/retrovirus.pdf
+
+#+BEGIN_CENTER
+
+The Viruses That Make Us:
+
+A Role For Endogenous Retrovirus In The Evolution Of
+
+Placental Species
+
+by Luis P. Villarreal
+
+#+END_CENTER
+
+See also: Retroviruses, the Placenta, and the Genomic Junk Drawer: http://schaechter.asmblog.org/schaechter/2014/06/retroviruses-the-placenta-and-the-genomic-junk-drawer.html
+**** Tangle.js: A JavaScript library for reactive documents
+ :PROPERTIES:
+ :DATE: <2015-03-29 Sun 16:16>
+ :END:
+
+http://worrydream.com/Tangle/
+
+By Bret Victor.
+
+#+BEGIN_QUOTE
+Tangle is a JavaScript library for creating reactive documents. Your readers can interactively explore possibilities, play with parameters, and see the document update immediately. Tangle is super-simple and easy to learn.
+#+END_QUOTE
+*** 2015-03-30 Monday
+**** grobotronix: Raspberry pi providers in the center of athens
+ :PROPERTIES:
+ :DATE: <2015-03-30 Mon 14:15>
+ :END:
+
+Grobotronics.comDirections
+Electronics Store
+Address: Klisovis 6, Athina
+Phone:801 300 3626
+Hours: Closing soon · 9:30 am – 2:30 pm
+Write a review
+****
+**** gui, doneAction, polling in SuperCollider
+ :PROPERTIES:
+ :DATE: <2015-03-30 Mon 15:36>
+ :END:
+
+
+From Class session.
+
+#+BEGIN_SRC sh
+/* Mon Mar 30 15:36:33 2015 EEST */
+
+Help.gui;
+
+// ================================================================
+//:
+w = Window();
+w.front;
+//:
+w = Window().front;
+//:
+w = Window("my window", Rect(10, 10, 300, 150)).front;
+//:
+w.bounds;
+//:
+w.bounds = Rect(200, 100, 200, 500);
+//:
+{
+	50 do: {
+		w.bounds = w.bounds.moveBy(10, 10);
+		0.1.wait;
+	}
+}.fork(AppClock)
+
+//:
+{ Line.kr(10, 100, 10) }.play;
+//:
+{ Line.kr(10, 100, 10, doneAction: 2) }.play;
+//:
+{ Line.kr(10, 100, 10).poll }.play;
+//:
+{ Line.kr(10, 100, 10, doneAction: 2).poll }.play;
+//:
+w = Window("moving", Rect(0, 0, 150, 150)).front;
+
+OSCdef(\trackLine1, { | msg |
+	msg.postln;
+	{ w.bounds = w.bounds.left = msg[3] * 4 }.defer
+}, \tr);
+
+{
+	var trig, source;
+	trig = Impulse.kr(10);
+	source = Line.kr(10, 100, 10, doneAction: 2);
+	SendTrig.kr(trig, 0, source);
+}.play;
+
+//:
+w = Window("sliders", Rect(0, 0, 400, 400)).front;
+w.view.layout = HLayout(
+	Slider().action = { | me | me.value.postln }
+}
+)fi
+
+//:
+a = { | freq = 0 | SinOsc.ar(freq, 0, 0.1) }.play;
+
+w = Window("sliders", Rect(0, 0, 400, 400)).front;
+w.view.layout = HLayout(
+Slider().action = { | me |
+	me.value.postln;
+	a.set(\freq, me.value * 4000 + 400)
+};
+
+)
+//:
+a = {{ | freq = 0 | SinOsc.ar(freq, 0, 0.1) }.play; } ! 10;
+
+w = Window("sliders", Rect(0, 0, 400, 400)).front;
+
+w.view.layout = VLayout(
+*({ | i |
+	HLayout(
+		StaticText().string_(format("slider %", i + 1)),
+		Slider().orientation_(\horizontal)
+		.action_({ | me |
+			a[i].set(\freq, me.value * 4000 + 400)
+		})
+	)
+} ! 10)
+)
+//:
+a = { SinOsc.ar(MouseX.kr(400, 4000), 0, 0.1) }.play;
+
+//: Use a ControlSpecμ
+a = {{ | freq = 0 | SinOsc.ar(freq, 0, 0.1) }.play; } ! 10;
+p = \freq.asSpec;
+w = Window("sliders", Rect(0, 0, 400, 400)).front;
+
+w.view.layout = VLayout(
+*({ | i |
+	HLayout(
+		StaticText().string_(format("slider %", i + 1)),
+		Slider().orientation_(\horizontal)
+		.action_({ | me |
+			a[i].set(\freq, p.map(me.value))
+		})
+	)
+} ! 10)
+
+)
+//: Bind the synths to sliders directly
+a = {{ | freq = 0 | SinOsc.ar(freq, 0, 0.1) }.play; } ! 10;
+p = \freq.asSpec;
+w = Window("sliders", Rect(0, 0, 400, 400)).front;
+
+w.view.layout = VLayout(
+*(a collect: { | synth, i |
+	HLayout(
+		StaticText().string_(format("slider %", i + 1)),
+		Slider().orientation_(\horizontal)
+		.action_({ | me | synth.set(\freq, p.map(me.value))})
+	)
+})
+)
+
+//:
+a = { SinOsc.ar(MouseX.kr(400, 4000), 0, 0.1) }.play;
+
+
+#+END_SRC
+
+**** semester paper examples + advice
+ :PROPERTIES:
+ :DATE: <2015-03-30 Mon 19:45>
+ :END:
+
+Quick search ...
+
+http://www.wikihow.com/Write-a-Term-Paper
+
+http://www.uvm.edu/~ral/bsad145/semester.research.paper.html
+
+https://academichelp.net/academic-assignments/write-term-paper.html
+
+http://www.lhup.edu/~dsimanek/termpapr.htm
+
+http://library.humboldt.edu/ic/general_competency/kuhlthau.html
+*** 2015-03-31 Tuesday
+**** blackmax: comprehensive black hole event generator
+ :PROPERTIES:
+ :DATE: <2015-03-31 Tue 07:06>
+ :END:
+
+http://blackmax.hepforge.org/
+** 2015-04 April
+:PROPERTIES:
+:LATEX_TEMPLATE: /Users/iani/Dropbox/000WORKFILES/1_SNIPPETS_AND_TEMPLATES/latex-simple-article-english-hypatia.tex
+:ID:       784DD6D5-94F0-48B3-ADFE-9C304B8F8BE4
+:LATEX_TEMPLATE_COPY: /Users/iani/Dropbox/000WORKFILES/0_PRIVATE/attachments/78/4DD6D5-94F0-48B3-ADFE-9C304B8F8BE4/latex-simple-article-english-hypatia.tex
+:END:
+*** 2015-04-01 Wednesday
+**** KCO Masterclasses Mariss Jansons 2 of 2
+ :PROPERTIES:
+ :DATE: <2015-04-01 Wed 00:34>
+ :END:
+
+https://www.youtube.com/watch?v=lBXXqI3i6xc
+**** single page apps with angular - with ajax
+ :PROPERTIES:
+ :DATE: <2015-04-01 Wed 08:10>
+ :END:
+
+https://www.youtube.com/watch?v=xN9QxPtK2LM
+
+See also: https://www.youtube.com/watch?v=xN9QxPtK2LM
+*** 2015-04-02 Thursday
+**** vgl BWV0213.9 w ?
+ :PROPERTIES:
+ :DATE: <2015-04-02 Thu 12:09>
+ :END:
+**** Sam Harris on nuanced religious people and the smart man's dodge
+ :PROPERTIES:
+ :DATE: <2015-04-02 Thu 18:13>
+ :END:
+
+https://www.youtube.com/watch?v=Go-ntjYFUiI
+
+http://en.wikipedia.org/wiki/Francis_Collins
+
+http://en.wikipedia.org/wiki/John_Polkinghorne
+
+http://en.wikipedia.org/wiki/N._T._Wright
+
+http://en.wikipedia.org/wiki/Reza_Aslan
+*** 2015-04-03 Friday
+**** copernicus masters earch monitoring competition (geo-data visualization)
+ :PROPERTIES:
+ :DATE: <2015-04-03 Fri 10:50>
+ :END:
+
+http://www.copernicus-masters.com/index.php?kat=competition.html&anzeige=competition.html
+
+http://www.copernicus-masters.com/index.php?anzeige=preregistration.html
+
+Winner 2014: http://www.copernicus-masters.com/index.php?kat=winners.html&anzeige=winner_airbus_hisdesat2014.html
+
+Since 2011, the annual Copernicus Masters competition is awarding prizes to innovative solutions for business and society based on Earth observation data.
+
+With the launch of Sentinel-1A in April 2014, a new era is set to begin for applications in the entire geospatial value chain. It is the first of the new fleet of ESA Earth observation satellites, which are poised to deliver the wealth of data and imagery that are at the core of Europe's flagship programme Copernicus. The Earth monitoring competition Copernicus Masters aims to support the development of market-oriented applications based on Earth observation data. In 2014, for the first time, the Copernicus Masters was carried out worldwide.
+The 171 submissions received from 43 countries in 2014 offer an excellent glimpse of the next generation of Earth observation services, which are set to benefit in particular from the expansion of digital infrastructures. The satellites now in orbit and the network development taking place here on Earth, for example, are expected to further accelerate the provision of current Earth observation data.
+It included exciting topic specific Challenges that were awarded by an array of prominent partners, such as the European Space Agency (ESA), the German Aerospace Center (DLR), T-Systems International GmbH, European Space Imaging GmbH & Skybox Imaging Inc., CloudEO AG, Airbus Defence and Space & Hisdesat S.A., and Satellite Applications Catapult Ltd.
+
+The submission phase war running from 15 April to 20 July. Participants were competing for their share of this year's EUR 300,000 prize pool.
+
+In addition to cash prizes, this prize pool primarily includes support for the commercial realisation of the winning ideas, data access, and the chance to enter the incubation programme of one of Europe's eleven ESA Business Incubation Centres (BICs). The overall winner - the Copernicus Master - was selected from among the winners of each challenge (except the Best Service Challenge) by a panel of experts.
+**** COMMENT why do people laugh at creationists
+ :PROPERTIES:
+ :DATE: <2015-04-03 Fri 16:10>
+ :END:
+
+https://www.youtube.com/watch?v=9Eo5MdHMNcw
+**** earth.nullschool: Animated global map of atmospheric data
+ :PROPERTIES:
+ :DATE: <2015-04-03 Fri 17:37>
+ :END:
+
+
+http://earth.nullschool.net/
+**** live audio streaming on the net for supercollider (and related apps)
+ :PROPERTIES:
+ :DATE: <2015-04-03 Fri 18:48>
+ :END:
+
+
+http://comments.gmane.org/gmane.comp.audio.supercollider.user/110918
+
+https://www.youtube.com/watch?v=g7ZgFlFrVVs
+
+http://nime2014.org/proceedings/papers/541_paper.pdf
+
+https://www.youtube.com/watch?v=7bi3-3VzdwI&list=PL240uJOh_Vb4Gx6aeyZwxdoTm4pkhXm93
+
+https://github.com/abramhindle/csound-timestretching-granular-synth-experiment/blob/master/oscrelay.pl
+
+https://github.com/abramhindle/html5-audio-streaming-via-webaudio-and-raw-encoding
+
+http://mixlr.com/ http://mixlr.com/live/popular/
+**** supercollider -> icecast (web streaming). 10 years story
+ :PROPERTIES:
+ :DATE: <2015-04-03 Fri 18:54>
+ :END:
+
+http://sc-users.bham.ac.narkive.com/mWAhpAnJ/supercollider-icecast
+
+Mark Polishook 10 years ago
+
+I've done this with SuperCollider to NiceCast to Icecast. It works very
+well.
+
+
+...
+
+f***@fredrikolofsson.com 10 years ago
+
+Post by Dan Stowell
+
+Just wondering if there's any prior work on using icecast to broadcast
+directly from SuperCollider to the internet? I run an icecast server
+and it'd be nice in future to think about connecting some live SC
+sound, directly to the broadcast.
+
+we're actually running sc2 under classic mode + shoutcast for an old
+installation that has gained new life online. as jack can't access classic
+soundmanager we use a dodgy hardware solution with a minitele cable from
+speaker -> micin and then the shoutcast~ external (pd|max) to encode.
+it works
+great believe it or not!
+but with sc server it'd be better to jack directly into pd|max. that
+shoutcast~
+external can be found here... http://www.akustische-kunst.org/
+
+sc-+3iaK88I7EWJWmDuVizWt9i2O/ 10 years ago
+
+I've used Darwin Streaming Server and SoundFlower to good effect; DSS
+is also good for video. MPEG4, btw.
+*** 2015-04-05 Sunday
+**** google calendar quick add syntax for dates
+ :PROPERTIES:
+ :DATE: <2015-04-05 Sun 12:14>
+ :END:
+
+- Intro, overview: https://support.google.com/calendar/answer/36604?hl=en
+- Syntax: https://www.gqueues.com/help/quickAdd#syntax
+
+Here is a copy from https://www.gqueues.com/help/quickAdd#syntax
+***** on date @ time
+
+shopping on friday
+shopping may 28 @ 3pm
+shopping fri at 3pm
+shopping 5/28
+shopping tomorrow
+shopping today
+
+NOTE: If you do not specify a year when typing the date GQueues will find the first instance of that date that occurs after today. To have the quick add parser ignore a weekday word put it in quotes (ie. prepare "Sunday" dinner).
+***** in X days/weeks
+
+shopping in 3 days
+shopping 2 weeks
+***** [queue name]
+
+shopping [to do]
+shopping on fri [To Do]
+NOTE: Queue names are not case-sensitive (you can type with capital letters or not). However, all queues in your account should have unique names to guarantee tasks created with this syntax go to the right queue.
+
+If a queue with the name specified does not exist, GQueues will create a new queue and place it in your first category. If GQueues is currently open you will need to refresh the page to see the new queue.
+***** #tagName
+
+shopping #bestBuy
+shopping #Lowes #errands
+NOTE: Only single word tags can be used (tags with spaces are not recognized)
+***** ^reminderMinutes reminderType
+
+shopping friday ^15 email
+shopping @ 3pm ^30 sms
+shopping sunday ^5 popup
+NOTE: A task must have a date or time in order to set a reminder.
+
+The Android App also supports these formats to simplify voice input:
+shopping friday email reminder 15 minutes
+shopping at 3pm sms reminder 30 minutes
+shopping sunday popup reminder 5 minutes
+***** +emailAddress to assign a task
+
+shopping +john@example.com
+shopping +mark@example.com +sue@example.com
+***** - subtask
+
+- dvd player
+-bills
+--rent
+--credit card
+NOTE: This can only be used in the Quick Add Window. Each dash indicates an additional subtask level.
+***** ~ description to disable quick add syntax for this task
+
+~ write minutes for Aug 3rd meeting
+**** using scserver as master clock
+ :PROPERTIES:
+ :DATE: <2015-04-05 Sun 15:46>
+ :END:
+
+Instead of using Pbind - or other types of routine-framework, use multiple SendTrigs on Impulse.kr.
+**** minimal UI for collaborative web performance with audience
+ :PROPERTIES:
+ :DATE: <2015-04-05 Sun 15:54>
+ :END:
+
+Node.js
+Just a cursor on a page (blank or not).
+**** foldit
+ :PROPERTIES:
+ :DATE: <2015-04-05 Sun 16:16>
+ :END:
+
+Chicago?
+**** erasmus mundus media arts cultures, Danemark, Poland, Hong-Kong
+ :PROPERTIES:
+ :DATE: <2015-04-05 Sun 16:18>
+ :END:
+
+http://www.mediaartscultures.eu/wp/programme-2/curriculum/
+
+*** 2015-04-05 Sunday
+:PROPERTIES:
+:LATEX_TEMPLATE: /Users/iani/Dropbox/000WORKFILES/1_SNIPPETS_AND_TEMPLATES/tufte-handout-fixed.tex
+:ID:       83F69197-2294-4621-81EB-317164D5AF80
+:LATEX_TEMPLATE_COPY: /Users/iani/Dropbox/000WORKFILES/0_PRIVATE/attachments/83/F69197-2294-4621-81EB-317164D5AF80/tufte-handout-fixed.tex
+:END:
+**** mtg: Stratos Bichakis, Kostas Tsioutas, Vicky Bisbiki
+ :PROPERTIES:
+ :DATE: <2015-04-05 Sun 15:00>
+ :END:
+
+See notes in following sections!
+**** scientist-gamer-performer [+programmer-texter-artist?]
+ :PROPERTIES:
+ :DATE: <2015-04-05 Sun 16:21>
+ :END:
+**** pierre schaeffer - το παιχνιώδες
+ :PROPERTIES:
+ :DATE: <2015-04-05 Sun 16:29>
+ :END:
+
+See also: http://www.craigschuftan.com/radio-series/culture-club-1/?start=42
+
+**** space under event: space-time-helix - stratos bichakis
+ :PROPERTIES:
+ :DATE: <2015-04-05 Sun 17:08>
+ :END:
+*** 2015-04-06 Monday
+**** regular expressions are the calculus of computer science [?]
+ :PROPERTIES:
+ :DATE: <2015-04-06 Mon 12:07>
+ :END:
+*** 2015-04-08 Wednesday
+**** john berger : ways of seeing (c/o A. Pistofidou)
+ :PROPERTIES:
+ :DATE: <2015-04-08 Wed 14:38>
+ :END:
+
+https://www.youtube.com/watch?v=0pDE4VX_9Kk
+*** 2015-04-09 Thursday
+**** tactile interfaces for big data navigation
+ :PROPERTIES:
+ :DATE: <2015-04-09 Thu 01:55>
+ :END:
+
+
+From ACM Tech news.
+
+#+BEGIN_QUOTE
+Five Years Ago the iPad Changed Clicks to Touches--but Another Tablet Revolution Is Coming
+
+The Conversation (04/03/15) Jason Alexander
+
+Next-generation displays are expected to evolve from the flat, two-dimensional form factor popularized by the iPad into three-dimensional (3D) tablets equipped with self-actuated, physically reconfigurable surfaces, writes Lancaster University lecturer Jason Alexander. He says these deformable flat screens will be capable of changing the shape of their display surface to better represent on-screen content and offer more ways to convey information tactilely instead of only visually. Computer interaction will undergo a fundamental transformation via the advent of dynamic physical geometry, as physically protruding pixels will enable developers to augment applications such as architecture, design, terrain modeling, and photography by rendering computer-generated 3D scenes in three dimensions. Alexander says this will create opportunities for unique applications in team collaboration, tangible entertainment, and ways of improving computer access for the disabled. He notes Lancaster University researchers have developed an interactive bar chart to represent common data visualization tasks such as displaying and filtering data, organizing it into rows and columns, navigating between large datasets, and producing annotations. They determined the physical nature of dynamic bars encouraged users to directly manipulate data points for annotation and comparison-style tasks, and that traditional touch-based controls are conducive to navigation and organization. Non-technical researchers can experiment with reconfigurable displays via ShapeClip, which adds a z-axis to a computer screen's x- and y-axes.
+#+END_QUOTE
+
+http://theconversation.com/five-years-ago-the-ipad-changed-clicks-to-touches-but-another-tablet-revolution-is-coming-39650
+**** beep.js library for live coding on the browser
+ :PROPERTIES:
+ :DATE: <2015-04-09 Thu 02:00>
+ :END:
+
+
+https://github.com/stewdio/beep.js
+**** gender issues in digital games - a report from Purple Moon
+ :PROPERTIES:
+ :DATE: <2015-04-09 Thu 08:10>
+ :END:
+
+
+#+BEGIN_QUOTE
+On Wed, Apr 8, 2015 at 6:41 PM, Brenda Laurel <xxxxxxx> wrote:
+----------empyre- soft-skinned space----------------------
+I’ve been interested in gender issues in computer gaming for many years. In 1996, after 4 years of qualitative research with over 1000 girls and boys throughout the US, I co-founded Purple Moon, a company to create interactive media explicitly for 8-12-year-old girls. This was the “girl games” moment with many entries into the field from such companies as Her Interactive and Mattel with “Barbie Fashion Designer.” Purple Moon’s first mission was to learn as much as we could about how girls play and then to create interactive experiences that took advantage of these insights in order to encourage girls to put their hands on the machine. In this period, girls were extremely reluctant to play computer games and were generally both afraid of the technology and afflicted with the belief that using it would be gender-transgressive. As we did the interviews, however, another goal emerged that would overshadow the first. We saw the opportunity to meet girls where they were (including their social structures, dreams and fears). We strove to encourage through play a cultural intervention to counter the sort of female gender identity as promulgated by the enforcers of a consumerist, sexist status quo (exemplified by Mattel).
+
+We decided to make a cultural intervention in the definition of femininity itself, including stereotypes about beauty, proper behavior, intelligence, social interaction and self-esteem. Purple Moon lasted for about 3 years until its investors pulled their funding to move to web-based enterprises that promised greater valuations and profits. Just as we released our eighth game we were suddenly taken into Chapter 7 bankruptcy. We raided our real estate deposit to be sure that all 40+ employees went home with a paycheck that day. Later, we persuaded our investors to choose Chapter 11 bankruptcy instead so that the company might be sold. Purple Moon was eventually acquired and killed by Mattel, as were most of the girl game properties of the time, and the party was over. However, I still get mail at least once a week from former Purple Moon players thanking me for our efforts and testifying to the positive differences the games made in their lives. Usually I send them a copy of my book Utopian Entrepreneur that talks about how the sausage was made.
+
+More recently, I have done design research with my students on such topics as the construction of masculinity in relation to media with 6-year-old boys. I have just finished another design research project with my UCSC game design students looking at ways to make interventions for kids with math anxiety. Over the last three years I have become more closely affiliated with feminists in games as well as with the queer games movement. I believe that games can serve to disrupt stereotypes – most importantly, the stereotypes that young people apply to themselves. I also believe that the current efflorescence in queer gaming reflects a desire to create social and personal spaces where one feels safe and happy in one’s own skin. I see games as a powerful force for cultural intervention in stereotypical identities and as places where one may investigate alternative versions of one’s own identity.
+
+
+#+END_QUOTE
+**** the University of California High-Performance AstroComputing Center (UC-HIPACC)
+ :PROPERTIES:
+ :DATE: <2015-04-09 Thu 22:17>
+ :END:
+
+http://hipacc.ucsc.edu/html/Projects&Collaborations.html
+*** 2015-04-10 Friday
+**** history, cultue and food security outlook burkina faso, global hunger index
+ :PROPERTIES:
+ :DATE: <2015-04-10 Fri 11:19>
+ :END:
+
+- http://www.aubergecarpediem.com/history/
+- http://www.everyculture.com/Bo-Co/Burkina-Faso.html
+- http://pulitzercenter.org/projects/burkina-faso-gold-mines-child-labor-exploitation-poverty-migration-famine
+  - March 24, 2015 to December 22, 2015: 'Dark Side of Gold,' Cost of Child Labor Exhibition at Norwegian Mining Museum
+  - February 6, 2015 / Untold Stories
+    Field Notes Podcast: Into the Gold Mines
+    QUINN LIBSON, LARRY C. PRICE
+    To document child labor in the small-scale gold mining industry Larry Price carried his cameras 300 feet into the earth.
+- https://www.wfp.org/countries/burkina-faso
+- http://www.fews.net/west-africa/burkina-faso Food Security Outlook Update (includes maps showing acuteness of famine in areas of the country). Update March 2015: "Détérioration des moyens d’existence probable dans l’extrême nord du pays"
+  - À propos de ce rapport :: Cette mise à jour sur la sécurité alimentaire est un rapport mensuel sur les conditions actuelles et des changements sur les perspectives projetées de l'insécurité alimentaire dans ce pays. Il met à jour les Perspectives sur la sécurité alimentaires de FEWS NET. Pour en savoir plus sur le travail, clique ici.
+- http://www.wfp.org/countries/burkina-faso/overview
+  The country is prone to recurrent natural disasters such as drought, floods and locust invasions, which have grown increasingly frequent and severe. In addition, desertification in drought-prone areas is rapidly spreading and the impact of climate change is increasingly affecting the availability of water and pasture.
+  Food insecurity and malnutrition rates remain chronically high. In 2013, Burkina Faso ranked 65 out of 78 on the global hunger index. In addition, while the 2012/2013 harvest showed a significant improvement compared to the previous harvest and the five-year average, populations are still recovering from the 2012 food and nutrition crisis. The government’s response plan for 2014 indicated that 1,330,000 people are vulnerable to food insecurity and 7,300 remain affected by the flooding that occurred in 2013. In addition, the influx of Malian refugees into the country that started in 2012 has generated additional challenges for food security in Burkina Faso, not only for the refugees, but also for the communities surrounding refugee settlements.
+- http://en.wikipedia.org/wiki/Global_Hunger_Index
+- https://www.youtube.com/watch?v=u2uZUf3v05A
+**** 9 eyes: Google Street View photo collection
+ :PROPERTIES:
+ :DATE: <2015-04-10 Fri 12:45>
+ :END:
+
+http://9-eyes.com/
+*** 2015-04-11 Saturday
+**** Spanish citizens use holograms to protest against anti-demonstration law
+ :PROPERTIES:
+ :DATE: <2015-04-11 Sat 13:36>
+ :END:
+
+http://revolution-news.com/first-hologram-protest-in-history-held-against-spains-gag-law/
+http://www.hologramasporlalibertad.org/#home
+*** 2015-04-14 Tuesday
+**** Volney: Les Ruines, ou méditations sur les révolutions des empires
+ :PROPERTIES:
+ :DATE: <2015-04-14 Tue 12:11>
+ :END:
+
+https://archive.org/details/lesruinesoumdi00voln
+
+http://www.omarkhayyamnederland.com/archives/articles/the-omarian-meditations-of-cf-volney.html
+
+https://archive.org/details/travelsthroughs03volngoog
+
+http://en.wikipedia.org/wiki/Constantin_Fran%C3%A7ois_de_Chasseb%C5%93uf,_comte_de_Volney
+***** Napoleon's Egypt Campaign
+
+http://www.napoleon-series.org/military/battles/c_egypt.html
+
+Number of scientists accompanying Napoleon in Egypt campaign: 167.
+**** european conference on data science (Wolfram+Raspberry Pi also featured)
+ :PROPERTIES:
+ :DATE: <2015-04-14 Tue 15:56>
+ :END:
+
+
+With just over one month until Wolfram descends onto Frankfurt
+for the third European Wolfram Technology Conference, there is
+limited time to register:
+http://url.wolfram.com/2B-WZK_a/
+
+You can look forward to excellent case studies and real-world
+examples, as well as a sneak peek at the future of Wolfram
+technologies!
+
+A few highlights from the program:
+
+- Signal Processing in One and More Dimensions (Markus van Almsick)
+- The Wolfram Data Science Platform (Tom Wickham-Jones)
+- Wolfram Data Drop and the Raspberry Pi for Education (Bernat Espigule-Pons)
+
+Visit our website for more information and to see the full
+program:
+http://url.wolfram.com/2.AT6Imc/
+
+We look forward to seeing you there!
+
+
+The European Technology Conference Team
+**** laurie spiegel: Research on Music and Animal Behavior
+ :PROPERTIES:
+ :DATE: <2015-04-14 Tue 18:41>
+ :END:
+
+https://independent.academia.edu/LaurieSpiegel
+**** download youtube videos without plugin or app
+ :PROPERTIES:
+ :DATE: <2015-04-14 Tue 19:03>
+ :END:
+
+To download: https://www.youtube.com/watch?v=ml9L7kv-MeY&feature=youtu.be
+add "ss" to the url like this:
+
+https://www.ssyoutube.com/watch?v=ml9L7kv-MeY&feature=youtu.be
+
+This redirects to a site that enables download in a variety of available formats.
+*** 2015-04-15 Wednesday
+**** Jacobin Magazine
+ :PROPERTIES:
+ :DATE: <2015-04-15 Wed 12:31>
+ :END:
+
+On the way to abra-electronics with Ben Spencer of Concordia MML.
+
+https://www.jacobinmag.com/
+**** space scientists create common data hub universal language for mission data
+ :PROPERTIES:
+ :DATE: <2015-04-15 Wed 13:13>
+ :END:
+
+
+http://www.scientificcomputing.com/news/2015/04/space-scientists-create-common-data-hub-universal-language-mission-data
+
+Space Scientists Create Common Data Hub, Universal Language for Mission Data
+Austrian Academy of Sciences (04/10/15)
+
+A consortium of European researchers have debuted a new common data hub that will enable space scientists to compare data from numerous different space missions. This task has previously been very difficult because space missions often use purpose-built instruments, as well as data acquisition and number-crunching tools that are built using mission-specific data structures and protocols; this results in reams of data that cannot be easily compared against data from other missions. The new IMPEx portal provides space scientists with a single point of access to a suite of tools designed to make searching for, visualizing, and comparing space mission data much easier. The new portal will enable scientists to better understand complex observational data and to compare computer-simulated data with actual observational data. The tools provided by IMPEx include the CDPP AMDA (Automated Multi-Dataset Analysis) tool, which offers scientists easy-to-use data-mining capabilities. Another tool is CDPP 3DView, which offers three-dimensional visualization capabilities for data such as spacecraft trajectories and planetary ephemerides. The first application of the IMPEx tools was a detailed comparison of observational data from the European Space Agency's Venus Express mission and the U.S. National Aeronautics and Space Administration's Messenger mission to Mercury against existing simulation models.
+**** marios isaakidis #hack66 / eQualit.ie
+ :PROPERTIES:
+ :DATE: <2015-04-15 Wed 15:15>
+ :END:
+
+https://equalit.ie/
+
+http://hack66.info
+
+https://github.com/misaakidis
+
+Thessaloniki <-> Cyprus <-> Montreal
+*** 2015-04-16 Thursday
+**** data and goliath
+ :PROPERTIES:
+ :DATE: <2015-04-16 Thu 12:16>
+ :END:
+
+https://www.schneier.com/books/data_and_goliath/
+
+Data and Goliath
+The Hidden Battles to Collect Your Data and Control Your World
+A Book by Bruce Schneier
+
+-----
+
+-> Evan Light
+
+Alison Hexagram 3D Printing / Cutting Facilities @ Concordia
+**** Hossein Nasr, Frithjof Schuon, Perennialism
+ :PROPERTIES:
+ :DATE: <2015-04-16 Thu 16:31>
+ :END:
+
+Agostino Steuco, Marsilio Ficino, Giovanni Pico della Mirandola
+*** 2015-04-18 Saturday
+**** mcluhan - harold innis - this is colossal
+ :PROPERTIES:
+ :DATE: <2015-04-18 Sat 09:47>
+ :END:
+
+http://www.thisiscolossal.com/about/
+
+**** black holes - bigger on the inside
+ :PROPERTIES:
+ :DATE: <2015-04-18 Sat 12:17>
+ :END:
+
+https://plus.google.com/u/0/117663015413546257905/posts/TU4GXXGTz9E
+
+#+BEGIN_QUOTE
+
+Black holes - bigger on the inside
+
+Guess what: black holes are bigger inside than they look - and they get bigger as they get older!
+
+For example, take the big black hole in the center of our galaxy, called Sagittarius A*.  It's about 2 million kilometers across.  That's pretty big - but the orbit of Mercury is 60 times bigger.  This black hole is old, roughly a billion years old.  And here's the cool part:  it's been growing on the inside  all this time!
+
+How is this possible?  Well, since spacetime is severely warped in a black hole, its volume can be bigger than you'd guess from outside.  And its volume can change.  Since we understand general relativity quite well, we can calculate how this works!  But nobody thought of doing it until last year, when Marios Christodoulou and my friend Carlo Rovelli did it.
+
+How big is the black hole at the center of our galaxy?  On the inside, it can hold a million solar systems!  Its volume is about 10^34 cubic kilometers!   And it's growing at a rate of about 10^25 cubic kilometers per year!
+
+Or suppose you have an ordinary star that turns into a black hole.  This black hole will last a long time before it evaporates due to Hawking radiation.  Christodolou and Rovelli estimate how big its volume will get before this happens.  And it gets really big - bigger than the current-day observable universe!
+
+Before you get too excited, remember: people falling into the black hole will not have time to do anything fun inside.  They will hit the singularity in a short time.  Very very roughly speaking, the problem is not the shortage of space inside the black hole, it's the shortage of time.
+
+If you fall into the black hole at the center of our galaxy, it will be about 1 minute, at most, before you hit the singularity.   You will not get to see most of the space inside the black hole!   The singularity is not in the 'middle' of the black hole - it's in your future.  You will hit it before you can reach the 'middle'.  So, you will only get to see part of the 'edge regions' inside the black hole.
+
+The 'middle regions' can only be seen by people who fell in much earlier.  And they can't see the 'edge', where you are!
+
+And now for the serious part.
+
+The hard part of this problem is defining the volume inside a black hole.
+
+If you choose a moment in time, the black hole's event horizon at that moment is a sphere.  There are infinitely many ways to extend this sphere to a solid ball.  In other words: there are many ways to choose a slice of space inside the black hole whose boundary is your chosen sphere.
+
+The slice can bend forwards in time, or backwards in time.  We can choose a wiggly slice or a smooth one.  Each slice has its own volume.
+
+How do you choose one, so you can calculate its volume? Christodoulou and Rovelli choose the one with the largest volume. This may sound like it's cheating.  But it's not.
+
+Think of a simpler problem one dimension down.  You have a loop of wire.  You ask me: "What's the area of the surface whose boundary is this loop?"
+
+I say: "That's a meaningless question!  Which surface?  There are lots!"
+
+You say: "Pick the best one!"
+
+So, it's up to me.   I take some soapy water and make a soap film whose boundary is that loop.  That's the surface I use.   If the loop of wire is not too crazy in its shape, this surface is uniquely defined.   In some sense it's the "least wiggly" surface I could choose.
+
+This surface minimizes the area.  A more wiggly surface would have more area.
+
+Christodoulou and Rovelli are doing the same thing.  But spacetime is different than space!   If you choose a wiggly 3-dimensional spatial surface in spacetime, it will have less volume than a flatter surface with the same boundary!
+
+So, the way to pick the flattest, nicest spatial surface inside our black hole is to pick the one that maximizes the volume.
+
+If you tried to minimize the volume, you could get it as close to zero as you wanted.  And this would have nothing to do with black holes!   This would be true even in your living room.
+
+Puzzle: why?
+
+Here's the paper:
+
+• Marios Christodoulou and Carlo Rovelli, How big is a black hole?, http://arxiv.org/abs/1411.2854.
+
+#spnetwork arXiv:1441.2854 #generalRelativity  ﻿
+
+#+END_QUOTE
+**** you can now make your own robo roach for $100
+ :PROPERTIES:
+ :DATE: <2015-04-18 Sat 12:33>
+ :END:
+
+https://plus.google.com/117663015413546257905/posts/EWUEhsMVm7U
+
+#+BEGIN_QUOTE
+You can now make your own cyborg roach for just $100.   Just buy this kit developed by the company Backyard Brains:
+
+Are you a teacher or parent that wants to teach a student about advanced neurotechnologies? You are in luck! After 3 long years of R&D, the RoboRoach is now ready for its grand release! We are excited to announce the world's first commercially available cyborg! With our RoboRoach you can briefly wirelessly control the left/right movement of a cockroach by microstimulation of the antenna nerves. The RoboRoach is a great way to learn about neural microstimulation, learning, and electronics!
+
+We are recently ran a successfully-funded kickstarter campaign to fund the release of our new RoboRoach! The hardware and firmware development are complete and we are now shipping!
+
+Product Details
+
+The RoboRoach "backpack" weighs 4.4 grams with the battery, and each battery will last over a month! Following a brief surgery you perform on the cockroach to attach the silver electrodes to the antenna, you can attach the backpack to the roach and control its movement for a few minutes before the cockroach adapts. When you return the cockroach to its cage for ~20 minutes, he "forgets" and the stimulation works again. Once you receive your RoboRoach in the mail, follow our online surgery instructions and videos and you will soon be on your way to becoming an expert in neural interfaces. After about 2-7 days, the stimulation stops working altogether, so you can clip the wires and retire the cockroach to your breeder colony to spend the rest of its days making more cockroaches for you and eating your lettuce.
+
+Technical Specs
+
+- 1x Free iOS or Android 4.3+ application for remote control
+- 1x Bluetooth Roboroach backpack control unit
+- 1x 1632 RoboRoach Battery
+- 3x Electrode Sets (to implant 3 Roaches)
+
+View our RoboRoach Ethics Statement
+
+Backyard Brains has developed ethical guidelines for all our products. You can read more in our statement regarding our use of insect for experiments at:
+
+http://ethics.backyardbrains.com
+
+I feel ethical qualms about taking away the autonomy of an animal this way, and their ethics statement doesn't really address that.  This is the closest they come:
+
+Criticism: Modifying a living creature to make a toy is wrong.
+
+The RoboRoach circuit is not a toy. This new bluetooth version is a powerful low-cost tool for studying neural circuits, allowing for students to make discoveries. High school students in New York, for example, have discovered random stimulation causes much slower adaptation times. We have scientist and high school educator colleagues who are mentoring students in novel behavioral experiments using the RoboRoach circuit. Some highlights will be posted on our website soon.
+
+By focusing on the question of whether the RoboRoach is a "toy", they dodge the harder question of when it's okay to override the nervous system of an animal and make it do what you want.  Perhaps feeling a bit nervous about this, some of the cyborg roach developers say they want to use it as a "rescue robot" that can crawl around and hear people trapped under collapsed buildings.  I think most people would say this is okay, at least if it actually works.
+
+For a critical view on the ethics, see:
+
+http://www.livescience.com/40821-roboroach-is-inhumane.html
+
+For more on how to actually make a RoboRoach, go here:
+
+http://www.popsci.com/science/article/2012-12/how-build-your-own-cockroach-cyborg﻿
+#+END_QUOTE
+*** 2015-04-20 Monday
+**** Dr Jim Penman: Biohistory
+ :PROPERTIES:
+ :DATE: <2015-04-20 Mon 12:06>
+ :END:
+
+#+BEGIN_QUOTE
+Founded on significant research into the physiological basis of behaviour, Biohistory is a ground-breaking scientific theory that presents an innovative investigation of the role of epigenetics in the history of civilisations from the Roman Empire to the present day. The book takes a fresh and original approach to exploring the factors that caused different civilisations to prosper and decline, and, through his analysis of human biology and the genetic causes of behaviour, Penman arrives at a startling conclusion: Western civilisation is in a state of decline and collapse.
+
+This is no shock tactic; Penman uses empirical, scientific data to present the first testable study of the role that biological factors played in the history of the West, based on the physiological mechanisms that change behaviour based on varying food conditions. Biohistory draws on the disciplines of history, biology, anthropology and economics to explain the effects of epigenetic differences on cultures, and how social change can even be predicted through biochemistry.
+#+END_QUOTE
+*** 2015-04-22 Wednesday
+**** google earth day quiz
+ :PROPERTIES:
+ :DATE: <2015-04-22 Wed 01:55>
+ :END:
+
+https://www.google.ca/search?q=earth+day+quiz&oi=ddle&ct=earth-day-2015-5638584300208128&hl=en
+
+https://www.google.ca/search?q=earth+day+quiz&oi=ddle&ct=earth-day-2015-5638584300208128&hl=en
+** 2015-05 May
+*** 2015-05-03 Sunday
+**** Alfred Watkins: The Old Straight Track
+ :PROPERTIES:
+ :DATE: <2015-05-03 Sun 12:20>
+ :END:
+
+c/o Peter Nelson @ Deleuze Guattari 2015 Conference.
+
+See also:
+
+http://www.ancient-wisdom.co.uk/alfredwatkinslecture.pdf
+**** Maya Plissetskaya +
+ :PROPERTIES:
+ :DATE: <2015-05-03 Sun 17:34>
+ :END:
+
+
+The dying swan, with encore re-dance: https://www.youtube.com/watch?v=Uv0BLVSwqbQ
+
+The dying swan, MP at age 60+ https://www.youtube.com/watch?v=Luz5g-doa34
+
+Bolero https://www.youtube.com/watch?v=SsSALaDJuN4
+
+Bach (Choral-Partita) https://www.youtube.com/watch?v=oWqciLh4sDc
+*** 2015-05-05 Tuesday
+**** art+science open call: european digital art and science network, ars electronica Collide@CERN
+ :PROPERTIES:
+ :DATE: <2015-05-05 Tue 04:46>
+ :END:
+
+http://www.aec.at/artandscience/open-call/
+*** 2015-05-10 Sunday
+**** Peter Vogel: The Sound of Shadows: Electronics as music notation?
+ :PROPERTIES:
+ :DATE: <2015-05-10 Sun 22:06>
+ :END:
+
+c/o JPH: https://vimeo.com/59829961
+*** 2015-05-11 Monday
+**** crystal fairy: de silva's (chilean) film
+ :PROPERTIES:
+ :DATE: <2015-05-11 Mon 13:15>
+ :END:
+
+(c/o TT)
+** 2015-06 June
+*** 2015-06-05 Friday
+**** biografilm festival
+ :PROPERTIES:
+ :DATE: <2015-06-05 Fri>--<2015-06-15 Mon>
+ :END:
+
+http://www.biografilm.it/2015/
