@@ -1,4 +1,4 @@
-#+EXPORT_DATE: Monday 11 May 2015 13:44:51 EEST
+#+EXPORT_DATE: Monday 11 May 2015 14:25:28 EEST
 #+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
 #+PM_PROJECTS: org-pm-test2 project1
 #+INFOJS_OPT: view:info toc:4 sdepth:4
@@ -2068,7 +2068,7 @@ c/o Peter Nelson @ Deleuze Guattari 2015 Conference.
 See also:
 
 http://www.ancient-wisdom.co.uk/alfredwatkinslecture.pdf
-**** Maya Plissetskaya +
+**** Maya Plissetskaya ✝
  :PROPERTIES:
  :DATE: <2015-05-03 Sun 17:34>
  :END:
