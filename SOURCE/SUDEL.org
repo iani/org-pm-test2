@@ -1,4 +1,4 @@
-#+EXPORT_DATE: Monday 11 May 2015 14:25:28 EEST
+#+EXPORT_DATE: Tuesday 12 May 2015 21:18:11 EEST
 #+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
 #+PM_PROJECTS: org-pm-test2 project1
 #+INFOJS_OPT: view:info toc:4 sdepth:4
@@ -2102,6 +2102,52 @@ c/o JPH: https://vimeo.com/59829961
  :END:
 
 (c/o TT)
+**** HCI Tangible Interface Evaluation (for Stratos Kountouras)
+ :PROPERTIES:
+ :DATE: <2015-05-11 Mon 14:34>
+ :END:
+
+Google search: "hci tangible interface evaluation".
+
+Some papers and sources found:
+
+- http://webtango.berkeley.edu/papers/thesis/chap2.pdf
+- http://www.tei-conf.org/14/wip/wip-vissers.pdf
+- http://www.researchgate.net/publication/254004940_Metaphor_modelling_for_tangible_interfaces_evaluation
+- http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.118.4986&rep=rep1&type=pdf
+*** 2015-05-12 Tuesday
+**** krauss on relativity and quantum mechanics, echtzeitmusik
+ :PROPERTIES:
+ :DATE: <2015-05-12 Tue 14:15>
+ :END:
+
+
+Lawrence Krauss on Relativity and Quantum Mechanics: https://www.youtube.com/watch?v=7Yg0-g7KF44
+
+http://echtzeitmusik.de/ :
+
+#+BEGIN_QUOTE
+This website is a service dedicated to and offered by the Echtzeitmusik scene in Berlin.
+
+The term 'Echtzeitmusik' was first introduced in the mid-1990s in order to distinguish the musical practices of a younger Berlin scene from music referred to as 'Improvised Music', 'Free Jazz', 'New Music', 'Experimental Music' and so on.
+
+echtzeitmusik.de was launched in 2001 by Gregor Hotz and Kai Fagaschinski to announce concerts at Labor Sonor and the now discontinued Raumschiff Zitrone.
+
+Echtzeitmusik is today mainly concentrated around the venue ausland (Prenzlauer Berg) and the concert series Labor Sonor (at KuLe in Mitte) and quiet cue (Neukölln
+#+END_QUOTE
+**** Krauss/Chomsky/Gandhi: Persuasion is a form of violence
+ :PROPERTIES:
+ :DATE: <2015-05-12 Tue 16:37>
+ :END:
+
+Lawrence Krauss & Noam Chomsky | March 22, 2015 | An Origins Project Dialogue - Part 1 https://www.youtube.com/watch?v=OFzB9vztqfg
+
+Krauss quoting Chomisky:
+#+BEGIN_QUOTE
+I am always put off by people who are called good speakers, by those who can rouse an audience.  That's just what you do not want.  If you have the capacity to do it, you should suppress it.
+#+END_QUOTE
+
+
 ** 2015-06 June
 *** 2015-06-05 Friday
 **** biografilm festival
