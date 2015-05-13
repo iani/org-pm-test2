@@ -1,4 +1,4 @@
-#+EXPORT_DATE: Tuesday 12 May 2015 21:18:11 EEST
+#+EXPORT_DATE: Wednesday 13 May 2015 22:38:14 EEST
 #+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
 #+PM_PROJECTS: org-pm-test2 project1
 #+INFOJS_OPT: view:info toc:4 sdepth:4
@@ -2142,12 +2142,28 @@ Echtzeitmusik is today mainly concentrated around the venue ausland (Prenzlauer 
 
 Lawrence Krauss & Noam Chomsky | March 22, 2015 | An Origins Project Dialogue - Part 1 https://www.youtube.com/watch?v=OFzB9vztqfg
 
-Krauss quoting Chomisky:
+Krauss quoting Chomsky:
 #+BEGIN_QUOTE
 I am always put off by people who are called good speakers, by those who can rouse an audience.  That's just what you do not want.  If you have the capacity to do it, you should suppress it.
 #+END_QUOTE
+*** 2015-05-13 Wednesday
+**** Ligeti: Sonata for Viola Solo
+ :PROPERTIES:
+ :DATE: <2015-05-13 Wed 22:21>
+ :END:
 
 
+
+Hora lungǎ
+
+#+BEGIN_SRC sclang
+41.midicps * 5 / 4; // =  218.26764464563
+17.midicps * 11; //  = 240.09440911019
+((1..128) - 4).midicps * 5 / 4;
+((1..128) - (12 * 3)).midicps * 11;
+#+END_SRC
+
+Loop?
 ** 2015-06 June
 *** 2015-06-05 Friday
 **** biografilm festival
