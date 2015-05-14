@@ -1,4 +1,4 @@
-#+EXPORT_DATE: Thursday 14 May 2015 09:28:22 EEST
+#+EXPORT_DATE: Thursday 14 May 2015 09:32:58 EEST
 #+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
 #+PM_PROJECTS: org-pm-test2 project1
 #+INFOJS_OPT: view:info toc:4 sdepth:4
@@ -2162,6 +2162,8 @@ Hora lungǎ
 #+END_SRC
 
 Loop?
+
+*** 2015-05-14 Thursday
 **** Frequencies for Hora longǎ
  :PROPERTIES:
  :DATE: <2015-05-14 Thu 08:22>
@@ -2189,6 +2191,9 @@ Here are the equal-tempered reference tones F, C and D for 6 octaves available t
 ~do = ~do_MIDI.midicps;
 ~re = ~re_MIDI.midicps;
 ~fa = ~fa_MIDI.midicps;
+#+END_SRC
+
+And here are the frequencies for the 7 pitches noted on the score by Ελευθερία:
 
 #+BEGIN_SRC sclang
 ~la5 = ~fa * 5 / 4;
@@ -2199,7 +2204,6 @@ Here are the equal-tempered reference tones F, C and D for 6 octaves available t
 ~fs11 = ~do * 11 / 8;
 ~sib7 = ~do * 7 / 4;
 #+END_SRC
-
 ** 2015-06 June
 *** 2015-06-05 Friday
 **** biografilm festival
