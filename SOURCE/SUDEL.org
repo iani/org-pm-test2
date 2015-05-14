@@ -1,4 +1,4 @@
-#+EXPORT_DATE: Wednesday 13 May 2015 22:38:14 EEST
+#+EXPORT_DATE: Thursday 14 May 2015 09:28:22 EEST
 #+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
 #+PM_PROJECTS: org-pm-test2 project1
 #+INFOJS_OPT: view:info toc:4 sdepth:4
@@ -2152,8 +2152,6 @@ I am always put off by people who are called good speakers, by those who can rou
  :DATE: <2015-05-13 Wed 22:21>
  :END:
 
-
-
 Hora lungǎ
 
 #+BEGIN_SRC sclang
@@ -2164,6 +2162,44 @@ Hora lungǎ
 #+END_SRC
 
 Loop?
+**** Frequencies for Hora longǎ
+ :PROPERTIES:
+ :DATE: <2015-05-14 Thu 08:22>
+ :END:
+
+The pitch classes noted on the score by Elevtheria Togia are:
+
+#+BEGIN_SRC sclang
+~la5   // A just major third above F
+~si11  // B (just) 11th (harmonic) above F
+~mib7  // Eflat just 7th above F
+~mi5   // E just major third above C
+~fs5   // Fsharp just major third above D
+~fs11  // Fsharp (just) 11th harmonic above C
+~sib7  // Bflat just seventh above C
+#+END_SRC
+
+Here are the equal-tempered reference tones F, C and D for 6 octaves available to the Viola.  Start by computing the MIDI numbers for those notes, given that the lowest note of the Viola is the C below middle C:
+
+#+BEGIN_SRC sclang
+~do0_MIDI = 60 - 12;
+~do_MIDI = (0..5) * 12 + ~do0_MIDI;
+~re_MIDI = ~do_MIDI + 2;
+~fa_MIDI = ~do_MIDI + 5;
+~do = ~do_MIDI.midicps;
+~re = ~re_MIDI.midicps;
+~fa = ~fa_MIDI.midicps;
+
+#+BEGIN_SRC sclang
+~la5 = ~fa * 5 / 4;
+~si11 = ~fa * 11 / 8;
+~mib7 = ~fa * 7 / 4;
+~mi5 = ~do * 5 / 4;
+~fs5 = ~re * 5 / 4;
+~fs11 = ~do * 11 / 8;
+~sib7 = ~do * 7 / 4;
+#+END_SRC
+
 ** 2015-06 June
 *** 2015-06-05 Friday
 **** biografilm festival

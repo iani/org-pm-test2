@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Experimental Project! 1 2 3</title>
-<!-- 2015-05-13 Wed 22:38 -->
+<!-- 2015-05-14 Thu 09:28 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
-<meta  name="author" content="IOANNIS ZANNOS" />
+<meta  name="author" content="Ioannis Zannos" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center; }
@@ -660,6 +660,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-2-3-6">2.3.6. 2015-05-13 Wednesday</a>
 <ul>
 <li><a href="#sec-2-3-6-1">2.3.6.1. Ligeti: Sonata for Viola Solo</a></li>
+<li><a href="#sec-2-3-6-2">2.3.6.2. Frequencies for Hora longǎ</a></li>
 </ul>
 </li>
 </ul>
@@ -4613,8 +4614,6 @@ I am always put off by people who are called good speakers, by those who can rou
 <h5 id="sec-2-3-6-1"><span class="section-number-5">2.3.6.1</span> Ligeti: Sonata for Viola Solo</h5>
 <div class="outline-text-5" id="text-2-3-6-1">
 
-
-
 <p>
 Hora lungǎ
 </p>
@@ -4633,8 +4632,55 @@ Loop?
 </p>
 </div>
 </div>
+<div id="outline-container-sec-2-3-6-2" class="outline-5">
+<h5 id="sec-2-3-6-2"><span class="section-number-5">2.3.6.2</span> Frequencies for Hora longǎ</h5>
+<div class="outline-text-5" id="text-2-3-6-2">
+
+<p>
+The pitch classes noted on the score by Elevtheria Togia are:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sclang"><span style="color: #ff6347;">~la5</span>   <span style="color: #888a85;">// </span><span style="color: #888a85;">A just major third above F</span>
+<span style="color: #ff6347;">~si11</span>  <span style="color: #888a85;">// </span><span style="color: #888a85;">B (just) 11th (harmonic) above F</span>
+<span style="color: #ff6347;">~mib7</span>  <span style="color: #888a85;">// </span><span style="color: #888a85;">Eflat just 7th above F</span>
+<span style="color: #ff6347;">~mi5</span>   <span style="color: #888a85;">// </span><span style="color: #888a85;">E just major third above C</span>
+<span style="color: #ff6347;">~fs5</span>   <span style="color: #888a85;">// </span><span style="color: #888a85;">Fsharp just major third above D</span>
+<span style="color: #ff6347;">~fs11</span>  <span style="color: #888a85;">// </span><span style="color: #888a85;">Fsharp (just) 11th harmonic above C</span>
+<span style="color: #ff6347;">~sib7</span>  <span style="color: #888a85;">// </span><span style="color: #888a85;">Bflat just seventh above C</span>
+</pre>
+</div>
+
+<p>
+Here are the equal-tempered reference tones F, C and D for 6 octaves available to the Viola.  Start by computing the MIDI numbers for those notes, given that the lowest note of the Viola is the C below middle C:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sclang"><span style="color: #ff6347;">~do0_MIDI</span> = 60 - 12;
+<span style="color: #ff6347;">~do_MIDI</span> = <span style="color: #CCFFCC;">(</span>0..5<span style="color: #CCFFCC;">)</span> * 12 + <span style="color: #ff6347;">~do0_MIDI</span>;
+<span style="color: #ff6347;">~re_MIDI</span> = <span style="color: #ff6347;">~do_MIDI</span> + 2;
+<span style="color: #ff6347;">~fa_MIDI</span> = <span style="color: #ff6347;">~do_MIDI</span> + 5;
+<span style="color: #ff6347;">~do</span> = <span style="color: #ff6347;">~do_MIDI</span>.midicps;
+<span style="color: #ff6347;">~re</span> = <span style="color: #ff6347;">~re_MIDI</span>.midicps;
+<span style="color: #ff6347;">~fa</span> = <span style="color: #ff6347;">~fa_MIDI</span>.midicps;
+
+#+BEGIN_SRC sclang
+<span style="color: #ff6347;">~la5</span> = <span style="color: #ff6347;">~fa</span> * 5 / 4;
+<span style="color: #ff6347;">~si11</span> = <span style="color: #ff6347;">~fa</span> * 11 / 8;
+<span style="color: #ff6347;">~mib7</span> = <span style="color: #ff6347;">~fa</span> * 7 / 4;
+<span style="color: #ff6347;">~mi5</span> = <span style="color: #ff6347;">~do</span> * 5 / 4;
+<span style="color: #ff6347;">~fs5</span> = <span style="color: #ff6347;">~re</span> * 5 / 4;
+<span style="color: #ff6347;">~fs11</span> = <span style="color: #ff6347;">~do</span> * 11 / 8;
+<span style="color: #ff6347;">~sib7</span> = <span style="color: #ff6347;">~do</span> * 7 / 4;
+</pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+
 <div id="outline-container-sec-2-4" class="outline-3">
 <h3 id="sec-2-4"><span class="section-number-3">2.4</span> 2015-06 June</h3>
 <div class="outline-text-3" id="text-2-4">
@@ -4697,9 +4743,9 @@ Roussel had kept this compositional method a secret until the publication of his
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="author">Author: IOANNIS ZANNOS</p>
-<p class="date">Created: 2015-05-13 Wed 22:38</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="author">Author: Ioannis Zannos</p>
+<p class="date">Created: 2015-05-14 Thu 09:28</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
