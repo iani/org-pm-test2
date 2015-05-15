@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #+EXPORT_DATE: Friday 15 May 2015 09:23:00 EEST
+=======
+#+EXPORT_DATE: Thursday 14 May 2015 09:32:58 EEST
+>>>>>>> dce8e3c84a343fd2a6e78add35e2e78aba588cb6
 #+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
 #+PM_PROJECTS: org-pm-test2 project1
 #+INFOJS_OPT: view:info toc:4 sdepth:4
@@ -2204,6 +2208,7 @@ And here are the frequencies for the 7 pitches noted on the score by Ελευθ�
 ~fs11 = ~do * 11 / 8;
 ~sib7 = ~do * 7 / 4;
 #+END_SRC
+<<<<<<< HEAD
 **** a nice emacs site - visually and content-wise
  :PROPERTIES:
  :DATE: <2015-05-14 Thu 17:39>
@@ -2243,6 +2248,8 @@ Backing-up, restoring and editing micro-sd card images of RPI software and OS:
  :END:
 
 https://sendgrid.com/blog/complete-guide-set-raspberry-pi-without-keyboard-mouse/
+=======
+>>>>>>> dce8e3c84a343fd2a6e78add35e2e78aba588cb6
 ** 2015-06 June
 *** 2015-06-05 Friday
 **** biografilm festival
