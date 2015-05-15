@@ -1,4 +1,4 @@
-#+EXPORT_DATE: Friday 15 May 2015 09:54:37 EEST
+#+EXPORT_DATE: Friday 15 May 2015 10:03:38 EEST
 #+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
 #+PM_PROJECTS: org-pm-test2 project1
 #+INFOJS_OPT: view:info toc:4 sdepth:4
@@ -2230,13 +2230,15 @@ https://github.com/coldnew/org-ioslide
 Backing-up, restoring and editing micro-sd card images of RPI software and OS:
 
 1. Download official Raspberry Pi OS images from here: https://www.raspberrypi.org/downloads/
-
 2. Software for making and copying images from RPI to Mac - and back, and for communicating with the RPI: http://ivanx.com/raspberrypi/ Includes:
-
    - Pi Filler :: Copy an Operating System Image from your mac to micro SD for use on RPI
    - Pi Copier :: Make a copy of a micro SD image to your Mac Hard Drive (the reverse of Pi Filler)
    - Pi Finder :: Find the IP of your RPI so that you can connect to it via SSH
-3. Mount raw disk images on your Linux based computer with QEMU.  Overview of related setup and tools:  https://lionfacelemonface.wordpress.com/2015/04/18/raspberry-pi-build-environment-in-no-time-at-all/
+3. Setup RPI on Mac without extra keyboard and mouse: https://sendgrid.com/blog/complete-guide-set-raspberry-pi-without-keyboard-mouse/
+4. Setup RPI as its own wifi access point (create a standalone wifi network using RPI as router) http://www.maketecheasier.com/set-up-raspberry-pi-as-wireless-access-point/
+5. Mount raw disk images on your Linux based computer with QEMU.  Overview of related setup and tools:  https://lionfacelemonface.wordpress.com/2015/04/18/raspberry-pi-build-environment-in-no-time-at-all/
+
+
 **** setup and connect RPI from a mac
  :PROPERTIES:
  :DATE: <2015-05-15 Fri 09:22>
