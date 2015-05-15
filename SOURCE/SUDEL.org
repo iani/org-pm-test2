@@ -1,4 +1,4 @@
-#+EXPORT_DATE: Friday 15 May 2015 09:17:28 EEST
+#+EXPORT_DATE: Friday 15 May 2015 09:23:00 EEST
 #+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
 #+PM_PROJECTS: org-pm-test2 project1
 #+INFOJS_OPT: view:info toc:4 sdepth:4
@@ -2237,6 +2237,12 @@ Backing-up, restoring and editing micro-sd card images of RPI software and OS:
    - Pi Copier :: Make a copy of a micro SD image to your Mac Hard Drive (the reverse of Pi Filler)
    - Pi Finder :: Find the IP of your RPI so that you can connect to it via SSH
 3. Mount raw disk images on your Linux based computer with QEMU.  Overview of related setup and tools:  https://lionfacelemonface.wordpress.com/2015/04/18/raspberry-pi-build-environment-in-no-time-at-all/
+**** setup and connect RPI from a mac
+ :PROPERTIES:
+ :DATE: <2015-05-15 Fri 09:22>
+ :END:
+
+https://sendgrid.com/blog/complete-guide-set-raspberry-pi-without-keyboard-mouse/
 ** 2015-06 June
 *** 2015-06-05 Friday
 **** biografilm festival
