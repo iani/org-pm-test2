@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Experimental Project! 1 2 3</title>
-<!-- 2015-05-13 Wed 22:38 -->
+<!-- 2015-05-15 Fri 09:03 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="IOANNIS ZANNOS" />
@@ -660,6 +660,19 @@ for the JavaScript code in this tag.
 <li><a href="#sec-2-3-6">2.3.6. 2015-05-13 Wednesday</a>
 <ul>
 <li><a href="#sec-2-3-6-1">2.3.6.1. Ligeti: Sonata for Viola Solo</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3-7">2.3.7. 2015-05-14 Thursday</a>
+<ul>
+<li><a href="#sec-2-3-7-1">2.3.7.1. Frequencies for Hora longǎ</a></li>
+<li><a href="#sec-2-3-7-2">2.3.7.2. a nice emacs site - visually and content-wise</a></li>
+<li><a href="#sec-2-3-7-3">2.3.7.3. org-io-slide</a></li>
+<li><a href="#sec-2-3-7-4">2.3.7.4. org-ioslide: newest cool slide generator for Org-Mode</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3-8">2.3.8. 2015-05-15 Friday</a>
+<ul>
+<li><a href="#sec-2-3-8-1">2.3.8.1. apple pie rpi first aid</a></li>
 </ul>
 </li>
 </ul>
@@ -4613,8 +4626,6 @@ I am always put off by people who are called good speakers, by those who can rou
 <h5 id="sec-2-3-6-1"><span class="section-number-5">2.3.6.1</span> Ligeti: Sonata for Viola Solo</h5>
 <div class="outline-text-5" id="text-2-3-6-1">
 
-
-
 <p>
 Hora lungǎ
 </p>
@@ -4631,6 +4642,122 @@ Hora lungǎ
 <p>
 Loop?
 </p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3-7" class="outline-4">
+<h4 id="sec-2-3-7"><span class="section-number-4">2.3.7</span> 2015-05-14 Thursday</h4>
+<div class="outline-text-4" id="text-2-3-7">
+</div><div id="outline-container-sec-2-3-7-1" class="outline-5">
+<h5 id="sec-2-3-7-1"><span class="section-number-5">2.3.7.1</span> Frequencies for Hora longǎ</h5>
+<div class="outline-text-5" id="text-2-3-7-1">
+
+<p>
+The pitch classes noted on the score by Elevtheria Togia are:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sclang"><span style="color: #ff6347;">~la5</span>   <span style="color: #888a85;">// </span><span style="color: #888a85;">A just major third above F</span>
+<span style="color: #ff6347;">~si11</span>  <span style="color: #888a85;">// </span><span style="color: #888a85;">B (just) 11th (harmonic) above F</span>
+<span style="color: #ff6347;">~mib7</span>  <span style="color: #888a85;">// </span><span style="color: #888a85;">Eflat just 7th above F</span>
+<span style="color: #ff6347;">~mi5</span>   <span style="color: #888a85;">// </span><span style="color: #888a85;">E just major third above C</span>
+<span style="color: #ff6347;">~fs5</span>   <span style="color: #888a85;">// </span><span style="color: #888a85;">Fsharp just major third above D</span>
+<span style="color: #ff6347;">~fs11</span>  <span style="color: #888a85;">// </span><span style="color: #888a85;">Fsharp (just) 11th harmonic above C</span>
+<span style="color: #ff6347;">~sib7</span>  <span style="color: #888a85;">// </span><span style="color: #888a85;">Bflat just seventh above C</span>
+</pre>
+</div>
+
+<p>
+Here are the equal-tempered reference tones F, C and D for 6 octaves available to the Viola.  Start by computing the MIDI numbers for those notes, given that the lowest note of the Viola is the C below middle C:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sclang"><span style="color: #ff6347;">~do0_MIDI</span> = 60 - 12;
+<span style="color: #ff6347;">~do_MIDI</span> = <span style="color: #CCFFCC;">(</span>0..5<span style="color: #CCFFCC;">)</span> * 12 + <span style="color: #ff6347;">~do0_MIDI</span>;
+<span style="color: #ff6347;">~re_MIDI</span> = <span style="color: #ff6347;">~do_MIDI</span> + 2;
+<span style="color: #ff6347;">~fa_MIDI</span> = <span style="color: #ff6347;">~do_MIDI</span> + 5;
+<span style="color: #ff6347;">~do</span> = <span style="color: #ff6347;">~do_MIDI</span>.midicps;
+<span style="color: #ff6347;">~re</span> = <span style="color: #ff6347;">~re_MIDI</span>.midicps;
+<span style="color: #ff6347;">~fa</span> = <span style="color: #ff6347;">~fa_MIDI</span>.midicps;
+</pre>
+</div>
+
+<p>
+And here are the frequencies for the 7 pitches noted on the score by Ελευθερία:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sclang"><span style="color: #ff6347;">~la5</span> = <span style="color: #ff6347;">~fa</span> * 5 / 4;
+<span style="color: #ff6347;">~si11</span> = <span style="color: #ff6347;">~fa</span> * 11 / 8;
+<span style="color: #ff6347;">~mib7</span> = <span style="color: #ff6347;">~fa</span> * 7 / 4;
+<span style="color: #ff6347;">~mi5</span> = <span style="color: #ff6347;">~do</span> * 5 / 4;
+<span style="color: #ff6347;">~fs5</span> = <span style="color: #ff6347;">~re</span> * 5 / 4;
+<span style="color: #ff6347;">~fs11</span> = <span style="color: #ff6347;">~do</span> * 11 / 8;
+<span style="color: #ff6347;">~sib7</span> = <span style="color: #ff6347;">~do</span> * 7 / 4;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-3-7-2" class="outline-5">
+<h5 id="sec-2-3-7-2"><span class="section-number-5">2.3.7.2</span> a nice emacs site - visually and content-wise</h5>
+<div class="outline-text-5" id="text-2-3-7-2">
+<p>
+<a href="http://www.wisdomandwonder.com/tag/programming-language">http://www.wisdomandwonder.com/tag/programming-language</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-7-3" class="outline-5">
+<h5 id="sec-2-3-7-3"><span class="section-number-5">2.3.7.3</span> org-io-slide</h5>
+<div class="outline-text-5" id="text-2-3-7-3">
+
+<p>
+<a href="https://coldnew.github.io/slides/org-ioslide/#1">https://coldnew.github.io/slides/org-ioslide/#1</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-7-4" class="outline-5">
+<h5 id="sec-2-3-7-4"><span class="section-number-5">2.3.7.4</span> org-ioslide: newest cool slide generator for Org-Mode</h5>
+<div class="outline-text-5" id="text-2-3-7-4">
+
+<p>
+<a href="https://github.com/coldnew/org-ioslide">https://github.com/coldnew/org-ioslide</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-3-8" class="outline-4">
+<h4 id="sec-2-3-8"><span class="section-number-4">2.3.8</span> 2015-05-15 Friday</h4>
+<div class="outline-text-4" id="text-2-3-8">
+</div><div id="outline-container-sec-2-3-8-1" class="outline-5">
+<h5 id="sec-2-3-8-1"><span class="section-number-5">2.3.8.1</span> apple pie rpi first aid</h5>
+<div class="outline-text-5" id="text-2-3-8-1">
+
+<p>
+Backing-up, restoring and editing micro-sd card images of RPI software and OS:
+</p>
+
+<ol class="org-ol">
+<li>Download official Raspberry Pi OS images from here: <a href="https://www.raspberrypi.org/downloads/">https://www.raspberrypi.org/downloads/</a>
+</li>
+
+<li>Software for making and copying images from RPI to Mac - and back, and for communicating with the RPI: <a href="http://ivanx.com/raspberrypi/">http://ivanx.com/raspberrypi/</a> Includes:
+
+<dl class="org-dl">
+<dt> Pi Filler </dt><dd>Copy an Operating System Image from your mac to micro SD for use on RPI
+</dd>
+<dt> Pi Copier </dt><dd>Make a copy of a micro SD image to your Mac Hard Drive (the reverse of Pi Filler)
+</dd>
+<dt> Pi Finder </dt><dd>Find the IP of your RPI so that you can connect to it via SSH
+</dd>
+</dl>
+</li>
+<li>Mount raw disk images on your Linux based computer with QEMU.  Overview of related setup and tools:  <a href="https://lionfacelemonface.wordpress.com/2015/04/18/raspberry-pi-build-environment-in-no-time-at-all/">https://lionfacelemonface.wordpress.com/2015/04/18/raspberry-pi-build-environment-in-no-time-at-all/</a>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -4698,7 +4825,7 @@ Roussel had kept this compositional method a secret until the publication of his
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: IOANNIS ZANNOS</p>
-<p class="date">Created: 2015-05-13 Wed 22:38</p>
+<p class="date">Created: 2015-05-15 Fri 09:03</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
