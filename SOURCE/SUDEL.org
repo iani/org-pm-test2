@@ -1,5 +1,6 @@
-#+EXPORT_DATE: Friday 15 May 2015 10:03:38 EEST
+#+EXPORT_DATE: Saturday 16 May 2015 10:23:34 EEST
 #+SOURCE: /Users/iani/Copy/000WORKFILES/6_WEBSITES-ORG/SUDEL.org
+#+SUDEL:
 #+PM_PROJECTS: org-pm-test2 project1
 #+INFOJS_OPT: view:info toc:4 sdepth:4
 #+OPTIONS: H:6 toc:4 ^:{}
@@ -2245,6 +2246,62 @@ Backing-up, restoring and editing micro-sd card images of RPI software and OS:
  :END:
 
 https://sendgrid.com/blog/complete-guide-set-raspberry-pi-without-keyboard-mouse/
+**** an emacs web developers tool belt
+ :PROPERTIES:
+ :DATE: <2015-05-15 Fri 14:27>
+ :END:
+
+http://richardriley.net/index
+**** A Simple, Responsive, Mobile First Navigation
+ :PROPERTIES:
+ :DATE: <2015-05-15 Fri 14:33>
+ :END:
+
+http://webdesign.tutsplus.com/articles/a-simple-responsive-mobile-first-navigation--webdesign-6074
+
+See also: http://www.jqueryscript.net/demo/Slick-App-Like-Sliding-Menu-Plugin-With-jQuery-Mmenu/examples/vertical-submenus.html
+**** mmenu: a jquery-based mobile-ready hierarchical menu to adapt for org-mode generated sites
+ :PROPERTIES:
+ :DATE: <2015-05-15 Fri 15:29>
+ :END:
+
+http://mmenu.frebsite.nl/
+
+#+BEGIN_QUOTE
+mmenu
+
+The best jQuery plugin for app look-alike on- and off-canvas menus with sliding submenus for your website and webapp.
+
+It is very customizable through a wide range of options, extensions and add-ons and it will always fit your needs.
+#+END_QUOTE
+
+See also other jquery goodies listed on the main page of the author Fred Heuschen:
+
+- http://frebsite.nl/
+- http://tosrus.frebsite.nl/ scrolling and swiping
+- http://cssrefreshframe.frebsite.nl/ auto-refresh site when its css is edited
+- http://coolcarousels.frebsite.nl/ many versions of carousels and pop-up galleries
+- http://dotdotdot.frebsite.nl/ constrain text to initial section within a rectangle, and show ellipsis
+
+**** formatting RPI SD
+ :PROPERTIES:
+ :DATE: <2015-05-15 Fri 20:28>
+ :END:
+
+http://elinux.org/RPi_Easy_SD_Card_Setup
+**** EMACS 24 on RPI!
+ :PROPERTIES:
+ :DATE: <2015-05-15 Fri 21:55>
+ :END:
+
+http://raspberrypi.stackexchange.com/questions/26911/how-to-install-emacs24-4-on-a-raspberry-pi-model-b
+
+- Download it from GNU: wget http://gnu.mirrors.linux.ro/emacs/emacs-24.4.tar.gz
+- Unzip:tar -xzvf emacs-24.4.tar.gz
+- Navigate to the unzipped directory
+- Type ./configure
+- After the command from step 4 is done, type: make
+- Finally type in terminal: sudo make install
 ** 2015-06 June
 *** 2015-06-05 Friday
 **** biografilm festival
