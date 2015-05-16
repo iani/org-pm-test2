@@ -1,7 +1,7 @@
 #!/bin/bash
-echo `date` >> /Users/iani/temp-deploy.txt
-echo `pwd` >> /Users/iani/temp-deploy.txt
-echo $1 >> /Users/iani/temp-deploy.txt
+# echo `date` >> /Users/iani/temp-deploy.txt
+# echo `pwd` >> /Users/iani/temp-deploy.txt
+# echo $1 >> /Users/iani/temp-deploy.txt
 cd $1
 git checkout master
 git add .
